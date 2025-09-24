@@ -1,5 +1,6 @@
 /*
-This store should be responsible for displaying the current word, and playing it's crossponding audio.
+This store should be responsible for displaying the current word, and playing it's corresponding audio.
+wordsSettings is the single source of truth for selectedLevels.
 */
 
 import { create } from "zustand";
@@ -8,7 +9,6 @@ import type { WordEntryInterface } from "~/types/types";
 import { useWordsSettingsStore } from "./wordsSettings.store";
 
 type WordsState = {
-  selectedLevels: string[];
   loadedWords: Record<string, WordEntryInterface[]>;
   words: string[];
   currentWord: string | undefined;
@@ -17,10 +17,13 @@ type WordsState = {
   currentAudio: string | undefined;
   isPlaying: boolean;
   answer: string;
+  inFlightLoads: Set<string>;
+
   setAnswer: (answer: string) => void;
   setSelectedLevels: (levels: string[]) => Promise<void>;
   addLevel: (level: string) => Promise<void>;
   removeLevel: (level: string) => void;
+  loadLevelsFromSettings: (levels: string[]) => Promise<void>;
   pickRandom: () =>
     | { word: string; index: number; id: string; file: string }
     | undefined;
@@ -32,7 +35,6 @@ export const useWordsStore = create<WordsState>((set, get) => {
   let audio: HTMLAudioElement | null = null;
 
   return {
-    selectedLevels: ["A1"],
     loadedWords: {
       A1: a1Data.entries,
     },
@@ -43,47 +45,84 @@ export const useWordsStore = create<WordsState>((set, get) => {
     currentAudio: undefined,
     isPlaying: false,
     answer: "",
+    inFlightLoads: new Set(),
 
     setAnswer: (answer) => {
       set({ answer });
     },
 
     setSelectedLevels: async (levels) => {
+      useWordsSettingsStore.getState().setSelectedLevels(levels);
+      await get().loadLevelsFromSettings(levels);
+    },
+
+    loadLevelsFromSettings: async (levels) => {
       const currentLoaded = get().loadedWords;
-      const toLoad = levels.filter((level) => !currentLoaded[level]);
+      const currentInFlight = get().inFlightLoads;
 
-      const loadedPromises = toLoad.map(async (level) => {
-        const importLevel = (await import(
-          `public/audio_files/en-us/index/${level}_en_us_index.json`,
-          { with: { type: "json" } }
-        )) as {
-          entries: WordEntryInterface[];
-          index: Record<string, number>;
-        };
-        return { level, words: importLevel.entries };
-      });
-
-      const newlyLoaded = await Promise.all(loadedPromises);
-      const updatedLoaded = {
-        ...currentLoaded,
-        ...Object.fromEntries(
-          newlyLoaded.map(({ level, words }) => [level, words]),
-        ),
-      };
-
-      const updatedWords = levels.flatMap(
-        (level) => updatedLoaded[level]?.map((w) => w.word) ?? [],
+      const toLoad = levels.filter(
+        (level) => !currentLoaded[level] && !currentInFlight.has(level),
       );
 
-      set({
-        selectedLevels: levels,
-        loadedWords: updatedLoaded,
-        words: updatedWords,
-      });
+      if (toLoad.length === 0) {
+        const updatedWords = levels.flatMap(
+          (level) => currentLoaded[level]?.map((w) => w.word) ?? [],
+        );
+        set({ words: updatedWords });
+        return;
+      }
+
+      set((state) => ({
+        inFlightLoads: new Set([...state.inFlightLoads, ...toLoad]),
+      }));
+
+      try {
+        const loadedPromises = toLoad.map(async (level) => {
+          const importLevel = (await import(
+            `public/audio_files/en-us/index/${level}_en_us_index.json`,
+            { with: { type: "json" } }
+          )) as {
+            entries: WordEntryInterface[];
+            index: Record<string, number>;
+          };
+          return { level, words: importLevel.entries };
+        });
+
+        const newlyLoaded = await Promise.all(loadedPromises);
+
+        const latestState = get();
+        const updatedLoaded = {
+          ...latestState.loadedWords,
+          ...Object.fromEntries(
+            newlyLoaded.map(({ level, words }) => [level, words]),
+          ),
+        };
+
+        const currentSelectedLevels =
+          useWordsSettingsStore.getState().selectedLevels;
+        const updatedWords = currentSelectedLevels.flatMap(
+          (level) => updatedLoaded[level]?.map((w) => w.word) ?? [],
+        );
+
+        set((state) => ({
+          loadedWords: updatedLoaded,
+          words: updatedWords,
+          inFlightLoads: new Set(
+            [...state.inFlightLoads].filter((l) => !toLoad.includes(l)),
+          ),
+        }));
+      } catch (error) {
+        console.error("Failed to load levels:", error);
+        set((state) => ({
+          inFlightLoads: new Set(
+            [...state.inFlightLoads].filter((l) => !toLoad.includes(l)),
+          ),
+        }));
+      }
     },
 
     addLevel: async (level) => {
-      const currentLevels = get().selectedLevels;
+      const currentLevels = useWordsSettingsStore.getState().selectedLevels;
       if (!currentLevels.includes(level)) {
         const nextLevels = [...currentLevels, level];
         await get().setSelectedLevels(nextLevels);
@@ -91,25 +130,26 @@ export const useWordsStore = create<WordsState>((set, get) => {
     },
 
     removeLevel: (level) => {
-      const currentLevels = get().selectedLevels;
+      const currentLevels = useWordsSettingsStore.getState().selectedLevels;
       const nextLevels = currentLevels.filter((l) => l !== level);
+
+      useWordsSettingsStore.getState().setSelectedLevels(nextLevels);
+
       const nextWords = nextLevels.flatMap(
         (l) => get().loadedWords[l]?.map((w) => w.word) ?? [],
       );
-      set({
-        selectedLevels: nextLevels,
-        words: nextWords,
-      });
+      set({ words: nextWords });
     },
 
     pickRandom: () => {
-      const entries = get().selectedLevels.flatMap(
+      const selectedLevels = useWordsSettingsStore.getState().selectedLevels;
+      const entries = selectedLevels.flatMap(
         (level) => get().loadedWords[level] ?? [],
       );
+
       if (!entries || entries.length === 0) return undefined;
 
       const randomEntry = entries[Math.floor(Math.random() * entries.length)];
-
       if (!randomEntry) return undefined;
 
       const result = {
@@ -155,5 +195,15 @@ export const useWordsStore = create<WordsState>((set, get) => {
 });
 
 useWordsSettingsStore.subscribe((state) => {
-  useWordsStore.getState().setSelectedLevels(state.selectedLevels).catch(console.error);
+  useWordsStore
+    .getState()
+    .loadLevelsFromSettings(state.selectedLevels)
+    .catch(console.error);
 });
+
+const initializeStore = async () => {
+  const initialLevels = useWordsSettingsStore.getState().selectedLevels;
+  await useWordsStore.getState().loadLevelsFromSettings(initialLevels);
+};
+
+initializeStore().catch(console.error);

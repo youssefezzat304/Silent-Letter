@@ -44,7 +44,7 @@ function Levels({
 function InfoDisplayBar() {
   const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
   const wordsLanguage = useWordsSettingsStore((s) => s.wordslanguage);
-  const selectedLevels = useWordsStore((s) => s.selectedLevels);
+  const selectedLevels = useWordsSettingsStore((s) => s.selectedLevels);
   const currentWordLevel = useWordsStore((s) => s.currentWordLevel);
   const delayTimer = useWordsSettingsStore((s) => s.delayTimer);
 

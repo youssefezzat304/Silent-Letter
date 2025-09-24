@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Button } from "~/components/ui/button";
 import { useWordsStore } from "~/store/words.store";
 import WordInput from "./WordInput";
@@ -24,22 +24,32 @@ export default function TheWord() {
   const soundEffects = useWordsSettingsStore((s) => s.soundEffects);
   const delayTimer = useWordsSettingsStore((s) => s.delayTimer);
 
-  const correctAnswerSound = new Audio("/website_sounds/correct-sound.wav");
-  const wrongAnswerSound = new Audio("/website_sounds/wrong-sound.mp3");
-
+  const correctAnswerSoundRef = useRef<HTMLAudioElement | null>(null);
+  const wrongAnswerSoundRef = useRef<HTMLAudioElement | null>(null);
 
   const [hasInteracted, setHasInteracted] = useState(false);
   const [start, setStart] = useState(true);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      correctAnswerSoundRef.current = new Audio(
+        "/website_sounds/correct-sound.wav",
+      );
+      wrongAnswerSoundRef.current = new Audio(
+        "/website_sounds/wrong-sound.mp3",
+      );
+    }
+  }, []);
+
   const checkAnswer = () => {
     if (!answer || answer !== currentWord) {
-      if (soundEffects.wrong) {
-        void wrongAnswerSound.play();
+      if (soundEffects.wrong && wrongAnswerSoundRef.current) {
+        void wrongAnswerSoundRef.current.play().catch(console.error);
       }
       return false;
     }
-    if (soundEffects.correct) {
-      void correctAnswerSound.play();
+    if (soundEffects.correct && correctAnswerSoundRef.current) {
+      void correctAnswerSoundRef.current.play().catch(console.error);
     }
     setTimeout(() => {
       setAnswer("");

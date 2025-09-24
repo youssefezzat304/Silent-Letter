@@ -92,7 +92,7 @@ const SFX = ({
 
 function WordsSettings() {
   const delayTimer = useWordsSettingsStore((s) => s.delayTimer);
-  const selectedLevels = useWordsStore((s) => s.selectedLevels);
+  const selectedLevels = useWordsSettingsStore((s) => s.selectedLevels);
   const setSelectedLevels = useWordsStore((s) => s.setSelectedLevels);
   const soundEffects = useWordsSettingsStore((s) => s.soundEffects);
   const setSoundEffects = useWordsSettingsStore((s) => s.setSoundEffects);
