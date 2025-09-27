@@ -1,15 +1,19 @@
 /*
 This store should be responsible for displaying the current word, and playing it's corresponding audio.
 wordsSettings is the single source of truth for selectedLevels.
+Better architecture with language-keyed cache.
 */
 
 import { create } from "zustand";
-import a1Data from "public/audio_files/en-us/index/A1_en_us_index.json";
-import type { WordEntryInterface } from "~/types/types";
+import a1Data from "public/audio_files/en-US/index/A1_en_us_index.json";
+import type { WordEntryInterface, WordLanguagesCodes } from "~/types/types";
 import { useWordsSettingsStore } from "./wordsSettings.store";
 
+type LanguageCache = Record<string, WordEntryInterface[]>;
+type WordsCache = Record<WordLanguagesCodes, LanguageCache>;
+
 type WordsState = {
-  loadedWords: Record<string, WordEntryInterface[]>;
+  wordsCache: WordsCache;
   words: string[];
   currentWord: string | undefined;
   currentWordLevel: string | undefined;
@@ -24,6 +28,7 @@ type WordsState = {
   addLevel: (level: string) => Promise<void>;
   removeLevel: (level: string) => void;
   loadLevelsFromSettings: (levels: string[]) => Promise<void>;
+  getCurrentLanguageCache: () => LanguageCache;
   pickRandom: () =>
     | { word: string; index: number; id: string; file: string }
     | undefined;
@@ -31,12 +36,28 @@ type WordsState = {
   stopAudio: () => void;
 };
 
+const LANGUAGE_CONFIG = {
+  "en-us": {
+    folder: "en-us",
+    suffix: "_en_us_index.json",
+    audioFolder: "en-us",
+  },
+  "de-de": {
+    folder: "de-de",
+    suffix: "_de_de_index.json",
+    audioFolder: "de-de",
+  },
+} as const;
+
 export const useWordsStore = create<WordsState>((set, get) => {
   let audio: HTMLAudioElement | null = null;
 
   return {
-    loadedWords: {
-      A1: a1Data.entries,
+    wordsCache: {
+      "en-us": {
+        A1: a1Data.entries,
+      },
+      "de-de": {},
     },
     words: a1Data.entries.map((w) => w.word),
     currentWord: undefined,
@@ -51,22 +72,28 @@ export const useWordsStore = create<WordsState>((set, get) => {
       set({ answer });
     },
 
+    getCurrentLanguageCache: () => {
+      const currentLanguage = useWordsSettingsStore.getState().wordslanguage;
+      return get().wordsCache[currentLanguage] || {};
+    },
+
     setSelectedLevels: async (levels) => {
       useWordsSettingsStore.getState().setSelectedLevels(levels);
       await get().loadLevelsFromSettings(levels);
     },
 
     loadLevelsFromSettings: async (levels) => {
-      const currentLoaded = get().loadedWords;
+      const currentLanguage = useWordsSettingsStore.getState().wordslanguage;
+      const languageCache = get().getCurrentLanguageCache();
       const currentInFlight = get().inFlightLoads;
 
       const toLoad = levels.filter(
-        (level) => !currentLoaded[level] && !currentInFlight.has(level),
+        (level) => !languageCache[level] && !currentInFlight.has(level),
       );
 
       if (toLoad.length === 0) {
         const updatedWords = levels.flatMap(
-          (level) => currentLoaded[level]?.map((w) => w.word) ?? [],
+          (level) => languageCache[level]?.map((w) => w.word) ?? [],
         );
         set({ words: updatedWords });
         return;
@@ -78,39 +105,60 @@ export const useWordsStore = create<WordsState>((set, get) => {
 
       try {
         const loadedPromises = toLoad.map(async (level) => {
+          const config = LANGUAGE_CONFIG[currentLanguage];
+          if (!config) {
+            throw new Error(`Unsupported language: ${currentLanguage}`);
+          }
+
           const importLevel = (await import(
-            `public/audio_files/en-us/index/${level}_en_us_index.json`,
+            `public/audio_files/${config.folder}/index/${level}${config.suffix}`,
             { with: { type: "json" } }
           )) as {
             entries: WordEntryInterface[];
             index: Record<string, number>;
           };
-          return { level, words: importLevel.entries };
+
+          const correctedEntries = importLevel.entries.map((entry) => {
+            const filename = entry.file.split("/").pop() ?? "";
+            const path = `/audio_files/${config.audioFolder}/${level}/${filename}`;
+
+            return {
+              ...entry,
+              file: path,
+            };
+          });
+
+          return { level, words: correctedEntries };
         });
 
         const newlyLoaded = await Promise.all(loadedPromises);
 
-        const latestState = get();
-        const updatedLoaded = {
-          ...latestState.loadedWords,
-          ...Object.fromEntries(
-            newlyLoaded.map(({ level, words }) => [level, words]),
-          ),
-        };
+        set((state) => {
+          const updatedCache = { ...state.wordsCache };
+          if (!updatedCache[currentLanguage]) {
+            updatedCache[currentLanguage] = {};
+          }
 
-        const currentSelectedLevels =
-          useWordsSettingsStore.getState().selectedLevels;
-        const updatedWords = currentSelectedLevels.flatMap(
-          (level) => updatedLoaded[level]?.map((w) => w.word) ?? [],
-        );
+          updatedCache[currentLanguage] = {
+            ...updatedCache[currentLanguage],
+            ...Object.fromEntries(
+              newlyLoaded.map(({ level, words }) => [level, words]),
+            ),
+          };
 
-        set((state) => ({
-          loadedWords: updatedLoaded,
-          words: updatedWords,
-          inFlightLoads: new Set(
-            [...state.inFlightLoads].filter((l) => !toLoad.includes(l)),
-          ),
-        }));
+          const updatedWords = levels.flatMap(
+            (level) =>
+              updatedCache[currentLanguage][level]?.map((w) => w.word) ?? [],
+          );
+
+          return {
+            wordsCache: updatedCache,
+            words: updatedWords,
+            inFlightLoads: new Set(
+              [...state.inFlightLoads].filter((l) => !toLoad.includes(l)),
+            ),
+          };
+        });
       } catch (error) {
         console.error("Failed to load levels:", error);
         set((state) => ({
@@ -135,22 +183,26 @@ export const useWordsStore = create<WordsState>((set, get) => {
 
       useWordsSettingsStore.getState().setSelectedLevels(nextLevels);
 
+      const languageCache = get().getCurrentLanguageCache();
       const nextWords = nextLevels.flatMap(
-        (l) => get().loadedWords[l]?.map((w) => w.word) ?? [],
+        (l) => languageCache[l]?.map((w) => w.word) ?? [],
       );
       set({ words: nextWords });
     },
 
     pickRandom: () => {
       const selectedLevels = useWordsSettingsStore.getState().selectedLevels;
+      const languageCache = get().getCurrentLanguageCache();
+
       const entries = selectedLevels.flatMap(
-        (level) => get().loadedWords[level] ?? [],
+        (level) => languageCache[level] ?? [],
       );
 
       if (!entries || entries.length === 0) return undefined;
 
-      const randomEntry = entries[Math.floor(Math.random() * entries.length)];
-      if (!randomEntry) return undefined;
+      let randomEntry = entries[Math.floor(Math.random() * entries.length)];
+
+      if (!randomEntry) return (randomEntry = entries[0]);
 
       const result = {
         word: randomEntry.word,
@@ -194,11 +246,21 @@ export const useWordsStore = create<WordsState>((set, get) => {
   };
 });
 
-useWordsSettingsStore.subscribe((state) => {
-  useWordsStore
-    .getState()
-    .loadLevelsFromSettings(state.selectedLevels)
-    .catch(console.error);
+useWordsSettingsStore.subscribe((state, prevState) => {
+  const wordsStore = useWordsStore.getState();
+
+  if (
+    !prevState ||
+    state.selectedLevels !== prevState.selectedLevels ||
+    state.wordslanguage !== prevState.wordslanguage
+  ) {
+    wordsStore
+      .loadLevelsFromSettings(state.selectedLevels)
+      .then(() => {
+        wordsStore.currentWord = wordsStore.pickRandom()?.word;
+      })
+      .catch(console.error);
+  }
 });
 
 const initializeStore = async () => {

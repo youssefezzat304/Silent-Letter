@@ -111,7 +111,7 @@ function WordsSettings() {
 
   return (
     <Drawer>
-      <DrawerTrigger className="cartoonish-btn from-red-500 to-gray-700 text-white">
+      <DrawerTrigger className="cartoonish-btn from-red-500 to-gray-700 text-white dark:text-black">
         settings
       </DrawerTrigger>
 
@@ -124,7 +124,7 @@ function WordsSettings() {
             <LanguageSelection />
 
             <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
-              <span className="text-2xl font-bold text-nowrap md:mr-3">
+              <span className="self-start text-2xl font-bold text-nowrap md:mr-3">
                 Levels :
               </span>
               <CERFLevels

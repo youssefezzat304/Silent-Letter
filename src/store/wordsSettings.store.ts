@@ -18,7 +18,7 @@ export type SetSFXState = {
 type WordsSettingsState = {
   selectedLevels: string[];
   delayTimer: number;
-  wordslanguage: "en-us";
+  wordslanguage: WordLanguagesCodes;
   soundEffects: SFXState;
 
   setSelectedLevels: (levels: string[]) => void;

@@ -53,3 +53,9 @@ scripts/
 
 # data
 public/audio_files
+public/download_tts.py
+public/english-us-keys.json
+*.py
+
+# secrets
+*.secret.*

@@ -83,7 +83,7 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(21% 0.006 285.885);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
@@ -125,8 +125,17 @@
   -moz-appearance: textfield;
 }
 
+.cartoonish {
+  @apply cursor-pointer rounded-full border-2 border-black bg-gradient-to-br font-bold uppercase shadow-[4px_4px_0px_#000000] ;
+}
+.cartoonish-card {
+  @apply rounded-lg border-2 border-black bg-gradient-to-br font-bold uppercase shadow-[4px_4px_0px_#000000] ;
+}
 .cartoonish-btn {
   @apply transform cursor-pointer rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none;
+}
+.cartoonish-in {
+  @apply rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000];
 }
 .cartoonish-switch {
   @apply transform cursor-pointer rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 active:shadow-none;
@@ -135,7 +144,7 @@
   @apply transform cursor-pointer rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 active:shadow-none;
 }
 .cartoonish-l {
-  @apply transform cursor-pointer rounded-lg border-2 border-black bg-gradient-to-br px-5 py-1 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 active:translate-y-1 active:shadow-none;
+  @apply transform cursor-pointer rounded-lg border-2 border-black bg-gradient-to-br font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 active:translate-y-1 active:shadow-none;
 }
 .cartoonish-menubar {
   @apply rounded-lg border-2 border-black bg-gradient-to-br px-5 py-1 font-bold shadow-[4px_4px_0px_#000000];

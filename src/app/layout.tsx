@@ -5,6 +5,8 @@ import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { NavBar } from "./_components/layout/NavBar";
+import { ThemeProvider } from "./_components/providers/theme-provider";
+import { SessionProvider as NextAuthSessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Hear & Spell",
@@ -23,8 +25,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`} suppressHydrationWarning>
       <body>
-        <NavBar />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <NextAuthSessionProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NavBar />
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </ThemeProvider>
+        </NextAuthSessionProvider>
       </body>
     </html>
   );

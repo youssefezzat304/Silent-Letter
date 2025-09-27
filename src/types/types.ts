@@ -8,4 +8,4 @@ export interface WordEntryInterface {
   file: string;
 }
 
-export type WordLanguagesCodes = "en-us";
+export type WordLanguagesCodes = "en-us" | "de-de";

@@ -1,13 +1,15 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+
+import React, { useEffect, useState, useRef, useCallback } from "react";
+
 import { Button } from "~/components/ui/button";
 import { useWordsStore } from "~/store/words.store";
 import WordInput from "./WordInput";
+import { useWordsSettingsStore } from "~/store/wordsSettings.store";
 
 import { AiFillSound } from "react-icons/ai";
 import { GiFastForwardButton } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa6";
-import { useWordsSettingsStore } from "~/store/wordsSettings.store";
 
 export default function TheWord() {
   const {
@@ -27,8 +29,13 @@ export default function TheWord() {
   const correctAnswerSoundRef = useRef<HTMLAudioElement | null>(null);
   const wrongAnswerSoundRef = useRef<HTMLAudioElement | null>(null);
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const [hasInteracted, setHasInteracted] = useState(false);
   const [start, setStart] = useState(true);
+
+  const [answerResult, setAnswerResult] = useState<boolean | null>(null);
+  const [disableSkip, setDisableSkip] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -44,30 +51,42 @@ export default function TheWord() {
   const checkAnswer = () => {
     if (!answer || answer !== currentWord) {
       if (soundEffects.wrong && wrongAnswerSoundRef.current) {
-        void wrongAnswerSoundRef.current.play().catch(console.error);
+        setAnswerResult(false);
+        wrongAnswerSoundRef.current.play().catch(console.error);
+        setTimeout(() => {
+          setAnswerResult(null);
+        }, 900);
       }
       return false;
     }
     if (soundEffects.correct && correctAnswerSoundRef.current) {
-      void correctAnswerSoundRef.current.play().catch(console.error);
+      setAnswerResult(true);
+      correctAnswerSoundRef.current.play().catch(console.error);
     }
     setTimeout(() => {
       setAnswer("");
+      setAnswerResult(null);
       pickRandom();
       setHasInteracted(true);
       return true;
     }, 500);
   };
 
-  const handleSkip = (delay = delayTimer) => {
-    playAudio();
-    setAnswer(currentWord ?? "");
-    setTimeout(() => {
-      setAnswer("");
-      pickRandom();
-      setHasInteracted(true);
-    }, delay);
-  };
+  const handleSkip = useCallback(
+    (delay = delayTimer) => {
+      setDisableSkip(true);
+      playAudio();
+      setAnswer(currentWord ?? "");
+      setTimeout(() => {
+        setAnswer("");
+        pickRandom();
+        setDisableSkip(false);
+        setHasInteracted(true);
+        inputRef.current?.focus();
+      }, delay);
+    },
+    [currentWord, delayTimer, playAudio, pickRandom, setAnswer],
+  );
 
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -81,11 +100,35 @@ export default function TheWord() {
   }, [words, currentWord, pickRandom]);
 
   useEffect(() => {
+    if (hasInteracted && currentWord) {
+      const timer = setTimeout(() => {
+        inputRef.current?.focus();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [currentWord, hasInteracted]);
+
+  useEffect(() => {
     if (hasInteracted && currentAudio && !isPlaying) {
       playAudio();
       setHasInteracted(false);
     }
   }, [hasInteracted, currentAudio, isPlaying, playAudio]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.altKey && event.key.toLowerCase() === "s" && !disableSkip) {
+        event.preventDefault();
+        handleSkip();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [disableSkip, handleSkip]);
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-5">
@@ -95,17 +138,21 @@ export default function TheWord() {
 
       <div className="flex items-center gap-3">
         <div className="text-4xl">
-          {currentWord ? <WordInput /> : "Loading..."}
+          {currentWord ? (
+            <WordInput ref={inputRef} answerResult={answerResult} />
+          ) : (
+            "Loading..."
+          )}
         </div>
       </div>
 
       <div className="flex gap-4">
         <Button
-          title="Skip"
+          title="Skip (Alt + S)"
           className="cartoonish-btn from-purple-500 to-yellow-700"
           onClick={() => handleSkip()}
           type="button"
-          disabled={words.length === 0}
+          disabled={words.length === 0 || disableSkip}
         >
           Skip <GiFastForwardButton />
         </Button>
@@ -126,6 +173,7 @@ export default function TheWord() {
             onClick={() => {
               setStart(false);
               playAudio();
+              inputRef.current?.focus();
             }}
             disabled={!currentAudio || isPlaying}
           >
@@ -138,6 +186,7 @@ export default function TheWord() {
             type="button"
             onClick={() => {
               playAudio();
+              inputRef.current?.focus();
             }}
             disabled={!currentAudio || isPlaying}
           >

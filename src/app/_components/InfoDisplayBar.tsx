@@ -49,7 +49,7 @@ function InfoDisplayBar() {
   const delayTimer = useWordsSettingsStore((s) => s.delayTimer);
 
   return (
-    <div className="flex items-center justify-center gap-20 border-t border-stone-300 bg-stone-50 p-2">
+    <div className="flex items-center justify-center gap-8 border-t border-stone-300 bg-stone-50 p-2 dark:bg-zinc-800 dark:border-stone-700">
       <div className="text-stone-500" title="Language" aria-label="Language">
         {LANGUAGE_OPTIONS.find((l) => l.value === wordsLanguage)?.label}
       </div>
