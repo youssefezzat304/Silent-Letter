@@ -1,24 +1,15 @@
-/*
-This store should be responsible for the words settings.
-*/
-
+// stores/wordsSettings.store.ts
 import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
 import type { WordLanguagesCodes } from "~/types/types";
 
-export type SFXState = {
-  correct: boolean;
-  wrong: boolean;
-};
-
-export type SetSFXState = {
-  soundEffect: keyof SFXState;
-  value: boolean;
-};
+export type SFXState = { correct: boolean; wrong: boolean };
+export type SetSFXState = { soundEffect: keyof SFXState; value: boolean };
 
 type WordsSettingsState = {
   selectedLevels: string[];
   delayTimer: number;
-  wordslanguage: WordLanguagesCodes;
+  language: WordLanguagesCodes;
   soundEffects: SFXState;
 
   setSelectedLevels: (levels: string[]) => void;
@@ -27,23 +18,40 @@ type WordsSettingsState = {
   setSoundEffects: ({ soundEffect, value }: SetSFXState) => void;
 };
 
-export const useWordsSettingsStore = create<WordsSettingsState>((set) => ({
-  selectedLevels: ["A1"],
-  delayTimer: 2000,
-  wordslanguage: "en-us",
-  soundEffects: { correct: true, wrong: true },
+const STORAGE_KEY = "words-preferences";
 
-  setSelectedLevels: (levels) => set({ selectedLevels: levels }),
+const safeStorage = () =>
+  typeof window !== "undefined"
+    ? createJSONStorage(() => localStorage)
+    : createJSONStorage(() => ({
+        getItem: () => null,
+        setItem: () => null,
+        removeItem: () => null,
+      }));
 
-  setDelayTimer: (timer) => {
-    set({ delayTimer: timer });
-  },
-  setLanguage: (language) => {
-    set({ wordslanguage: language });
-  },
-  setSoundEffects: ({ soundEffect, value }: SetSFXState) => {
-    set((state) => ({
-      soundEffects: { ...state.soundEffects, [soundEffect]: value },
-    }));
-  },
-}));
+export const useWordsSettingsStore = create<WordsSettingsState>()(
+  persist(
+    (set) => ({
+      selectedLevels: ["A1"],
+      delayTimer: 2,
+      language: "en-us",
+      soundEffects: { correct: true, wrong: true },
+
+      setSelectedLevels: (levels) => set({ selectedLevels: levels }),
+      setDelayTimer: (timer) => set({ delayTimer: timer }),
+      setLanguage: (language) => set({ language }),
+      setSoundEffects: ({ soundEffect, value }: SetSFXState) =>
+        set((state) => ({
+          soundEffects: { ...state.soundEffects, [soundEffect]: value },
+        })),
+    }),
+    {
+      name: STORAGE_KEY,
+      storage: safeStorage(),
+      version: 1,
+      migrate: (persistedState) => {
+        return persistedState ?? undefined;
+      },
+    },
+  ),
+);

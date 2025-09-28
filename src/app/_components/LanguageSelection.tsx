@@ -8,25 +8,24 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
-import { useWordsSettingsStore } from "~/store/wordsSettings.store";
 import type { WordLanguagesCodes } from "~/types/types";
 
-export const LANGUAGE_OPTIONS: { value: WordLanguagesCodes; label: string }[] = [
-  { value: "en-us", label: "English (US)" },
-  { value: "de-de", label: "Deutsch (DE)" },
-];
+export const LANGUAGE_OPTIONS: { value: WordLanguagesCodes; label: string }[] =
+  [
+    { value: "en-us", label: "English (US)" },
+    { value: "de-de", label: "Deutsch (DE)" },
+  ];
 
-function LanguageSelection() {
-  const wordslanguage = useWordsSettingsStore((s) => s.wordslanguage);
-  const setWordslanguage = useWordsSettingsStore((s) => s.setLanguage);
-
+function LanguageSelection({
+  onChange,
+}: {
+  value: WordLanguagesCodes;
+  onChange: (value: WordLanguagesCodes) => void;
+}) {
   return (
-    <Select
-      value={wordslanguage ?? undefined}
-      onValueChange={(val) => setWordslanguage(val as WordLanguagesCodes)}
-    >
+    <Select onValueChange={onChange}>
       <SelectTrigger
-        className="cartoonish-selection self-center w-[180px] translate-y-0"
+        className="cartoonish-selection w-[180px] translate-y-0 self-center"
         aria-label="Language"
       >
         <SelectValue placeholder="language" />

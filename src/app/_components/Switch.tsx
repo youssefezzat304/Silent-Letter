@@ -1,14 +1,16 @@
-import React from "react";
+// BooleanSwitch.tsx
+import { useState, useEffect } from "react";
 import { Input } from "~/components/ui/input";
 
 type Size = "small" | "medium";
 
-interface SwitchProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "value"> {
+interface SwitchProps {
   size?: Size;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value?: boolean;
   label?: string;
+  id?: string;
+  storeValue: boolean;
+  onChange: (value: boolean) => void;
+  className?: string;
 }
 
 const SIZE_MAP: Record<
@@ -31,15 +33,26 @@ const SIZE_MAP: Record<
   },
 };
 
-export default function Switch({
+function Switch({
   size = "small",
   className = "",
   label,
   id,
-  value,
+  storeValue,
   onChange,
-  ...inputProps
 }: SwitchProps) {
+  const [checked, setChecked] = useState(storeValue);
+
+  useEffect(() => {
+    setChecked(storeValue);
+  }, [storeValue]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.checked;
+    setChecked(newValue);
+    onChange(newValue);
+  };
+
   const sizeConfig = SIZE_MAP[size];
 
   const trackBase = [
@@ -64,13 +77,14 @@ export default function Switch({
         id={id}
         type="checkbox"
         className="peer sr-only"
-        aria-checked={inputProps.checked}
-        checked={value}
-        onChange={onChange}
-        {...inputProps}
+        checked={checked}
+        onChange={handleChange}
       />
 
       <div className={trackBase} />
     </label>
   );
 }
+
+export default Switch;
+

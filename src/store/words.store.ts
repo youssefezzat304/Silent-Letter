@@ -25,8 +25,6 @@ type WordsState = {
 
   setAnswer: (answer: string) => void;
   setSelectedLevels: (levels: string[]) => Promise<void>;
-  addLevel: (level: string) => Promise<void>;
-  removeLevel: (level: string) => void;
   loadLevelsFromSettings: (levels: string[]) => Promise<void>;
   getCurrentLanguageCache: () => LanguageCache;
   pickRandom: () =>
@@ -73,7 +71,7 @@ export const useWordsStore = create<WordsState>((set, get) => {
     },
 
     getCurrentLanguageCache: () => {
-      const currentLanguage = useWordsSettingsStore.getState().wordslanguage;
+      const currentLanguage = useWordsSettingsStore.getState().language;
       return get().wordsCache[currentLanguage] || {};
     },
 
@@ -83,7 +81,7 @@ export const useWordsStore = create<WordsState>((set, get) => {
     },
 
     loadLevelsFromSettings: async (levels) => {
-      const currentLanguage = useWordsSettingsStore.getState().wordslanguage;
+      const currentLanguage = useWordsSettingsStore.getState().language;
       const languageCache = get().getCurrentLanguageCache();
       const currentInFlight = get().inFlightLoads;
 
@@ -169,27 +167,6 @@ export const useWordsStore = create<WordsState>((set, get) => {
       }
     },
 
-    addLevel: async (level) => {
-      const currentLevels = useWordsSettingsStore.getState().selectedLevels;
-      if (!currentLevels.includes(level)) {
-        const nextLevels = [...currentLevels, level];
-        await get().setSelectedLevels(nextLevels);
-      }
-    },
-
-    removeLevel: (level) => {
-      const currentLevels = useWordsSettingsStore.getState().selectedLevels;
-      const nextLevels = currentLevels.filter((l) => l !== level);
-
-      useWordsSettingsStore.getState().setSelectedLevels(nextLevels);
-
-      const languageCache = get().getCurrentLanguageCache();
-      const nextWords = nextLevels.flatMap(
-        (l) => languageCache[l]?.map((w) => w.word) ?? [],
-      );
-      set({ words: nextWords });
-    },
-
     pickRandom: () => {
       const selectedLevels = useWordsSettingsStore.getState().selectedLevels;
       const languageCache = get().getCurrentLanguageCache();
@@ -252,7 +229,7 @@ useWordsSettingsStore.subscribe((state, prevState) => {
   if (
     !prevState ||
     state.selectedLevels !== prevState.selectedLevels ||
-    state.wordslanguage !== prevState.wordslanguage
+    state.language !== prevState.language
   ) {
     wordsStore
       .loadLevelsFromSettings(state.selectedLevels)

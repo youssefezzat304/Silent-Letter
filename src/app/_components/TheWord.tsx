@@ -50,18 +50,22 @@ export default function TheWord() {
 
   const checkAnswer = () => {
     if (!answer || answer !== currentWord) {
-      if (soundEffects.wrong && wrongAnswerSoundRef.current) {
+      if (wrongAnswerSoundRef.current) {
         setAnswerResult(false);
-        wrongAnswerSoundRef.current.play().catch(console.error);
+        if (soundEffects.wrong) {
+          wrongAnswerSoundRef.current.play().catch(console.error);
+        }
         setTimeout(() => {
           setAnswerResult(null);
         }, 900);
       }
       return false;
     }
-    if (soundEffects.correct && correctAnswerSoundRef.current) {
+    if (correctAnswerSoundRef.current) {
       setAnswerResult(true);
-      correctAnswerSoundRef.current.play().catch(console.error);
+      if (soundEffects.correct) {
+        correctAnswerSoundRef.current.play().catch(console.error);
+      }
     }
     setTimeout(() => {
       setAnswer("");
@@ -83,7 +87,7 @@ export default function TheWord() {
         setDisableSkip(false);
         setHasInteracted(true);
         inputRef.current?.focus();
-      }, delay);
+      }, delay * 1000);
     },
     [currentWord, delayTimer, playAudio, pickRandom, setAnswer],
   );

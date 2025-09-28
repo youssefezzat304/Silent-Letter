@@ -43,7 +43,7 @@ function Levels({
 
 function InfoDisplayBar() {
   const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  const wordsLanguage = useWordsSettingsStore((s) => s.wordslanguage);
+  const language = useWordsSettingsStore((s) => s.language);
   const selectedLevels = useWordsSettingsStore((s) => s.selectedLevels);
   const currentWordLevel = useWordsStore((s) => s.currentWordLevel);
   const delayTimer = useWordsSettingsStore((s) => s.delayTimer);
@@ -51,12 +51,12 @@ function InfoDisplayBar() {
   return (
     <div className="flex items-center justify-center gap-8 border-t border-stone-300 bg-stone-50 p-2 dark:bg-zinc-800 dark:border-stone-700">
       <div className="text-stone-500" title="Language" aria-label="Language">
-        {LANGUAGE_OPTIONS.find((l) => l.value === wordsLanguage)?.label}
+        {LANGUAGE_OPTIONS.find((l) => l.value === language)?.label}
       </div>
       <Levels levels={levels} selectedLevels={selectedLevels} />
 
       <div title="Delay timer" className="text-stone-500">
-        {delayTimer / 1000} sec
+        {delayTimer} sec
       </div>
 
       <div title="Current word level" className="text-stone-500">

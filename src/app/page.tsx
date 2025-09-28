@@ -1,9 +1,7 @@
-import { auth } from "~/server/auth";
-import { api, HydrateClient } from "~/trpc/server";
 import TheWord from "./_components/TheWord";
-import WordsSettings from "./_components/WordsSettings";
 import InfoDisplayBar from "./_components/InfoDisplayBar";
 import TimerLoadingBar from "./_components/ui/TimerLoadingBar";
+import WordsPreference from "./_components/WordsPreference";
 
 export default async function Home() {
   // const session = await auth();
@@ -17,7 +15,7 @@ export default async function Home() {
       <div className="absoluteflex gap-10">
         <TheWord />
       </div>
-      <WordsSettings />
+      <WordsPreference />
       <footer className="absolute bottom-0 w-full">
         <TimerLoadingBar />
         <InfoDisplayBar />
