@@ -10,8 +10,11 @@ import { useWordsSettingsStore } from "~/store/wordsSettings.store";
 import { AiFillSound } from "react-icons/ai";
 import { GiFastForwardButton } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa6";
+import { useSession } from "next-auth/react";
 
 export default function TheWord() {
+  const { data: session } = useSession();
+
   const {
     words,
     answer,
@@ -136,6 +139,12 @@ export default function TheWord() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-5">
+      {session?.user?.name && (
+        <span className="text-xl font-bold dark:text-zinc-200 text-stone-950">
+          Welcom, {session?.user?.name}.
+        </span>
+      )}
+
       <div className="text-stone-500">
         Listen to the word, and type what you hear.
       </div>

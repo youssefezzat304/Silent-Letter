@@ -129,10 +129,13 @@
   @apply cursor-pointer rounded-full border-2 border-black bg-gradient-to-br font-bold uppercase shadow-[4px_4px_0px_#000000] ;
 }
 .cartoonish-card {
-  @apply rounded-lg border-2 border-black bg-gradient-to-br font-bold uppercase shadow-[4px_4px_0px_#000000] ;
+  @apply rounded-lg border-2 border-black bg-gradient-to-br font-bold shadow-[4px_4px_0px_#000000] ;
+}
+.cartoonish-toast {
+  @apply rounded-lg w-80 border-2 px-3 py-4 text-sm border-black bg-gradient-to-br font-bold uppercase  shadow-[4px_4px_0px_#000000] text-white ;
 }
 .cartoonish-btn {
-  @apply transform cursor-pointer rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none;
+  @apply transform cursor-pointer rounded-lg border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000] transition-all duration-150 hover:-translate-y-0.5 active:translate-y-1 active:shadow-none;
 }
 .cartoonish-in {
   @apply rounded-full border-2 border-black bg-gradient-to-br px-5 py-2.5 font-bold uppercase shadow-[4px_4px_0px_#000000];

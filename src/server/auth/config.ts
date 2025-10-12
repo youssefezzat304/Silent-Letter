@@ -1,36 +1,10 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { type DefaultSession, type NextAuthConfig } from "next-auth";
+import { type NextAuthConfig } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { supabase } from "~/lib/supabaseClient";
+import bcrypt from "bcryptjs";
+import type { SupabaseUser } from "~/types/supabase";
 
-import { db } from "~/server/db";
-
-/**
- * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
- * object and keep type safety.
- *
- * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
- */
-declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user: {
-      id: string;
-      // ...other properties
-      // role: UserRole;
-    } & DefaultSession["user"];
-  }
-
-  // interface User {
-  //   // ...other properties
-  //   // role: UserRole;
-  // }
-}
-
-/**
- * Options for NextAuth.js used to configure adapters, providers, callbacks, etc.
- *
- * @see https://next-auth.js.org/configuration/options
- */
 export const authConfig = {
   providers: [
     GoogleProvider({
@@ -44,49 +18,100 @@ export const authConfig = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (
-          !credentials ||
-          typeof credentials.email !== "string" ||
-          typeof credentials.password !== "string"
-        ) {
-          return null;
-        }
+        if (!credentials?.email || !credentials.password) return null;
 
-        const user = await db.user.findUnique({
-          where: { email: credentials.email },
-        });
+        const { data: user } = await supabase
+          .from("users")
+          .select("*")
+          .eq("email", credentials.email as string)
+          .single<SupabaseUser>();
 
-        if (!user) return null;
+        if (!user || !user.password) return null;
 
-        // Add your password verification logic here
-        // const isPasswordValid = await verifyPassword(credentials.password, user.password);
-        // if (!isPasswordValid) return null;
+        const passwordsMatch = await bcrypt.compare(
+          credentials.password as string,
+          user.password,
+        );
 
-        return user;
+        if (passwordsMatch) return user;
+
+        return null;
       },
     }),
   ],
-  adapter: PrismaAdapter(db),
-  session: {
-    strategy: "database" as const,
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-  },
-  pages: {
-    // signIn: "/auth/signin",
-    // error: "/auth/error",
-  },
+  session: { strategy: "jwt" },
   callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
-    async redirect({ url, baseUrl }) {
-      if (url.startsWith("/")) return `${baseUrl}${url}`;
-      else if (new URL(url).origin === baseUrl) return url;
-      return baseUrl;
+    async signIn({ user, account }) {
+      if (account?.provider !== "google" || !user.email) {
+        return true;
+      }
+
+      try {
+        let { data: dbUser } = await supabase
+          .from("users")
+          .select("id")
+          .eq("email", user.email)
+          .single();
+
+        if (!dbUser) {
+          const { data: newUser, error } = await supabase
+            .from("users")
+            .insert({
+              id: user.id,
+              name: user.name,
+              email: user.email,
+              image: user.image,
+            })
+            .select("id")
+            .single();
+
+          if (error || !newUser) {
+            console.error("Error creating Google user:", error);
+            return false;
+          }
+          dbUser = newUser;
+        }
+
+        if (dbUser) {
+          await supabase.from("accounts").upsert({
+            user_id: dbUser.id,
+            type: account.type,
+            provider: account.provider,
+            provider_account_id: account.providerAccountId,
+            access_token: account.access_token,
+            refresh_token: account.refresh_token,
+            expires_at: account.expires_at,
+            token_type: account.token_type,
+            scope: account.scope,
+            id_token: account.id_token,
+          });
+        }
+
+        user.id = dbUser.id;
+        return true;
+      } catch (error) {
+        console.error("Google Sign-In Callback Error:", error);
+        return false;
+      }
+    },
+    jwt({ token, user, trigger, session }) {
+      if (user) {
+        token.id = user.id;
+        token.picture = user.image;
+      }
+
+      if (trigger === "update" && session?.user) {
+        token.name = session.user.name;
+        token.picture = session.user.image;
+      }
+      return token;
+    },
+    session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.id as string;
+        session.user.image = token.picture as string | undefined;
+      }
+      return session;
     },
   },
   secret: process.env.NEXTAUTH_SECRET,

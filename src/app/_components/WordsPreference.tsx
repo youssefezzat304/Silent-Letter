@@ -174,7 +174,7 @@ function WordsPreference() {
                   control={form.control}
                   name="soundEffects.correct"
                   render={({ field }) => (
-                    <FormItem className="cartoonish-l flex flex-row items-center justify-between rounded-lg p-2">
+                    <FormItem className="cartoonish-card flex flex-row items-center justify-between rounded-lg p-2">
                       <div className="space-y-0.5">
                         <label>Correct answer</label>
                       </div>
@@ -192,7 +192,7 @@ function WordsPreference() {
                   control={form.control}
                   name="soundEffects.wrong"
                   render={({ field }) => (
-                    <FormItem className="cartoonish-l flex flex-row items-center justify-between rounded-lg p-2">
+                    <FormItem className="cartoonish-card flex flex-row items-center justify-between rounded-lg p-2">
                       <div className="space-y-0.5">
                         <label>Wrong answer</label>
                       </div>

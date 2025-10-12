@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Input } from "~/components/ui/input";
-import Info from "../Info";
+import Info from "./Info";
 
 interface DelayTimerInputProps {
   storeValue: number;
@@ -65,4 +65,3 @@ function DelayTimerInput({ storeValue, onChange }: DelayTimerInputProps) {
 }
 
 export default DelayTimerInput;
-

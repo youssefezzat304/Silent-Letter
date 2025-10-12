@@ -5,13 +5,14 @@ import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { NavBar } from "./_components/layout/NavBar";
-import { ThemeProvider } from "./_components/providers/theme-provider";
-import { SessionProvider as NextAuthSessionProvider } from "next-auth/react";
+import { Toaster } from "~/components/ui/sonner";
+import ProvidersWrapper from "./_components/providers/ProvidersWrapper";
 
 export const metadata: Metadata = {
   title: "Hear & Spell",
   description: "Learn to spell.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  creator: "Youssef Abdelrahim",
 };
 
 const geist = Geist({
@@ -24,18 +25,17 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`} suppressHydrationWarning>
-      <body>
-        <NextAuthSessionProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+      <body className="flex min-h-screen flex-col bg-background">
+        <ProvidersWrapper>
+          <nav className="flex w-full justify-center bg-background">
             <NavBar />
-            <TRPCReactProvider>{children}</TRPCReactProvider>
-          </ThemeProvider>
-        </NextAuthSessionProvider>
+          </nav>
+          <TRPCReactProvider>
+            <div className="flex min-h-0 flex-1 flex-col">{children}</div>
+          </TRPCReactProvider>
+
+          <Toaster duration={3000} position="top-center" />
+        </ProvidersWrapper>
       </body>
     </html>
   );

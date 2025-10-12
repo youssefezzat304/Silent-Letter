@@ -1,6 +1,10 @@
 import React, { forwardRef } from "react";
 
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "~/components/ui/input-otp";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "~/components/ui/input-otp";
 
 import { useWordsStore } from "~/store/words.store";
 
@@ -27,7 +31,7 @@ const WordInput = forwardRef<
       maxLength={wordLenght}
     >
       <InputOTPGroup
-        className={`cartoonish-in max-w-[330px] gap-1 bg-stone-100 text-black md:max-w-fit ${
+        className={`cartoonish-in max-w-[330px] gap-1 bg-stone-100 text-black md:max-w-[600px] lg:max-w-[800px] ${
           answerResult === true
             ? "border-green-500! shadow-[4px_4px_0px_#00c951]!"
             : answerResult === false
@@ -37,7 +41,7 @@ const WordInput = forwardRef<
       >
         {currentWord?.split("").map((_, index) => (
           <InputOTPSlot
-            className="h-10 w-12 border-b-2 border-black text-2xl caret-black shadow-none md:text-3xl"
+            className="h-10 w-12 border-b-2 border-black text-[15px] caret-black shadow-none md:text-2xl lg:text-3xl"
             key={index}
             index={index}
             style={{
