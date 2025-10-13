@@ -1,3 +1,5 @@
+import type { Tables } from "./supabase";
+
 export interface WordEntryInterface {
   id: string;
   lang: string;
@@ -20,4 +22,6 @@ export type ActionError = {
 export type ActionResult<T = void> =
   | { ok: true; data?: T }
   | { ok: false; error: ActionError };
+
+export type SupabaseUser = Tables<"users">
 

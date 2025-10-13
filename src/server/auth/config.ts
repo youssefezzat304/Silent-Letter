@@ -1,9 +1,9 @@
+import bcrypt from "bcryptjs";
+import type { SupabaseUser } from "~/types/types";
 import { type NextAuthConfig } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { supabase } from "~/lib/supabaseClient";
-import bcrypt from "bcryptjs";
-import type { SupabaseUser } from "~/types/supabase";
+import { supabaseAdmin } from "~/lib/supabaseAdmin";
 
 export const authConfig = {
   providers: [
@@ -20,7 +20,7 @@ export const authConfig = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials.password) return null;
 
-        const { data: user } = await supabase
+        const { data: user } = await supabaseAdmin
           .from("users")
           .select("*")
           .eq("email", credentials.email as string)
@@ -47,14 +47,14 @@ export const authConfig = {
       }
 
       try {
-        let { data: dbUser } = await supabase
+        let { data: dbUser } = await supabaseAdmin
           .from("users")
           .select("id")
           .eq("email", user.email)
           .single();
 
         if (!dbUser) {
-          const { data: newUser, error } = await supabase
+          const { data: newUser, error } = await supabaseAdmin
             .from("users")
             .insert({
               id: user.id,
@@ -73,7 +73,7 @@ export const authConfig = {
         }
 
         if (dbUser) {
-          await supabase.from("accounts").upsert({
+          await supabaseAdmin.from("accounts").upsert({
             user_id: dbUser.id,
             type: account.type,
             provider: account.provider,

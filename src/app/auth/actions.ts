@@ -1,6 +1,6 @@
 "use server";
 
-import { supabase } from "~/lib/supabaseClient";
+import { supabaseAdmin } from "~/lib/supabaseAdmin";
 import bcrypt from "bcryptjs";
 import {
   createAccountSchema,
@@ -36,7 +36,7 @@ export async function credentialsSignupAction(
   const { name, email, password } = parsed.data;
 
   try {
-    const { data: existingUser, error: fetchError } = await supabase
+    const { data: existingUser, error: fetchError } = await supabaseAdmin
       .from("users")
       .select("id")
       .eq("email", email)
@@ -54,11 +54,13 @@ export async function credentialsSignupAction(
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
-    const { error: insertError } = await supabase.from("users").insert({
+    const { error: insertError } = await supabaseAdmin.from("users").insert({
       name,
       email,
       password: passwordHash,
     });
+
+    console.log()
 
     if (insertError) throw insertError;
 
@@ -80,7 +82,7 @@ export async function updateProfileAction(
   data: { name?: string; email?: string; image?: string },
 ): Promise<ActionResult<{ success: boolean }>> {
   try {
-    const { error } = await supabase
+    const { error } = await supabaseAdmin
       .from("users")
       .update(data)
       .eq("id", userId);

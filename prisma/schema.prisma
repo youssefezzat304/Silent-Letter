@@ -16,7 +16,6 @@ model User {
   password       String?            @map("password")
   image          String?
 
-  // relations
   reports        Report[]           @relation("UserReports")
   attachments    ReportAttachment[] @relation("UserAttachments")
   handledReports Report[]           @relation("HandledReports")

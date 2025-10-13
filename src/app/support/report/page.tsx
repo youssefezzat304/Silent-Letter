@@ -103,28 +103,25 @@ function ReportPage() {
     setIsSubmitting(true);
 
     try {
-      // Create FormData for file uploads
       const formData = new FormData();
       formData.append("subject", data.subject);
       formData.append("message", data.message);
-      formData.append("priority", data.priority);
       formData.append("language", data.language);
       formData.append("problemType", data.problemType);
+      formData.append("priority", data.priority);
+      formData.append("contactEmail", data.contactEmail);
 
-      // Add contact email if provided
       if (data.contactEmail) {
         formData.append("contactEmail", data.contactEmail);
       }
 
-      // Append files
       if (data.attachments) {
         data.attachments.forEach((file) => {
           formData.append("attachments", file);
         });
       }
 
-      // Submit to API
-      const response = await fetch("/api/reports", {
+      const response = await fetch("/api/report", {
         method: "POST",
         body: formData,
       });

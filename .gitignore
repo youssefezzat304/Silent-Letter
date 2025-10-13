@@ -59,3 +59,4 @@ public/english-us-keys.json
 
 # secrets
 *.secret.*
+*/TODO.md*
