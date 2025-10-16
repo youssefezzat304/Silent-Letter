@@ -1,12 +1,9 @@
-// test-db.mjs
-// Run this with: node test-db.mjs
-
+// test database connection
 import { PrismaClient } from "@prisma/client";
 
 async function testConnection() {
   console.log("🔍 Testing database connection...\n");
 
-  // Log environment variables (without showing password)
   console.log("Environment Check:");
   console.log("- NODE_ENV:", process.env.NODE_ENV);
   console.log("- DATABASE_URL exists:", !!process.env.DATABASE_URL);
