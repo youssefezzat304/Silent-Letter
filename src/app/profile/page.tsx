@@ -3,7 +3,6 @@
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 import { Form, FormField, FormItem } from "~/components/ui/form";
-import { useSession } from "next-auth/react";
 import { profileSchema, type ProfileValues } from "~/schema/auth.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -15,45 +14,79 @@ import { Profile } from "../_components/layout/NavBar";
 import Loading from "../loading";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { uploadImageToSupabase } from "./actions";
-import { updateProfileAction } from "~/app/auth/actions";
+import { createClient } from "~/lib/supabase/client";
+import {
+  getProfile,
+  updateProfileInfo,
+  updateProfileImageUrl,
+} from "../api/actions/profile";
 import { toast } from "sonner";
 import CustomToast from "../_components/ui/CustomToast";
+import type { Profile as ProfileType } from "@prisma/client";
+import { useProfileImage } from "~/hooks/useProfileImage";
+import { useGetUser } from "~/hooks/useGetUser";
 
 function ProfilePage() {
-  const { data: session, status, update } = useSession();
+  const supabase = createClient();
+  const { user, setUser, loading } = useGetUser();
+  const [profile, setProfile] = useState<ProfileType | null>(null);
+
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [uploading, setUploading] = useState(false);
 
   const profileForm = useForm<ProfileValues>({
     resolver: zodResolver(profileSchema),
     defaultValues: {
-      name: session?.user?.name ?? "",
-      email: session?.user?.email ?? "",
-      image: session?.user?.image ?? undefined,
+      email: "",
+      name: "",
+      image: undefined,
     },
   });
 
   const { handleSignOut } = useAuth();
+  const { uploadProfileImage, uploading: imageUploading } = useProfileImage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const uploading = imageUploading || isSubmitting;
 
   useEffect(() => {
-    if (status === "unauthenticated") {
+    const getUser = async () => {
+      try {
+        const fetchedProfile = await getProfile();
+
+        console.log("Fetched profile:", fetchedProfile);
+
+        if (!fetchedProfile) {
+          console.warn("No profile found for user:", user?.id);
+        }
+
+        setProfile(fetchedProfile);
+      } catch (err) {
+        console.error("Unexpected error getting user:", err);
+        setProfile(null);
+      }
+    };
+
+    void getUser();
+  }, [supabase]);
+
+  useEffect(() => {
+    if (!loading && user === null) {
       router.replace("/");
     }
-  }, [status, router]);
+  }, [user, router, loading]);
 
   useEffect(() => {
-    if (session?.user) {
+    if (user) {
       profileForm.reset({
-        name: session.user.name ?? "",
-        email: session.user.email ?? "",
-        image: session.user.image ?? undefined,
+        email: user.email ?? "",
+        name: profile?.name ?? "",
+        image: profile?.image ?? undefined,
       });
     }
-  }, [session, profileForm]);
+  }, [user, profile, profileForm]);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -73,25 +106,23 @@ function ProfilePage() {
   };
 
   const onSubmit = async (data: ProfileValues) => {
-    if (!session?.user?.id) {
+    if (!user?.id) {
       toast.custom(() => (
         <CustomToast text="User session not found" type="error" />
       ));
       return;
     }
 
-    setUploading(true);
-
     try {
-      let imageUrl = session.user.image ?? undefined;
+      let imageUpdated = false;
 
       if (selectedFile) {
-        const { url, error } = await uploadImageToSupabase(
+        const { result, error, publicUrl } = await uploadProfileImage(
           selectedFile,
-          session.user.id,
+          user.id,
         );
 
-        if (error || !url) {
+        if (error || !result || !publicUrl) {
           toast.custom(() => (
             <CustomToast
               text={`Failed to upload image: ${error}`}
@@ -101,43 +132,64 @@ function ProfilePage() {
           return;
         }
 
-        imageUrl = url;
+        const { result: dbResult, error: dbError } =
+          await updateProfileImageUrl(user.id, publicUrl);
+
+        if (dbError || !dbResult) {
+          toast.custom(() => (
+            <CustomToast
+              text={`Failed to save image: ${dbError}`}
+              type="error"
+            />
+          ));
+          return;
+        }
+
+        imageUpdated = true;
       }
 
-      const result = await updateProfileAction(session.user.id, {
-        name: data.name,
-        email: data.email,
-        image: imageUrl,
-      });
+      const emailChanged = data.email !== user.email;
+      const nameChanged = data.name !== (profile?.name ?? "");
 
-      if (!result.ok) {
+      if (emailChanged || nameChanged) {
+        const { error } = await updateProfileInfo(
+          user.id,
+          data,
+          user.email ?? "",
+          profile?.name ?? "",
+        );
+
+        if (error) {
+          toast.custom(() => <CustomToast text={error} type="error" />);
+          return;
+        }
+      }
+
+      if (imageUpdated || emailChanged || nameChanged) {
         toast.custom(() => (
-          <CustomToast
-            text={result.error.message || "Failed to update profile"}
-            type="error"
-          />
+          <CustomToast text="Profile updated successfully!" type="success" />
         ));
-        return;
       }
 
-      await update({
-        ...session,
-        user: {
-          ...session.user,
-          name: data.name,
-          email: data.email,
-          image: imageUrl,
-        },
-      });
+      const updatedProfile = await getProfile();
+      setProfile(updatedProfile);
 
-      toast.custom(() => (
-        <CustomToast text="Profile updated successfully!" type="success" />
-      ));
+      const {
+        data: { user: refreshedUser },
+      } = await supabase.auth.getUser();
+
+      if (refreshedUser) {
+        setUser(refreshedUser);
+      }
+
+      profileForm.reset({
+        email: refreshedUser?.email ?? user.email ?? "",
+        name: updatedProfile?.name ?? "",
+        image: updatedProfile?.image ?? undefined,
+      });
 
       setPreviewImage(null);
       setSelectedFile(null);
-
-      router.refresh();
     } catch (error) {
       console.error("Error updating profile:", error);
       toast.custom(() => (
@@ -150,20 +202,18 @@ function ProfilePage() {
           type="error"
         />
       ));
-    } finally {
-      setUploading(false);
     }
   };
 
-  if (status === "loading") {
+  if (loading) {
     return <Loading />;
   }
 
-  if (status === "unauthenticated") {
+  if (!user) {
     return null;
   }
 
-  const displayImage = previewImage ?? session?.user?.image?.toString() ?? "";
+  const displayImage = previewImage ?? profile?.image?.toString() ?? "";
 
   return (
     <Form {...profileForm}>
@@ -174,7 +224,7 @@ function ProfilePage() {
         <Card className="cartoonish-card mx-5 w-full px-4">
           <Profile
             imageSrc={displayImage}
-            fallback={session?.user?.name?.[0] ?? "C"}
+            fallback={profile?.name?.[0] ?? "C"}
             className="h-32 w-32 self-center md:h-48 md:w-48"
             fallbackClassName="text-[3rem]"
           />

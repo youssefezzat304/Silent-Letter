@@ -4,13 +4,12 @@ import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardFooter } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs";
 import { FcGoogle } from "react-icons/fc";
-import { useEffect } from "react";
-import { useSession } from "next-auth/react";
+import { useEffect, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { FormField, Form, FormItem } from "~/components/ui/form";
+import { Form, FormField, FormItem } from "~/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   createAccountSchema,
@@ -21,8 +20,32 @@ import {
 import Loading from "../loading";
 import InputError from "../_components/ui/InputError";
 import { useAuth } from "~/hooks/useAuth";
+import { createClient } from "~/lib/supabase/client";
+import { toast } from "sonner";
+import CustomToast from "../_components/ui/CustomToast";
+import { login } from "../api/actions/auth";
 
 function AuthPage() {
+  const [isPending, startTransition] = useTransition();
+  const supabase = createClient();
+  const router = useRouter();
+  const { handleGoogleSignIn, handleSignup, googleLoading, handleLogin } =
+    useAuth();
+
+  const [isCheckingSession, setIsCheckingSession] = useState(true);
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        router.replace("/");
+      } else {
+        setIsCheckingSession(false);
+      }
+    };
+    void checkSession();
+  }, [router, supabase.auth]);
+
   const signupForm = useForm<CreateAccountValues>({
     resolver: zodResolver(createAccountSchema),
     defaultValues: {
@@ -41,31 +64,24 @@ function AuthPage() {
     },
   });
 
-  const {
-    handleGoogleSignIn,
-    handleLogin,
-    handleSignup,
-    loading,
-    googleLoading,
-  } = useAuth();
+  const handleLoginSubmit = (values: LoginValues) => {
+    startTransition(async () => {
+      await handleLogin(values);
+    });
+  };
 
-  const router = useRouter();
-  const { status } = useSession();
+  const handleSignupSubmit = (values: CreateAccountValues) => {
+    startTransition(async () => {
+      await handleSignup(values);
+    });
+  };
 
-  useEffect(() => {
-    if (status === "authenticated") {
-      router.replace("/");
-    }
-  }, [status, router]);
-
-  if (status === "loading") {
+  if (isCheckingSession) {
     return <Loading />;
   }
 
-  if (status === "authenticated") return null;
-
   return (
-    <div className="flex absolute top-[15%] w-full items-center justify-center">
+    <div className="absolute top-[15%] flex w-full items-center justify-center">
       <div className="max-w-sm flex-col gap-6 self-center">
         <Tabs defaultValue="Login">
           <TabsList className="cartoonish-card self-center md:w-lg">
@@ -89,7 +105,7 @@ function AuthPage() {
           >
             <Card>
               <Form {...loginForm}>
-                <form onSubmit={loginForm.handleSubmit(handleLogin)}>
+                <form onSubmit={loginForm.handleSubmit(handleLoginSubmit)}>
                   <CardContent className="grid gap-2">
                     <FormField
                       {...loginForm}
@@ -128,18 +144,21 @@ function AuthPage() {
                   <CardFooter className="mt-2 flex flex-col gap-2">
                     <Button
                       type="submit"
-                      disabled={loading}
+                      disabled={isPending}
                       className="cartoonish-btn w-full"
                     >
-                      Login
+                      {isPending ? "Logging in..." : "Login"}
                     </Button>
                     <Button
                       className="cartoonish-btn w-full bg-white from-green-200 to-blue-200 text-black"
                       onClick={handleGoogleSignIn}
-                      disabled={loading || googleLoading}
+                      disabled={isPending || googleLoading}
+                      type="button"
                     >
                       <FcGoogle />
-                      {googleLoading ? "Signing in..." : "Continue with Google"}
+                      {googleLoading
+                        ? "Redirecting..."
+                        : "Continue with Google"}
                     </Button>
                   </CardFooter>
                 </form>
@@ -154,14 +173,14 @@ function AuthPage() {
           >
             <Card>
               <Form {...signupForm}>
-                <form onSubmit={signupForm.handleSubmit(handleSignup)}>
+                <form onSubmit={signupForm.handleSubmit(handleSignupSubmit)}>
                   <CardContent className="grid gap-2">
                     <FormField
                       control={signupForm.control}
                       name="name"
                       render={({ field }) => (
                         <FormItem className="grid gap-3">
-                          <Label htmlFor="dispay-name">Display name</Label>
+                          <Label htmlFor="display-name">Display name</Label>
                           <Input
                             id="display-name"
                             placeholder="John Doe"
@@ -229,9 +248,9 @@ function AuthPage() {
                     <Button
                       type="submit"
                       className="cartoonish-btn mt-2 w-full"
-                      disabled={loading}
+                      disabled={isPending}
                     >
-                      Create Account
+                      {isPending ? "Creating Account..." : "Create Account"}
                     </Button>
                   </CardFooter>
                 </form>

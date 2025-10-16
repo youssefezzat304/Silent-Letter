@@ -11,7 +11,7 @@ export const fileSchema = z
 export const reportSchema = z.object({
   subject: z.string().min(5, "Subject must be at least 5 characters long."),
   message: z.string().min(20, "Message must be at least 20 characters long."),
-  language: z.enum(["nal", "en", "de"], {
+  language: z.enum(["nal", "en-us", "de-de"], {
     required_error: "Please select a language.",
   }),
   problemType: z.enum(

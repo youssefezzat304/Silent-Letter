@@ -10,10 +10,10 @@ import { useWordsSettingsStore } from "~/store/wordsSettings.store";
 import { AiFillSound } from "react-icons/ai";
 import { GiFastForwardButton } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa6";
-import { useSession } from "next-auth/react";
+import { useGetUser } from "~/hooks/useGetUser";
 
 export default function TheWord() {
-  const { data: session } = useSession();
+  const { user, setUser, supabase } = useGetUser();
 
   const {
     words,
@@ -39,6 +39,18 @@ export default function TheWord() {
 
   const [answerResult, setAnswerResult] = useState<boolean | null>(null);
   const [disableSkip, setDisableSkip] = useState<boolean>(false);
+
+  useEffect(() => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase, setUser]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -139,9 +151,9 @@ export default function TheWord() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-5">
-      {session?.user?.name && (
-        <span className="text-xl font-bold dark:text-zinc-200 text-stone-950">
-          Welcom, {session?.user?.name}.
+      {user?.user_metadata.name && (
+        <span className="text-xl font-bold text-stone-950 dark:text-zinc-200">
+          Welcom, {user?.user_metadata.name}.
         </span>
       )}
 

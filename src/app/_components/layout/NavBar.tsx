@@ -9,11 +9,14 @@ import {
   MenubarTrigger,
 } from "~/components/ui/menubar";
 import { DarkModeToggle } from "../DarkModeToggle";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { MdLogout } from "react-icons/md";
 import { useAuth } from "~/hooks/useAuth";
+import { useEffect, useState } from "react";
+import { getProfile } from "~/app/api/actions/profile";
+import type { Profile as ProfileType } from "@prisma/client";
+import { useGetUser } from "~/hooks/useGetUser";
 
 const LoginSignup = () => {
   return (
@@ -40,15 +43,43 @@ export const Profile = ({
 }) => {
   return (
     <Avatar className={`cartoonish justify-center ${className}`}>
-      <AvatarImage src={imageSrc} />
+      <AvatarImage src={imageSrc} className="object-cover" />
       <AvatarFallback className={fallbackClassName}>{fallback}</AvatarFallback>
     </Avatar>
   );
 };
 
 export function NavBar() {
-  const { data: session, status } = useSession();
-  const handleSignOut = useAuth().handleSignOut;
+  const { user, setUser, supabase } = useGetUser();
+  const { handleSignOut } = useAuth();
+
+  const [profileInfo, setProfileInfo] = useState<ProfileType | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const data = await getProfile();
+        setProfileInfo(data);
+      } catch (error) {
+        console.error("Failed to get user:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    void getUser();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase, setUser]);
 
   return (
     <Menubar className="cartoonish-menubar m-2 h-12 max-w-fit min-w-fit gap-3 md:gap-5 dark:bg-zinc-800">
@@ -83,33 +114,32 @@ export function NavBar() {
           About
         </MenubarTrigger>
       </MenubarMenu>
-      <MenubarMenu key={status || session}>
-        {status === "loading" ? (
+      <MenubarMenu>
+        {loading ? (
           <div>Loading...</div>
-        ) : status === "authenticated" ? (
+        ) : user ? (
           <MenubarMenu>
             <MenubarTrigger className="cursor-pointer font-bold uppercase">
               <Profile
-                imageSrc={session?.user?.image?.toString() ?? ""}
-                fallback={session.user.name![0] ?? "C"}
+                imageSrc={profileInfo?.image ?? ""}
+                fallback={profileInfo?.name?.[0] ?? "C"}
               />
-
-              <MenubarContent
-                className="cartoonish-l gap-1 px-2 py-2"
-                align="end"
-              >
-                <Link href="/profile">
-                  <MenubarItem className="cursor-pointer">Profile</MenubarItem>
-                  <MenubarSeparator />
-                </Link>
-                <MenubarItem
-                  onClick={handleSignOut}
-                  className="cursor-pointer justify-between text-red-500"
-                >
-                  Logout <MdLogout className="text-red-500" />
-                </MenubarItem>
-              </MenubarContent>
             </MenubarTrigger>
+            <MenubarContent
+              className="cartoonish-l gap-1 px-2 py-2"
+              align="end"
+            >
+              <Link href="/profile">
+                <MenubarItem className="cursor-pointer">Profile</MenubarItem>
+              </Link>
+              <MenubarSeparator />
+              <MenubarItem
+                onClick={handleSignOut}
+                className="cursor-pointer justify-between text-red-500"
+              >
+                Logout <MdLogout className="text-red-500" />
+              </MenubarItem>
+            </MenubarContent>
           </MenubarMenu>
         ) : (
           <LoginSignup />

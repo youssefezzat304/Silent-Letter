@@ -8,19 +8,17 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model User {
-  id             String             @id @default(uuid()) @db.Uuid
+model Profile {
+  id             String             @id @db.Uuid
   name           String?
-  email          String?            @unique
-  emailVerified  DateTime?          @map("email_verified")
-  password       String?            @map("password")
   image          String?
-
-  reports        Report[]           @relation("UserReports")
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
   attachments    ReportAttachment[] @relation("UserAttachments")
   handledReports Report[]           @relation("HandledReports")
+  reports        Report[]           @relation("UserReports")
 
-  @@map("users")
+  @@map("profiles")
 }
 
 model WordsPreference {
@@ -31,60 +29,28 @@ model WordsPreference {
   delayTime     Int           @default(2)
 
   @@index([userId])
-}
-
-model Account {
-  id                String  @id @default(cuid())
-  userId            String  @map("user_id") @db.Uuid
-  type              String
-  provider          String
-  providerAccountId String  @map("provider_account_id")
-  refresh_token     String?
-  access_token      String?
-  expires_at        Int?
-  token_type        String?
-  scope             String?
-  id_token          String?
-  session_state     String?
-
-  @@unique([provider, providerAccountId])
-  @@map("accounts")
-}
-
-model VerificationToken {
-  identifier String
-  token      String
-  expires    DateTime
-
-  @@unique([identifier, token])
-  @@map("verification_tokens")
+  @@map("words_preferences")
 }
 
 model Report {
-  id            String   @id @default(uuid()) @db.Uuid
-  userId        String?  @db.Uuid
-  user          User?    @relation("UserReports", fields: [userId], references: [id], onDelete: Cascade)
-
-  subject       String
-  message       String   @db.Text
-  contactEmail  String?
-  ip            String?
-  userAgent     String?
-
-  problemType   ProblemType
-
-  status        ReportStatus   @default(OPEN)
-  priority      ReportPriority @default(MEDIUM)
-
-  createdAt     DateTime  @default(now())
-  handledAt     DateTime?
-  handledById   String?   @db.Uuid
-  handledBy     User?     @relation("HandledReports", fields: [handledById], references: [id], onDelete: SetNull)
-
-  adminNote     String?   @db.Text
-  emailSent     Boolean   @default(false)
-
-  attachments   ReportAttachment[] @relation("ReportAttachments")
+  id           String             @id @default(uuid()) @db.Uuid
+  userId       String?            @db.Uuid
+  subject      String
+  message      String
+  contactEmail String?
+  ip           String?
+  userAgent    String?
+  problemType  ProblemType
+  status       ReportStatus       @default(OPEN)
+  priority     ReportPriority     @default(MEDIUM)
+  createdAt    DateTime           @default(now())
+  handledAt    DateTime?
+  handledById  String?            @db.Uuid
+  adminNote    String?
+  emailSent    Boolean            @default(false)
+  attachments  ReportAttachment[] @relation("ReportAttachments")
+  handledBy    Profile?           @relation("HandledReports", fields: [handledById], references: [id])
+  user         Profile?           @relation("UserReports", fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([ip])
@@ -95,18 +61,15 @@ model Report {
 
 model ReportAttachment {
   id        String   @id @default(uuid()) @db.Uuid
-
   reportId  String   @db.Uuid
-  report    Report   @relation("ReportAttachments", fields: [reportId], references: [id], onDelete: Cascade)
-
   filename  String
   url       String
   mimeType  String?
   size      Int?
   createdAt DateTime @default(now())
-
   userId    String?  @db.Uuid
-  user      User?    @relation("UserAttachments", fields: [userId], references: [id])
+  report    Report   @relation("ReportAttachments", fields: [reportId], references: [id], onDelete: Cascade)
+  user      Profile? @relation("UserAttachments", fields: [userId], references: [id])
 
   @@index([reportId])
   @@map("report_attachments")

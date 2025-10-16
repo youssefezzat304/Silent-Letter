@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useSession } from "next-auth/react";
 import { useState, useRef } from "react";
 import { toast } from "sonner";
 
@@ -37,10 +36,14 @@ import {
 } from "~/schema/report.schema";
 import { formatBytes } from "~/lib/helpers";
 import { LANGUAGE_OPTIONS } from "~/metadata";
-import type { ActionResult } from "~/types/types";
+import { useGetUser } from "~/hooks/useGetUser";
+import { useReportUpload } from "~/hooks/useReportUpload";
+import { createReport } from "~/app/api/actions/report";
 
 function ReportPage() {
-  const { status, data: session } = useSession();
+  const { user, loading } = useGetUser();
+  const { uploadReportAttachments, uploading: uploadingFiles } =
+    useReportUpload();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [attachedFiles, setAttachedFiles] = useState<File[]>([]);
@@ -52,9 +55,13 @@ function ReportPage() {
       subject: "",
       message: "",
       priority: "MEDIUM",
+      problemType: "OTHER",
+      contactEmail: "",
       attachments: [],
     },
   });
+
+  const isProcessing = uploadingFiles || isSubmitting;
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files ?? []);
@@ -93,7 +100,6 @@ function ReportPage() {
     setAttachedFiles(newFiles);
     form.setValue("attachments", newFiles, { shouldValidate: true });
 
-
     if (fileInputRef.current) {
       fileInputRef.current.value = "";
     }
@@ -103,76 +109,64 @@ function ReportPage() {
     setIsSubmitting(true);
 
     try {
-      const formData = new FormData();
-      formData.append("subject", data.subject);
-      formData.append("message", data.message);
-      formData.append("language", data.language);
-      formData.append("problemType", data.problemType);
-      formData.append("priority", data.priority);
-      formData.append("contactEmail", data.contactEmail);
+      const {
+        result: uploadResult,
+        error: uploadError,
+        uploadedFiles,
+      } = await uploadReportAttachments(data.attachments ?? []);
 
-      if (data.contactEmail) {
-        formData.append("contactEmail", data.contactEmail);
-      }
-
-      if (data.attachments) {
-        data.attachments.forEach((file) => {
-          formData.append("attachments", file);
-        });
-      }
-
-      const response = await fetch("/api/report", {
-        method: "POST",
-        body: formData,
-      });
-
-      const result: ActionResult = await response.json();
-
-      if (!result.ok) {
-        if (result.error?.fields) {
-          Object.entries(result.error.fields).forEach(([field, messages]) => {
-            if (messages && messages.length > 0) {
-              form.setError(field as keyof ReportValues, {
-                type: "manual",
-                message: messages[0],
-              });
-            }
-          });
-
-          toast.custom(() => (
-            <CustomToast
-              text="Please check the form for errors."
-              type="error"
-            />
-          ));
-        } else {
-          // Generic error
-          toast.custom(() => (
-            <CustomToast
-              text={
-                result.error?.message ||
-                "Failed to submit report. Please try again."
-              }
-              type="error"
-            />
-          ));
-        }
+      if (!uploadResult || uploadError) {
+        toast.custom(() => (
+          <CustomToast
+            text={uploadError ?? "Failed to upload attachments"}
+            type="error"
+          />
+        ));
+        setIsSubmitting(false);
         return;
       }
 
-      // Success
+      const userAgent = navigator.userAgent;
+
+      const { result, error } = await createReport({
+        data: {
+          subject: data.subject,
+          message: data.message,
+          language: data.language,
+          problemType: data.problemType,
+          priority: data.priority,
+          contactEmail: data.contactEmail ?? undefined,
+        },
+        attachmentUrls: uploadedFiles,
+        userAgent,
+      });
+
+      if (!result || error) {
+        toast.custom(() => (
+          <CustomToast text={error ?? "Failed to submit report"} type="error" />
+        ));
+        setIsSubmitting(false);
+        return;
+      }
+
       toast.custom(() => (
         <CustomToast
-          text="Report submitted successfully! Thank you for your feedback."
+          text="Report submitted successfully! Thank you kind human being. 😊"
           type="success"
         />
       ));
 
-      // Reset form
-      form.reset();
+      form.reset({
+        language: "nal",
+        subject: "",
+        message: "",
+        priority: "MEDIUM",
+        problemType: "OTHER",
+        contactEmail: "",
+        attachments: [],
+      });
       setAttachedFiles([]);
 
-      // Reset file input
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
@@ -189,7 +183,7 @@ function ReportPage() {
     }
   };
 
-  if (status === "loading") {
+  if (loading) {
     return <Loading />;
   }
 
@@ -215,7 +209,7 @@ function ReportPage() {
                   <Input
                     placeholder="e.g., Incorrect spelling on homepage"
                     {...field}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   />
                 </FormControl>
                 <FormMessage />
@@ -234,7 +228,7 @@ function ReportPage() {
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   >
                     <FormControl>
                       <SelectTrigger>
@@ -242,9 +236,7 @@ function ReportPage() {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="nal">
-                        Not a Language
-                      </SelectItem>
+                      <SelectItem value="nal">Not a Language</SelectItem>
                       {LANGUAGE_OPTIONS.map((opt) => (
                         <SelectItem key={opt.value} value={opt.value}>
                           {opt.label}
@@ -267,7 +259,7 @@ function ReportPage() {
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   >
                     <FormControl>
                       <SelectTrigger>
@@ -300,7 +292,7 @@ function ReportPage() {
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   >
                     <FormControl>
                       <SelectTrigger>
@@ -340,7 +332,7 @@ function ReportPage() {
                     placeholder="Please describe the issue in detail..."
                     className="min-h-[120px] resize-y"
                     {...field}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   />
                 </FormControl>
                 <FormMessage />
@@ -358,12 +350,10 @@ function ReportPage() {
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder={
-                      session?.user?.email ?? "your.email@example.com"
-                    }
+                    placeholder={user?.email ?? "your.email@example.com"}
                     {...field}
                     value={field.value ?? ""}
-                    disabled={isSubmitting}
+                    disabled={isProcessing}
                   />
                 </FormControl>
                 <FormMessage />
@@ -390,7 +380,7 @@ function ReportPage() {
                         variant="ghost"
                         size="sm"
                         onClick={() => removeFile(index)}
-                        disabled={isSubmitting}
+                        disabled={isProcessing}
                       >
                         &#x2715;
                       </Button>
@@ -407,7 +397,7 @@ function ReportPage() {
                 onChange={handleFileChange}
                 accept="image/*,application/pdf,.doc,.docx,.txt"
                 disabled={
-                  isSubmitting || attachedFiles.length >= MAX_ATTACHMENTS
+                  isProcessing || attachedFiles.length >= MAX_ATTACHMENTS
                 }
               />
               <Button
@@ -415,7 +405,7 @@ function ReportPage() {
                 className="cartoonish-btn w-full from-gray-500 to-gray-800"
                 onClick={() => fileInputRef.current?.click()}
                 disabled={
-                  isSubmitting || attachedFiles.length >= MAX_ATTACHMENTS
+                  isProcessing || attachedFiles.length >= MAX_ATTACHMENTS
                 }
               >
                 {attachedFiles.length >= MAX_ATTACHMENTS
@@ -437,9 +427,13 @@ function ReportPage() {
           <Button
             type="submit"
             className="cartoonish-btn mt-4 w-full from-blue-500 to-blue-800"
-            disabled={isSubmitting}
+            disabled={isProcessing}
           >
-            {isSubmitting ? "Submitting..." : "Submit Report"}
+            {uploadingFiles
+              ? "Uploading files..."
+              : isSubmitting
+                ? "Submitting..."
+                : "Submit Report"}
           </Button>
         </Card>
       </form>

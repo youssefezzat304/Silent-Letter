@@ -1,3 +1,4 @@
+import type { AuthError, User } from "next-auth";
 import type { Tables } from "./supabase";
 
 export interface WordEntryInterface {
@@ -23,5 +24,9 @@ export type ActionResult<T = void> =
   | { ok: true; data?: T }
   | { ok: false; error: ActionError };
 
-export type SupabaseUser = Tables<"users">
+export type SupabaseUser = Tables<"users">;
 
+export type SupabaseGetUserResp = {
+  data: { user: User | null } | null;
+  error: AuthError | null;
+};
