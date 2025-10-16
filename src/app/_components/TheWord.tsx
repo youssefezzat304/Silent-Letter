@@ -11,6 +11,7 @@ import { AiFillSound } from "react-icons/ai";
 import { GiFastForwardButton } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa6";
 import { useGetUser } from "~/hooks/useGetUser";
+import { createProfile } from "../api/actions/profile";
 
 export default function TheWord() {
   const { user, setUser, supabase } = useGetUser();
@@ -51,6 +52,25 @@ export default function TheWord() {
       subscription.unsubscribe();
     };
   }, [supabase, setUser]);
+
+  useEffect(() => {
+    const handleProfile = async () => {
+      if (!user) return; // Skip if no user
+
+      try {
+        const profile = await createProfile();
+        if (!profile) {
+          console.error("Profile handling failed");
+          // Optional: Add a toast or UI feedback if needed
+        }
+        // Optional: If you need to use the returned profile (e.g., for additional state), do so here
+      } catch (err) {
+        console.error("Error calling createProfile:", err);
+      }
+    };
+
+    void handleProfile();
+  }, [user]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

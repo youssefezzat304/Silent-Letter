@@ -35,6 +35,47 @@ export async function getProfile(): Promise<Profile | null> {
   }
 }
 
+export async function createProfile(): Promise<Profile | null> {
+  const supabase = await createClient();
+
+  const resp = (await supabase.auth.getUser()) as SupabaseGetUserResp;
+
+  const authError = resp.error;
+  if (authError) {
+    console.error("Supabase getUser error:", authError.message ?? authError);
+    return null;
+  }
+
+  const user = resp.data?.user ?? null;
+  if (!user) return null;
+
+  try {
+    const existingProfile = await db.profile.findUnique({
+      where: { id: user.id },
+    });
+
+    if (existingProfile) {
+      return existingProfile;
+    }
+
+    const newProfile = await db.profile.create({
+      data: {
+        id: user.id,
+        name: user.user_metadata.name || "Unknown",
+        image: user.user_metadata.avatar_url || null,
+      },
+    });
+    return newProfile;
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error("Error handling profile:", err.message);
+    } else {
+      console.error("Error handling profile:", String(err));
+    }
+    return null;
+  }
+}
+
 export async function updateProfileImageUrl(
   userId: string,
   imageUrl: string,

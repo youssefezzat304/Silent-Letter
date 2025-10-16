@@ -16,9 +16,6 @@ export async function signUp(email: string, password: string, name: string) {
     return { result: null, authError };
   }
 
-  console.log("DATABASE_URL:", process.env.DATABASE_URL);
-  console.log("DIRECT_URL:", process.env.DIRECT_URL);
-
   const result = await db.profile.create(
     {
       data: {
