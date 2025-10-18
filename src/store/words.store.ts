@@ -5,9 +5,27 @@ Better architecture with language-keyed cache.
 */
 
 import { create } from "zustand";
-import a1Data from "public/audio_files/en-US/index/A1_en_us_index.json";
 import type { WordEntryInterface, WordLanguagesCodes } from "~/types/types";
 import { useWordsSettingsStore } from "./wordsSettings.store";
+
+let a1Data: { entries: WordEntryInterface[] } = { entries: [] };
+
+if (typeof window !== "undefined") {
+  fetch("/audio_files/en-us/index/A1_en_us_index.json")
+    .then((res) => {
+      if (!res.ok) throw new Error(`Failed to fetch A1 data: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => {
+      a1Data = data as { entries: WordEntryInterface[] };
+      const store = useWordsStore.getState();
+      store.wordsCache["en-us"].A1 = a1Data.entries;
+      store.words = a1Data.entries.map((w) => w.word);
+    })
+    .catch((err) => {
+      console.error("Failed to load A1 data:", err);
+    });
+}
 
 type LanguageCache = Record<string, WordEntryInterface[]>;
 type WordsCache = Record<WordLanguagesCodes, LanguageCache>;
@@ -52,12 +70,10 @@ export const useWordsStore = create<WordsState>((set, get) => {
 
   return {
     wordsCache: {
-      "en-us": {
-        A1: a1Data.entries,
-      },
+      "en-us": {},
       "de-de": {},
     },
-    words: a1Data.entries.map((w) => w.word),
+    words: [],
     currentWord: undefined,
     currentWordLevel: undefined,
     answeredWords: [],
@@ -81,6 +97,10 @@ export const useWordsStore = create<WordsState>((set, get) => {
     },
 
     loadLevelsFromSettings: async (levels) => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
       const currentLanguage = useWordsSettingsStore.getState().language;
       const languageCache = get().getCurrentLanguageCache();
       const currentInFlight = get().inFlightLoads;
@@ -108,25 +128,35 @@ export const useWordsStore = create<WordsState>((set, get) => {
             throw new Error(`Unsupported language: ${currentLanguage}`);
           }
 
-          const importLevel = (await import(
-            `public/audio_files/${config.folder}/index/${level}${config.suffix}`,
-            { with: { type: "json" } }
-          )) as {
-            entries: WordEntryInterface[];
-            index: Record<string, number>;
-          };
-
-          const correctedEntries = importLevel.entries.map((entry) => {
-            const filename = entry.file.split("/").pop() ?? "";
-            const path = `/audio_files/${config.audioFolder}/${level}/${filename}`;
-
-            return {
-              ...entry,
-              file: path,
+          try {
+            const response = await fetch(
+              `/audio_files/${config.folder}/index/${level}${config.suffix}`,
+            );
+            if (!response.ok) {
+              throw new Error(
+                `Failed to fetch ${level} data: ${response.status}`,
+              );
+            }
+            const importLevel = (await response.json()) as {
+              entries: WordEntryInterface[];
+              index: Record<string, number>;
             };
-          });
 
-          return { level, words: correctedEntries };
+            const correctedEntries = importLevel.entries.map((entry) => {
+              const filename = entry.file.split("/").pop() ?? "";
+              const path = `/audio_files/${config.audioFolder}/${level}/${filename}`;
+
+              return {
+                ...entry,
+                file: path,
+              };
+            });
+
+            return { level, words: correctedEntries };
+          } catch (error) {
+            console.error(`Failed to load level ${level}:`, error);
+            return { level, words: [] };
+          }
         });
 
         const newlyLoaded = await Promise.all(loadedPromises);
@@ -200,6 +230,8 @@ export const useWordsStore = create<WordsState>((set, get) => {
     },
 
     playAudio: () => {
+      if (typeof window === "undefined") return;
+
       const audioFile = get().currentAudio;
       if (audioFile) {
         if (audio) {
@@ -223,26 +255,28 @@ export const useWordsStore = create<WordsState>((set, get) => {
   };
 });
 
-useWordsSettingsStore.subscribe((state, prevState) => {
-  const wordsStore = useWordsStore.getState();
+if (typeof window !== "undefined") {
+  useWordsSettingsStore.subscribe((state, prevState) => {
+    const wordsStore = useWordsStore.getState();
 
-  if (
-    !prevState ||
-    state.selectedLevels !== prevState.selectedLevels ||
-    state.language !== prevState.language
-  ) {
-    wordsStore
-      .loadLevelsFromSettings(state.selectedLevels)
-      .then(() => {
-        wordsStore.currentWord = wordsStore.pickRandom()?.word;
-      })
-      .catch(console.error);
-  }
-});
+    if (
+      !prevState ||
+      state.selectedLevels !== prevState.selectedLevels ||
+      state.language !== prevState.language
+    ) {
+      wordsStore
+        .loadLevelsFromSettings(state.selectedLevels)
+        .then(() => {
+          wordsStore.currentWord = wordsStore.pickRandom()?.word;
+        })
+        .catch(console.error);
+    }
+  });
 
-const initializeStore = async () => {
-  const initialLevels = useWordsSettingsStore.getState().selectedLevels;
-  await useWordsStore.getState().loadLevelsFromSettings(initialLevels);
-};
+  const initializeStore = async () => {
+    const initialLevels = useWordsSettingsStore.getState().selectedLevels;
+    await useWordsStore.getState().loadLevelsFromSettings(initialLevels);
+  };
 
-initializeStore().catch(console.error);
+  initializeStore().catch(console.error);
+}

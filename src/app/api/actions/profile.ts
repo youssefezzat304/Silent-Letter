@@ -1,23 +1,22 @@
+/* eslint-disable */
 "use server";
 
 import { createClient } from "~/lib/supabase/server";
 import { db } from "~/server/db";
 import type { Profile } from "@prisma/client";
-import type { SupabaseGetUserResp } from "~/types/types";
 import type { ProfileValues } from "~/schema/auth.schema";
 
 export async function getProfile(): Promise<Profile | null> {
   const supabase = await createClient();
 
-  const resp = (await supabase.auth.getUser()) as SupabaseGetUserResp;
+  const { data, error: authError } = await supabase.auth.getUser();
 
-  const authError = resp.error;
   if (authError) {
     console.error("Supabase getUser error:", authError.message ?? authError);
     return null;
   }
 
-  const user = resp.data?.user ?? null;
+  const user = data.user;
   if (!user) return null;
 
   try {
@@ -38,15 +37,14 @@ export async function getProfile(): Promise<Profile | null> {
 export async function createProfile(): Promise<Profile | null> {
   const supabase = await createClient();
 
-  const resp = (await supabase.auth.getUser()) as SupabaseGetUserResp;
+  const { data, error: authError } = await supabase.auth.getUser();
 
-  const authError = resp.error;
   if (authError) {
     console.error("Supabase getUser error:", authError.message ?? authError);
     return null;
   }
 
-  const user = resp.data?.user ?? null;
+  const user = data.user;
   if (!user) return null;
 
   try {
@@ -61,8 +59,8 @@ export async function createProfile(): Promise<Profile | null> {
     const newProfile = await db.profile.create({
       data: {
         id: user.id,
-        name: user.user_metadata.name || "Unknown",
-        image: user.user_metadata.avatar_url || null,
+        name: user.user_metadata.name ?? "Unknown",
+        image: user.user_metadata.avatar_url ?? null,
       },
     });
     return newProfile;

@@ -56,8 +56,6 @@ function ProfilePage() {
       try {
         const fetchedProfile = await getProfile();
 
-        console.log("Fetched profile:", fetchedProfile);
-
         if (!fetchedProfile) {
           console.warn("No profile found for user:", user?.id);
         }
@@ -70,6 +68,7 @@ function ProfilePage() {
     };
 
     void getUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [supabase]);
 
   useEffect(() => {
@@ -202,6 +201,8 @@ function ProfilePage() {
           type="error"
         />
       ));
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

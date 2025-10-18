@@ -21,9 +21,7 @@ import Loading from "../loading";
 import InputError from "../_components/ui/InputError";
 import { useAuth } from "~/hooks/useAuth";
 import { createClient } from "~/lib/supabase/client";
-import { toast } from "sonner";
-import CustomToast from "../_components/ui/CustomToast";
-import { login } from "../api/actions/auth";
+
 
 function AuthPage() {
   const [isPending, startTransition] = useTransition();

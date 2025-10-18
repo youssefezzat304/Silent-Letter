@@ -4,16 +4,16 @@ import { cookies } from "next/headers";
 export async function createClient() {
   const cookieStore = await cookies();
 
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL in server env");
+  if (!process.env.SUPABASE_URL) {
+    throw new Error("Missing SUPABASE_URL in server env");
   }
-  if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    throw new Error("Missing NEXT_PUBLIC_SUPABASE_ANON_KEY in server env");
+  if (!process.env.SUPABASE_ANON_KEY) {
+    throw new Error("Missing SUPABASE_ANON_KEY in server env");
   }
 
   return createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    process.env.SUPABASE_URL,
+    process.env.SUPABASE_ANON_KEY,
     {
       cookies: {
         getAll() {

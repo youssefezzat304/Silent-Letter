@@ -1,0 +1,6657 @@
+{
+  "entries": [
+    {
+      "id": "000001",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 1,
+      "word": "abc",
+      "slug": "abc",
+      "file": "/audio_files/de-de/A1/A1_000001_abc.mp3"
+    },
+    {
+      "id": "000002",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 2,
+      "word": "abend",
+      "slug": "abend",
+      "file": "/audio_files/de-de/A1/A1_000002_abend.mp3"
+    },
+    {
+      "id": "000003",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 3,
+      "word": "abendbrot",
+      "slug": "abendbrot",
+      "file": "/audio_files/de-de/A1/A1_000003_abendbrot.mp3"
+    },
+    {
+      "id": "000004",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 4,
+      "word": "abendessen",
+      "slug": "abendessen",
+      "file": "/audio_files/de-de/A1/A1_000004_abendessen.mp3"
+    },
+    {
+      "id": "000005",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 5,
+      "word": "abends",
+      "slug": "abends",
+      "file": "/audio_files/de-de/A1/A1_000005_abends.mp3"
+    },
+    {
+      "id": "000006",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 6,
+      "word": "acht",
+      "slug": "acht",
+      "file": "/audio_files/de-de/A1/A1_000006_acht.mp3"
+    },
+    {
+      "id": "000007",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 7,
+      "word": "achtzehn",
+      "slug": "achtzehn",
+      "file": "/audio_files/de-de/A1/A1_000007_achtzehn.mp3"
+    },
+    {
+      "id": "000008",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 8,
+      "word": "achtzig",
+      "slug": "achtzig",
+      "file": "/audio_files/de-de/A1/A1_000008_achtzig.mp3"
+    },
+    {
+      "id": "000009",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 9,
+      "word": "adresse",
+      "slug": "adresse",
+      "file": "/audio_files/de-de/A1/A1_000009_adresse.mp3"
+    },
+    {
+      "id": "000010",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 10,
+      "word": "all",
+      "slug": "all",
+      "file": "/audio_files/de-de/A1/A1_000010_all.mp3"
+    },
+    {
+      "id": "000011",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 11,
+      "word": "alphabet",
+      "slug": "alphabet",
+      "file": "/audio_files/de-de/A1/A1_000011_alphabet.mp3"
+    },
+    {
+      "id": "000012",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 12,
+      "word": "also",
+      "slug": "also",
+      "file": "/audio_files/de-de/A1/A1_000012_also.mp3"
+    },
+    {
+      "id": "000013",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 13,
+      "word": "alt",
+      "slug": "alt",
+      "file": "/audio_files/de-de/A1/A1_000013_alt.mp3"
+    },
+    {
+      "id": "000014",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 14,
+      "word": "alter",
+      "slug": "alter",
+      "file": "/audio_files/de-de/A1/A1_000014_alter.mp3"
+    },
+    {
+      "id": "000015",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 15,
+      "word": "amerikanerin",
+      "slug": "amerikanerin",
+      "file": "/audio_files/de-de/A1/A1_000015_amerikanerin.mp3"
+    },
+    {
+      "id": "000016",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 16,
+      "word": "ampel",
+      "slug": "ampel",
+      "file": "/audio_files/de-de/A1/A1_000016_ampel.mp3"
+    },
+    {
+      "id": "000017",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 17,
+      "word": "ander",
+      "slug": "ander",
+      "file": "/audio_files/de-de/A1/A1_000017_ander.mp3"
+    },
+    {
+      "id": "000018",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 18,
+      "word": "anfang",
+      "slug": "anfang",
+      "file": "/audio_files/de-de/A1/A1_000018_anfang.mp3"
+    },
+    {
+      "id": "000019",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 19,
+      "word": "anfangen",
+      "slug": "anfangen",
+      "file": "/audio_files/de-de/A1/A1_000019_anfangen.mp3"
+    },
+    {
+      "id": "000020",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 20,
+      "word": "anfänger",
+      "slug": "anfänger",
+      "file": "/audio_files/de-de/A1/A1_000020_anfänger.mp3"
+    },
+    {
+      "id": "000021",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 21,
+      "word": "ankommen",
+      "slug": "ankommen",
+      "file": "/audio_files/de-de/A1/A1_000021_ankommen.mp3"
+    },
+    {
+      "id": "000022",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 22,
+      "word": "anruf",
+      "slug": "anruf",
+      "file": "/audio_files/de-de/A1/A1_000022_anruf.mp3"
+    },
+    {
+      "id": "000023",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 23,
+      "word": "anrufen",
+      "slug": "anrufen",
+      "file": "/audio_files/de-de/A1/A1_000023_anrufen.mp3"
+    },
+    {
+      "id": "000024",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 24,
+      "word": "anschalten",
+      "slug": "anschalten",
+      "file": "/audio_files/de-de/A1/A1_000024_anschalten.mp3"
+    },
+    {
+      "id": "000025",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 25,
+      "word": "antwort",
+      "slug": "antwort",
+      "file": "/audio_files/de-de/A1/A1_000025_antwort.mp3"
+    },
+    {
+      "id": "000026",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 26,
+      "word": "antworten",
+      "slug": "antworten",
+      "file": "/audio_files/de-de/A1/A1_000026_antworten.mp3"
+    },
+    {
+      "id": "000027",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 27,
+      "word": "apfel",
+      "slug": "apfel",
+      "file": "/audio_files/de-de/A1/A1_000027_apfel.mp3"
+    },
+    {
+      "id": "000028",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 28,
+      "word": "apfelkuchen",
+      "slug": "apfelkuchen",
+      "file": "/audio_files/de-de/A1/A1_000028_apfelkuchen.mp3"
+    },
+    {
+      "id": "000029",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 29,
+      "word": "apfelsaft",
+      "slug": "apfelsaft",
+      "file": "/audio_files/de-de/A1/A1_000029_apfelsaft.mp3"
+    },
+    {
+      "id": "000030",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 30,
+      "word": "april",
+      "slug": "april",
+      "file": "/audio_files/de-de/A1/A1_000030_april.mp3"
+    },
+    {
+      "id": "000031",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 31,
+      "word": "arbeit",
+      "slug": "arbeit",
+      "file": "/audio_files/de-de/A1/A1_000031_arbeit.mp3"
+    },
+    {
+      "id": "000032",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 32,
+      "word": "arbeiten",
+      "slug": "arbeiten",
+      "file": "/audio_files/de-de/A1/A1_000032_arbeiten.mp3"
+    },
+    {
+      "id": "000033",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 33,
+      "word": "arm",
+      "slug": "arm",
+      "file": "/audio_files/de-de/A1/A1_000033_arm.mp3"
+    },
+    {
+      "id": "000034",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 34,
+      "word": "arzt",
+      "slug": "arzt",
+      "file": "/audio_files/de-de/A1/A1_000034_arzt.mp3"
+    },
+    {
+      "id": "000035",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 35,
+      "word": "auch",
+      "slug": "auch",
+      "file": "/audio_files/de-de/A1/A1_000035_auch.mp3"
+    },
+    {
+      "id": "000036",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 36,
+      "word": "aufgabe",
+      "slug": "aufgabe",
+      "file": "/audio_files/de-de/A1/A1_000036_aufgabe.mp3"
+    },
+    {
+      "id": "000037",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 37,
+      "word": "aufpassen",
+      "slug": "aufpassen",
+      "file": "/audio_files/de-de/A1/A1_000037_aufpassen.mp3"
+    },
+    {
+      "id": "000038",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 38,
+      "word": "aufstehen",
+      "slug": "aufstehen",
+      "file": "/audio_files/de-de/A1/A1_000038_aufstehen.mp3"
+    },
+    {
+      "id": "000039",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 39,
+      "word": "aufwachen",
+      "slug": "aufwachen",
+      "file": "/audio_files/de-de/A1/A1_000039_aufwachen.mp3"
+    },
+    {
+      "id": "000040",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 40,
+      "word": "auge",
+      "slug": "auge",
+      "file": "/audio_files/de-de/A1/A1_000040_auge.mp3"
+    },
+    {
+      "id": "000041",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 41,
+      "word": "ausruhen",
+      "slug": "ausruhen",
+      "file": "/audio_files/de-de/A1/A1_000041_ausruhen.mp3"
+    },
+    {
+      "id": "000042",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 42,
+      "word": "auto",
+      "slug": "auto",
+      "file": "/audio_files/de-de/A1/A1_000042_auto.mp3"
+    },
+    {
+      "id": "000043",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 43,
+      "word": "autoschlüssel",
+      "slug": "autoschlüssel",
+      "file": "/audio_files/de-de/A1/A1_000043_autoschlüssel.mp3"
+    },
+    {
+      "id": "000044",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 44,
+      "word": "baby",
+      "slug": "baby",
+      "file": "/audio_files/de-de/A1/A1_000044_baby.mp3"
+    },
+    {
+      "id": "000045",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 45,
+      "word": "bad",
+      "slug": "bad",
+      "file": "/audio_files/de-de/A1/A1_000045_bad.mp3"
+    },
+    {
+      "id": "000046",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 46,
+      "word": "baden",
+      "slug": "baden",
+      "file": "/audio_files/de-de/A1/A1_000046_baden.mp3"
+    },
+    {
+      "id": "000047",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 47,
+      "word": "badezimmer",
+      "slug": "badezimmer",
+      "file": "/audio_files/de-de/A1/A1_000047_badezimmer.mp3"
+    },
+    {
+      "id": "000048",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 48,
+      "word": "bahn",
+      "slug": "bahn",
+      "file": "/audio_files/de-de/A1/A1_000048_bahn.mp3"
+    },
+    {
+      "id": "000049",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 49,
+      "word": "bahnhof",
+      "slug": "bahnhof",
+      "file": "/audio_files/de-de/A1/A1_000049_bahnhof.mp3"
+    },
+    {
+      "id": "000050",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 50,
+      "word": "bald",
+      "slug": "bald",
+      "file": "/audio_files/de-de/A1/A1_000050_bald.mp3"
+    },
+    {
+      "id": "000051",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 51,
+      "word": "ball",
+      "slug": "ball",
+      "file": "/audio_files/de-de/A1/A1_000051_ball.mp3"
+    },
+    {
+      "id": "000052",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 52,
+      "word": "banane",
+      "slug": "banane",
+      "file": "/audio_files/de-de/A1/A1_000052_banane.mp3"
+    },
+    {
+      "id": "000053",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 53,
+      "word": "bank",
+      "slug": "bank",
+      "file": "/audio_files/de-de/A1/A1_000053_bank.mp3"
+    },
+    {
+      "id": "000054",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 54,
+      "word": "baum",
+      "slug": "baum",
+      "file": "/audio_files/de-de/A1/A1_000054_baum.mp3"
+    },
+    {
+      "id": "000055",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 55,
+      "word": "becher",
+      "slug": "becher",
+      "file": "/audio_files/de-de/A1/A1_000055_becher.mp3"
+    },
+    {
+      "id": "000056",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 56,
+      "word": "beginnen",
+      "slug": "beginnen",
+      "file": "/audio_files/de-de/A1/A1_000056_beginnen.mp3"
+    },
+    {
+      "id": "000057",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 57,
+      "word": "beide",
+      "slug": "beide",
+      "file": "/audio_files/de-de/A1/A1_000057_beide.mp3"
+    },
+    {
+      "id": "000058",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 58,
+      "word": "bein",
+      "slug": "bein",
+      "file": "/audio_files/de-de/A1/A1_000058_bein.mp3"
+    },
+    {
+      "id": "000059",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 59,
+      "word": "bekommen",
+      "slug": "bekommen",
+      "file": "/audio_files/de-de/A1/A1_000059_bekommen.mp3"
+    },
+    {
+      "id": "000060",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 60,
+      "word": "benutzen",
+      "slug": "benutzen",
+      "file": "/audio_files/de-de/A1/A1_000060_benutzen.mp3"
+    },
+    {
+      "id": "000061",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 61,
+      "word": "berg",
+      "slug": "berg",
+      "file": "/audio_files/de-de/A1/A1_000061_berg.mp3"
+    },
+    {
+      "id": "000062",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 62,
+      "word": "beruf",
+      "slug": "beruf",
+      "file": "/audio_files/de-de/A1/A1_000062_beruf.mp3"
+    },
+    {
+      "id": "000063",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 63,
+      "word": "best",
+      "slug": "best",
+      "file": "/audio_files/de-de/A1/A1_000063_best.mp3"
+    },
+    {
+      "id": "000064",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 64,
+      "word": "besuch",
+      "slug": "besuch",
+      "file": "/audio_files/de-de/A1/A1_000064_besuch.mp3"
+    },
+    {
+      "id": "000065",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 65,
+      "word": "besuchen",
+      "slug": "besuchen",
+      "file": "/audio_files/de-de/A1/A1_000065_besuchen.mp3"
+    },
+    {
+      "id": "000066",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 66,
+      "word": "bett",
+      "slug": "bett",
+      "file": "/audio_files/de-de/A1/A1_000066_bett.mp3"
+    },
+    {
+      "id": "000067",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 67,
+      "word": "bibliothek",
+      "slug": "bibliothek",
+      "file": "/audio_files/de-de/A1/A1_000067_bibliothek.mp3"
+    },
+    {
+      "id": "000068",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 68,
+      "word": "bier",
+      "slug": "bier",
+      "file": "/audio_files/de-de/A1/A1_000068_bier.mp3"
+    },
+    {
+      "id": "000069",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 69,
+      "word": "bild",
+      "slug": "bild",
+      "file": "/audio_files/de-de/A1/A1_000069_bild.mp3"
+    },
+    {
+      "id": "000070",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 70,
+      "word": "birne",
+      "slug": "birne",
+      "file": "/audio_files/de-de/A1/A1_000070_birne.mp3"
+    },
+    {
+      "id": "000071",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 71,
+      "word": "bitte",
+      "slug": "bitte",
+      "file": "/audio_files/de-de/A1/A1_000071_bitte.mp3"
+    },
+    {
+      "id": "000072",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 72,
+      "word": "blau",
+      "slug": "blau",
+      "file": "/audio_files/de-de/A1/A1_000072_blau.mp3"
+    },
+    {
+      "id": "000073",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 73,
+      "word": "bleiben",
+      "slug": "bleiben",
+      "file": "/audio_files/de-de/A1/A1_000073_bleiben.mp3"
+    },
+    {
+      "id": "000074",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 74,
+      "word": "bleistift",
+      "slug": "bleistift",
+      "file": "/audio_files/de-de/A1/A1_000074_bleistift.mp3"
+    },
+    {
+      "id": "000075",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 75,
+      "word": "blond",
+      "slug": "blond",
+      "file": "/audio_files/de-de/A1/A1_000075_blond.mp3"
+    },
+    {
+      "id": "000076",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 76,
+      "word": "blume",
+      "slug": "blume",
+      "file": "/audio_files/de-de/A1/A1_000076_blume.mp3"
+    },
+    {
+      "id": "000077",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 77,
+      "word": "bluse",
+      "slug": "bluse",
+      "file": "/audio_files/de-de/A1/A1_000077_bluse.mp3"
+    },
+    {
+      "id": "000078",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 78,
+      "word": "bratwurst",
+      "slug": "bratwurst",
+      "file": "/audio_files/de-de/A1/A1_000078_bratwurst.mp3"
+    },
+    {
+      "id": "000079",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 79,
+      "word": "brauchen",
+      "slug": "brauchen",
+      "file": "/audio_files/de-de/A1/A1_000079_brauchen.mp3"
+    },
+    {
+      "id": "000080",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 80,
+      "word": "braun",
+      "slug": "braun",
+      "file": "/audio_files/de-de/A1/A1_000080_braun.mp3"
+    },
+    {
+      "id": "000081",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 81,
+      "word": "brief",
+      "slug": "brief",
+      "file": "/audio_files/de-de/A1/A1_000081_brief.mp3"
+    },
+    {
+      "id": "000082",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 82,
+      "word": "bringen",
+      "slug": "bringen",
+      "file": "/audio_files/de-de/A1/A1_000082_bringen.mp3"
+    },
+    {
+      "id": "000083",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 83,
+      "word": "brot",
+      "slug": "brot",
+      "file": "/audio_files/de-de/A1/A1_000083_brot.mp3"
+    },
+    {
+      "id": "000084",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 84,
+      "word": "bruder",
+      "slug": "bruder",
+      "file": "/audio_files/de-de/A1/A1_000084_bruder.mp3"
+    },
+    {
+      "id": "000085",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 85,
+      "word": "brötchen",
+      "slug": "brötchen",
+      "file": "/audio_files/de-de/A1/A1_000085_brötchen.mp3"
+    },
+    {
+      "id": "000086",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 86,
+      "word": "buch",
+      "slug": "buch",
+      "file": "/audio_files/de-de/A1/A1_000086_buch.mp3"
+    },
+    {
+      "id": "000087",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 87,
+      "word": "buchstabe",
+      "slug": "buchstabe",
+      "file": "/audio_files/de-de/A1/A1_000087_buchstabe.mp3"
+    },
+    {
+      "id": "000088",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 88,
+      "word": "bunt",
+      "slug": "bunt",
+      "file": "/audio_files/de-de/A1/A1_000088_bunt.mp3"
+    },
+    {
+      "id": "000089",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 89,
+      "word": "burger",
+      "slug": "burger",
+      "file": "/audio_files/de-de/A1/A1_000089_burger.mp3"
+    },
+    {
+      "id": "000090",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 90,
+      "word": "bus",
+      "slug": "bus",
+      "file": "/audio_files/de-de/A1/A1_000090_bus.mp3"
+    },
+    {
+      "id": "000091",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 91,
+      "word": "bushaltestelle",
+      "slug": "bushaltestelle",
+      "file": "/audio_files/de-de/A1/A1_000091_bushaltestelle.mp3"
+    },
+    {
+      "id": "000092",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 92,
+      "word": "butter",
+      "slug": "butter",
+      "file": "/audio_files/de-de/A1/A1_000092_butter.mp3"
+    },
+    {
+      "id": "000093",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 93,
+      "word": "bäcker",
+      "slug": "bäcker",
+      "file": "/audio_files/de-de/A1/A1_000093_bäcker.mp3"
+    },
+    {
+      "id": "000094",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 94,
+      "word": "bäckerei",
+      "slug": "bäckerei",
+      "file": "/audio_files/de-de/A1/A1_000094_bäckerei.mp3"
+    },
+    {
+      "id": "000095",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 95,
+      "word": "büro",
+      "slug": "büro",
+      "file": "/audio_files/de-de/A1/A1_000095_büro.mp3"
+    },
+    {
+      "id": "000096",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 96,
+      "word": "bürste",
+      "slug": "bürste",
+      "file": "/audio_files/de-de/A1/A1_000096_bürste.mp3"
+    },
+    {
+      "id": "000097",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 97,
+      "word": "caf",
+      "slug": "caf",
+      "file": "/audio_files/de-de/A1/A1_000097_caf.mp3"
+    },
+    {
+      "id": "000098",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 98,
+      "word": "cappuccino",
+      "slug": "cappuccino",
+      "file": "/audio_files/de-de/A1/A1_000098_cappuccino.mp3"
+    },
+    {
+      "id": "000099",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 99,
+      "word": "cent",
+      "slug": "cent",
+      "file": "/audio_files/de-de/A1/A1_000099_cent.mp3"
+    },
+    {
+      "id": "000100",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 100,
+      "word": "cola",
+      "slug": "cola",
+      "file": "/audio_files/de-de/A1/A1_000100_cola.mp3"
+    },
+    {
+      "id": "000101",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 101,
+      "word": "computer",
+      "slug": "computer",
+      "file": "/audio_files/de-de/A1/A1_000101_computer.mp3"
+    },
+    {
+      "id": "000102",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 102,
+      "word": "cornflakes",
+      "slug": "cornflakes",
+      "file": "/audio_files/de-de/A1/A1_000102_cornflakes.mp3"
+    },
+    {
+      "id": "000103",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 103,
+      "word": "danken",
+      "slug": "danken",
+      "file": "/audio_files/de-de/A1/A1_000103_danken.mp3"
+    },
+    {
+      "id": "000104",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 104,
+      "word": "dann",
+      "slug": "dann",
+      "file": "/audio_files/de-de/A1/A1_000104_dann.mp3"
+    },
+    {
+      "id": "000105",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 105,
+      "word": "dauern",
+      "slug": "dauern",
+      "file": "/audio_files/de-de/A1/A1_000105_dauern.mp3"
+    },
+    {
+      "id": "000106",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 106,
+      "word": "decke",
+      "slug": "decke",
+      "file": "/audio_files/de-de/A1/A1_000106_decke.mp3"
+    },
+    {
+      "id": "000107",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 107,
+      "word": "denken",
+      "slug": "denken",
+      "file": "/audio_files/de-de/A1/A1_000107_denken.mp3"
+    },
+    {
+      "id": "000108",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 108,
+      "word": "deutsch",
+      "slug": "deutsch",
+      "file": "/audio_files/de-de/A1/A1_000108_deutsch.mp3"
+    },
+    {
+      "id": "000109",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 109,
+      "word": "dezember",
+      "slug": "dezember",
+      "file": "/audio_files/de-de/A1/A1_000109_dezember.mp3"
+    },
+    {
+      "id": "000110",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 110,
+      "word": "dienstag",
+      "slug": "dienstag",
+      "file": "/audio_files/de-de/A1/A1_000110_dienstag.mp3"
+    },
+    {
+      "id": "000111",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 111,
+      "word": "dienstagabend",
+      "slug": "dienstagabend",
+      "file": "/audio_files/de-de/A1/A1_000111_dienstagabend.mp3"
+    },
+    {
+      "id": "000112",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 112,
+      "word": "ding",
+      "slug": "ding",
+      "file": "/audio_files/de-de/A1/A1_000112_ding.mp3"
+    },
+    {
+      "id": "000113",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 113,
+      "word": "donnerstag",
+      "slug": "donnerstag",
+      "file": "/audio_files/de-de/A1/A1_000113_donnerstag.mp3"
+    },
+    {
+      "id": "000114",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 114,
+      "word": "dorf",
+      "slug": "dorf",
+      "file": "/audio_files/de-de/A1/A1_000114_dorf.mp3"
+    },
+    {
+      "id": "000115",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 115,
+      "word": "dort",
+      "slug": "dort",
+      "file": "/audio_files/de-de/A1/A1_000115_dort.mp3"
+    },
+    {
+      "id": "000116",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 116,
+      "word": "drei",
+      "slug": "drei",
+      "file": "/audio_files/de-de/A1/A1_000116_drei.mp3"
+    },
+    {
+      "id": "000117",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 117,
+      "word": "dreihundert",
+      "slug": "dreihundert",
+      "file": "/audio_files/de-de/A1/A1_000117_dreihundert.mp3"
+    },
+    {
+      "id": "000118",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 118,
+      "word": "dreimal",
+      "slug": "dreimal",
+      "file": "/audio_files/de-de/A1/A1_000118_dreimal.mp3"
+    },
+    {
+      "id": "000119",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 119,
+      "word": "dreissig",
+      "slug": "dreissig",
+      "file": "/audio_files/de-de/A1/A1_000119_dreissig.mp3"
+    },
+    {
+      "id": "000120",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 120,
+      "word": "dreizehn",
+      "slug": "dreizehn",
+      "file": "/audio_files/de-de/A1/A1_000120_dreizehn.mp3"
+    },
+    {
+      "id": "000121",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 121,
+      "word": "dritte",
+      "slug": "dritte",
+      "file": "/audio_files/de-de/A1/A1_000121_dritte.mp3"
+    },
+    {
+      "id": "000122",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 122,
+      "word": "dunkel",
+      "slug": "dunkel",
+      "file": "/audio_files/de-de/A1/A1_000122_dunkel.mp3"
+    },
+    {
+      "id": "000123",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 123,
+      "word": "durst",
+      "slug": "durst",
+      "file": "/audio_files/de-de/A1/A1_000123_durst.mp3"
+    },
+    {
+      "id": "000124",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 124,
+      "word": "dusche",
+      "slug": "dusche",
+      "file": "/audio_files/de-de/A1/A1_000124_dusche.mp3"
+    },
+    {
+      "id": "000125",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 125,
+      "word": "duschen",
+      "slug": "duschen",
+      "file": "/audio_files/de-de/A1/A1_000125_duschen.mp3"
+    },
+    {
+      "id": "000126",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 126,
+      "word": "eineinhalb",
+      "slug": "eineinhalb",
+      "file": "/audio_files/de-de/A1/A1_000126_eineinhalb.mp3"
+    },
+    {
+      "id": "000127",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 127,
+      "word": "einfach",
+      "slug": "einfach",
+      "file": "/audio_files/de-de/A1/A1_000127_einfach.mp3"
+    },
+    {
+      "id": "000128",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 128,
+      "word": "eingang",
+      "slug": "eingang",
+      "file": "/audio_files/de-de/A1/A1_000128_eingang.mp3"
+    },
+    {
+      "id": "000129",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 129,
+      "word": "einhundert",
+      "slug": "einhundert",
+      "file": "/audio_files/de-de/A1/A1_000129_einhundert.mp3"
+    },
+    {
+      "id": "000130",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 130,
+      "word": "einkaufen",
+      "slug": "einkaufen",
+      "file": "/audio_files/de-de/A1/A1_000130_einkaufen.mp3"
+    },
+    {
+      "id": "000131",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 131,
+      "word": "einmal",
+      "slug": "einmal",
+      "file": "/audio_files/de-de/A1/A1_000131_einmal.mp3"
+    },
+    {
+      "id": "000132",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 132,
+      "word": "eins",
+      "slug": "eins",
+      "file": "/audio_files/de-de/A1/A1_000132_eins.mp3"
+    },
+    {
+      "id": "000133",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 133,
+      "word": "einsteigen",
+      "slug": "einsteigen",
+      "file": "/audio_files/de-de/A1/A1_000133_einsteigen.mp3"
+    },
+    {
+      "id": "000134",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 134,
+      "word": "eis",
+      "slug": "eis",
+      "file": "/audio_files/de-de/A1/A1_000134_eis.mp3"
+    },
+    {
+      "id": "000135",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 135,
+      "word": "elf",
+      "slug": "elf",
+      "file": "/audio_files/de-de/A1/A1_000135_elf.mp3"
+    },
+    {
+      "id": "000136",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 136,
+      "word": "ende",
+      "slug": "ende",
+      "file": "/audio_files/de-de/A1/A1_000136_ende.mp3"
+    },
+    {
+      "id": "000137",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 137,
+      "word": "englisch",
+      "slug": "englisch",
+      "file": "/audio_files/de-de/A1/A1_000137_englisch.mp3"
+    },
+    {
+      "id": "000138",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 138,
+      "word": "entschuldigen",
+      "slug": "entschuldigen",
+      "file": "/audio_files/de-de/A1/A1_000138_entschuldigen.mp3"
+    },
+    {
+      "id": "000139",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 139,
+      "word": "entschuldigung",
+      "slug": "entschuldigung",
+      "file": "/audio_files/de-de/A1/A1_000139_entschuldigung.mp3"
+    },
+    {
+      "id": "000140",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 140,
+      "word": "erdbeere",
+      "slug": "erdbeere",
+      "file": "/audio_files/de-de/A1/A1_000140_erdbeere.mp3"
+    },
+    {
+      "id": "000141",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 141,
+      "word": "essen",
+      "slug": "essen",
+      "file": "/audio_files/de-de/A1/A1_000141_essen.mp3"
+    },
+    {
+      "id": "000142",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 142,
+      "word": "euro",
+      "slug": "euro",
+      "file": "/audio_files/de-de/A1/A1_000142_euro.mp3"
+    },
+    {
+      "id": "000143",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 143,
+      "word": "fahren",
+      "slug": "fahren",
+      "file": "/audio_files/de-de/A1/A1_000143_fahren.mp3"
+    },
+    {
+      "id": "000144",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 144,
+      "word": "fahrer",
+      "slug": "fahrer",
+      "file": "/audio_files/de-de/A1/A1_000144_fahrer.mp3"
+    },
+    {
+      "id": "000145",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 145,
+      "word": "fahrrad",
+      "slug": "fahrrad",
+      "file": "/audio_files/de-de/A1/A1_000145_fahrrad.mp3"
+    },
+    {
+      "id": "000146",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 146,
+      "word": "fallen",
+      "slug": "fallen",
+      "file": "/audio_files/de-de/A1/A1_000146_fallen.mp3"
+    },
+    {
+      "id": "000147",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 147,
+      "word": "falsch",
+      "slug": "falsch",
+      "file": "/audio_files/de-de/A1/A1_000147_falsch.mp3"
+    },
+    {
+      "id": "000148",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 148,
+      "word": "familie",
+      "slug": "familie",
+      "file": "/audio_files/de-de/A1/A1_000148_familie.mp3"
+    },
+    {
+      "id": "000149",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 149,
+      "word": "farbe",
+      "slug": "farbe",
+      "file": "/audio_files/de-de/A1/A1_000149_farbe.mp3"
+    },
+    {
+      "id": "000150",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 150,
+      "word": "fast",
+      "slug": "fast",
+      "file": "/audio_files/de-de/A1/A1_000150_fast.mp3"
+    },
+    {
+      "id": "000151",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 151,
+      "word": "feb",
+      "slug": "feb",
+      "file": "/audio_files/de-de/A1/A1_000151_feb.mp3"
+    },
+    {
+      "id": "000152",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 152,
+      "word": "februar",
+      "slug": "februar",
+      "file": "/audio_files/de-de/A1/A1_000152_februar.mp3"
+    },
+    {
+      "id": "000153",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 153,
+      "word": "fehlen",
+      "slug": "fehlen",
+      "file": "/audio_files/de-de/A1/A1_000153_fehlen.mp3"
+    },
+    {
+      "id": "000154",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 154,
+      "word": "fehler",
+      "slug": "fehler",
+      "file": "/audio_files/de-de/A1/A1_000154_fehler.mp3"
+    },
+    {
+      "id": "000155",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 155,
+      "word": "feiern",
+      "slug": "feiern",
+      "file": "/audio_files/de-de/A1/A1_000155_feiern.mp3"
+    },
+    {
+      "id": "000156",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 156,
+      "word": "fenster",
+      "slug": "fenster",
+      "file": "/audio_files/de-de/A1/A1_000156_fenster.mp3"
+    },
+    {
+      "id": "000157",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 157,
+      "word": "fernseher",
+      "slug": "fernseher",
+      "file": "/audio_files/de-de/A1/A1_000157_fernseher.mp3"
+    },
+    {
+      "id": "000158",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 158,
+      "word": "fertig",
+      "slug": "fertig",
+      "file": "/audio_files/de-de/A1/A1_000158_fertig.mp3"
+    },
+    {
+      "id": "000159",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 159,
+      "word": "film",
+      "slug": "film",
+      "file": "/audio_files/de-de/A1/A1_000159_film.mp3"
+    },
+    {
+      "id": "000160",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 160,
+      "word": "finden",
+      "slug": "finden",
+      "file": "/audio_files/de-de/A1/A1_000160_finden.mp3"
+    },
+    {
+      "id": "000161",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 161,
+      "word": "finger",
+      "slug": "finger",
+      "file": "/audio_files/de-de/A1/A1_000161_finger.mp3"
+    },
+    {
+      "id": "000162",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 162,
+      "word": "fisch",
+      "slug": "fisch",
+      "file": "/audio_files/de-de/A1/A1_000162_fisch.mp3"
+    },
+    {
+      "id": "000163",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 163,
+      "word": "flasche",
+      "slug": "flasche",
+      "file": "/audio_files/de-de/A1/A1_000163_flasche.mp3"
+    },
+    {
+      "id": "000164",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 164,
+      "word": "fleisch",
+      "slug": "fleisch",
+      "file": "/audio_files/de-de/A1/A1_000164_fleisch.mp3"
+    },
+    {
+      "id": "000165",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 165,
+      "word": "fliegen",
+      "slug": "fliegen",
+      "file": "/audio_files/de-de/A1/A1_000165_fliegen.mp3"
+    },
+    {
+      "id": "000166",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 166,
+      "word": "flughafen",
+      "slug": "flughafen",
+      "file": "/audio_files/de-de/A1/A1_000166_flughafen.mp3"
+    },
+    {
+      "id": "000167",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 167,
+      "word": "flugzeug",
+      "slug": "flugzeug",
+      "file": "/audio_files/de-de/A1/A1_000167_flugzeug.mp3"
+    },
+    {
+      "id": "000168",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 168,
+      "word": "fluss",
+      "slug": "fluss",
+      "file": "/audio_files/de-de/A1/A1_000168_fluss.mp3"
+    },
+    {
+      "id": "000169",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 169,
+      "word": "formular",
+      "slug": "formular",
+      "file": "/audio_files/de-de/A1/A1_000169_formular.mp3"
+    },
+    {
+      "id": "000170",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 170,
+      "word": "foto",
+      "slug": "foto",
+      "file": "/audio_files/de-de/A1/A1_000170_foto.mp3"
+    },
+    {
+      "id": "000171",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 171,
+      "word": "frage",
+      "slug": "frage",
+      "file": "/audio_files/de-de/A1/A1_000171_frage.mp3"
+    },
+    {
+      "id": "000172",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 172,
+      "word": "fragen",
+      "slug": "fragen",
+      "file": "/audio_files/de-de/A1/A1_000172_fragen.mp3"
+    },
+    {
+      "id": "000173",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 173,
+      "word": "französisch",
+      "slug": "französisch",
+      "file": "/audio_files/de-de/A1/A1_000173_französisch.mp3"
+    },
+    {
+      "id": "000174",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 174,
+      "word": "frau",
+      "slug": "frau",
+      "file": "/audio_files/de-de/A1/A1_000174_frau.mp3"
+    },
+    {
+      "id": "000175",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 175,
+      "word": "frei",
+      "slug": "frei",
+      "file": "/audio_files/de-de/A1/A1_000175_frei.mp3"
+    },
+    {
+      "id": "000176",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 176,
+      "word": "freitag",
+      "slug": "freitag",
+      "file": "/audio_files/de-de/A1/A1_000176_freitag.mp3"
+    },
+    {
+      "id": "000177",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 177,
+      "word": "freitagnachmittag",
+      "slug": "freitagnachmittag",
+      "file": "/audio_files/de-de/A1/A1_000177_freitagnachmittag.mp3"
+    },
+    {
+      "id": "000178",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 178,
+      "word": "freizeit",
+      "slug": "freizeit",
+      "file": "/audio_files/de-de/A1/A1_000178_freizeit.mp3"
+    },
+    {
+      "id": "000179",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 179,
+      "word": "freund",
+      "slug": "freund",
+      "file": "/audio_files/de-de/A1/A1_000179_freund.mp3"
+    },
+    {
+      "id": "000180",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 180,
+      "word": "freundin",
+      "slug": "freundin",
+      "file": "/audio_files/de-de/A1/A1_000180_freundin.mp3"
+    },
+    {
+      "id": "000181",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 181,
+      "word": "freundlich",
+      "slug": "freundlich",
+      "file": "/audio_files/de-de/A1/A1_000181_freundlich.mp3"
+    },
+    {
+      "id": "000182",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 182,
+      "word": "frieren",
+      "slug": "frieren",
+      "file": "/audio_files/de-de/A1/A1_000182_frieren.mp3"
+    },
+    {
+      "id": "000183",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 183,
+      "word": "frisch",
+      "slug": "frisch",
+      "file": "/audio_files/de-de/A1/A1_000183_frisch.mp3"
+    },
+    {
+      "id": "000184",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 184,
+      "word": "früh",
+      "slug": "früh",
+      "file": "/audio_files/de-de/A1/A1_000184_früh.mp3"
+    },
+    {
+      "id": "000185",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 185,
+      "word": "frühling",
+      "slug": "frühling",
+      "file": "/audio_files/de-de/A1/A1_000185_frühling.mp3"
+    },
+    {
+      "id": "000186",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 186,
+      "word": "frühstück",
+      "slug": "frühstück",
+      "file": "/audio_files/de-de/A1/A1_000186_frühstück.mp3"
+    },
+    {
+      "id": "000187",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 187,
+      "word": "frühstücken",
+      "slug": "frühstücken",
+      "file": "/audio_files/de-de/A1/A1_000187_frühstücken.mp3"
+    },
+    {
+      "id": "000188",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 188,
+      "word": "fuss",
+      "slug": "fuss",
+      "file": "/audio_files/de-de/A1/A1_000188_fuss.mp3"
+    },
+    {
+      "id": "000189",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 189,
+      "word": "fussball",
+      "slug": "fussball",
+      "file": "/audio_files/de-de/A1/A1_000189_fussball.mp3"
+    },
+    {
+      "id": "000190",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 190,
+      "word": "fuß",
+      "slug": "fuß",
+      "file": "/audio_files/de-de/A1/A1_000190_fuß.mp3"
+    },
+    {
+      "id": "000191",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 191,
+      "word": "führen",
+      "slug": "führen",
+      "file": "/audio_files/de-de/A1/A1_000191_führen.mp3"
+    },
+    {
+      "id": "000192",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 192,
+      "word": "fünf",
+      "slug": "fünf",
+      "file": "/audio_files/de-de/A1/A1_000192_fünf.mp3"
+    },
+    {
+      "id": "000193",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 193,
+      "word": "fünft",
+      "slug": "fünft",
+      "file": "/audio_files/de-de/A1/A1_000193_fünft.mp3"
+    },
+    {
+      "id": "000194",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 194,
+      "word": "fünfzehn",
+      "slug": "fünfzehn",
+      "file": "/audio_files/de-de/A1/A1_000194_fünfzehn.mp3"
+    },
+    {
+      "id": "000195",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 195,
+      "word": "fünfzig",
+      "slug": "fünfzig",
+      "file": "/audio_files/de-de/A1/A1_000195_fünfzig.mp3"
+    },
+    {
+      "id": "000196",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 196,
+      "word": "gabel",
+      "slug": "gabel",
+      "file": "/audio_files/de-de/A1/A1_000196_gabel.mp3"
+    },
+    {
+      "id": "000197",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 197,
+      "word": "ganz",
+      "slug": "ganz",
+      "file": "/audio_files/de-de/A1/A1_000197_ganz.mp3"
+    },
+    {
+      "id": "000198",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 198,
+      "word": "garage",
+      "slug": "garage",
+      "file": "/audio_files/de-de/A1/A1_000198_garage.mp3"
+    },
+    {
+      "id": "000199",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 199,
+      "word": "garten",
+      "slug": "garten",
+      "file": "/audio_files/de-de/A1/A1_000199_garten.mp3"
+    },
+    {
+      "id": "000200",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 200,
+      "word": "geben",
+      "slug": "geben",
+      "file": "/audio_files/de-de/A1/A1_000200_geben.mp3"
+    },
+    {
+      "id": "000201",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 201,
+      "word": "geboren",
+      "slug": "geboren",
+      "file": "/audio_files/de-de/A1/A1_000201_geboren.mp3"
+    },
+    {
+      "id": "000202",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 202,
+      "word": "geburtstag",
+      "slug": "geburtstag",
+      "file": "/audio_files/de-de/A1/A1_000202_geburtstag.mp3"
+    },
+    {
+      "id": "000203",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 203,
+      "word": "gehen",
+      "slug": "gehen",
+      "file": "/audio_files/de-de/A1/A1_000203_gehen.mp3"
+    },
+    {
+      "id": "000204",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 204,
+      "word": "gekommen",
+      "slug": "gekommen",
+      "file": "/audio_files/de-de/A1/A1_000204_gekommen.mp3"
+    },
+    {
+      "id": "000205",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 205,
+      "word": "gelb",
+      "slug": "gelb",
+      "file": "/audio_files/de-de/A1/A1_000205_gelb.mp3"
+    },
+    {
+      "id": "000206",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 206,
+      "word": "geld",
+      "slug": "geld",
+      "file": "/audio_files/de-de/A1/A1_000206_geld.mp3"
+    },
+    {
+      "id": "000207",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 207,
+      "word": "gemacht",
+      "slug": "gemacht",
+      "file": "/audio_files/de-de/A1/A1_000207_gemacht.mp3"
+    },
+    {
+      "id": "000208",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 208,
+      "word": "gemüse",
+      "slug": "gemüse",
+      "file": "/audio_files/de-de/A1/A1_000208_gemüse.mp3"
+    },
+    {
+      "id": "000209",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 209,
+      "word": "genug",
+      "slug": "genug",
+      "file": "/audio_files/de-de/A1/A1_000209_genug.mp3"
+    },
+    {
+      "id": "000210",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 210,
+      "word": "geradeaus",
+      "slug": "geradeaus",
+      "file": "/audio_files/de-de/A1/A1_000210_geradeaus.mp3"
+    },
+    {
+      "id": "000211",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 211,
+      "word": "gern",
+      "slug": "gern",
+      "file": "/audio_files/de-de/A1/A1_000211_gern.mp3"
+    },
+    {
+      "id": "000212",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 212,
+      "word": "geschenk",
+      "slug": "geschenk",
+      "file": "/audio_files/de-de/A1/A1_000212_geschenk.mp3"
+    },
+    {
+      "id": "000213",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 213,
+      "word": "geschwister",
+      "slug": "geschwister",
+      "file": "/audio_files/de-de/A1/A1_000213_geschwister.mp3"
+    },
+    {
+      "id": "000214",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 214,
+      "word": "geschäft",
+      "slug": "geschäft",
+      "file": "/audio_files/de-de/A1/A1_000214_geschäft.mp3"
+    },
+    {
+      "id": "000215",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 215,
+      "word": "gesicht",
+      "slug": "gesicht",
+      "file": "/audio_files/de-de/A1/A1_000215_gesicht.mp3"
+    },
+    {
+      "id": "000216",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 216,
+      "word": "gestern",
+      "slug": "gestern",
+      "file": "/audio_files/de-de/A1/A1_000216_gestern.mp3"
+    },
+    {
+      "id": "000217",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 217,
+      "word": "gesund",
+      "slug": "gesund",
+      "file": "/audio_files/de-de/A1/A1_000217_gesund.mp3"
+    },
+    {
+      "id": "000218",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 218,
+      "word": "getränk",
+      "slug": "getränk",
+      "file": "/audio_files/de-de/A1/A1_000218_getränk.mp3"
+    },
+    {
+      "id": "000219",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 219,
+      "word": "gitarre",
+      "slug": "gitarre",
+      "file": "/audio_files/de-de/A1/A1_000219_gitarre.mp3"
+    },
+    {
+      "id": "000220",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 220,
+      "word": "glas",
+      "slug": "glas",
+      "file": "/audio_files/de-de/A1/A1_000220_glas.mp3"
+    },
+    {
+      "id": "000221",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 221,
+      "word": "gleich",
+      "slug": "gleich",
+      "file": "/audio_files/de-de/A1/A1_000221_gleich.mp3"
+    },
+    {
+      "id": "000222",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 222,
+      "word": "glück",
+      "slug": "glück",
+      "file": "/audio_files/de-de/A1/A1_000222_glück.mp3"
+    },
+    {
+      "id": "000223",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 223,
+      "word": "glücklich",
+      "slug": "glücklich",
+      "file": "/audio_files/de-de/A1/A1_000223_glücklich.mp3"
+    },
+    {
+      "id": "000224",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 224,
+      "word": "gramm",
+      "slug": "gramm",
+      "file": "/audio_files/de-de/A1/A1_000224_gramm.mp3"
+    },
+    {
+      "id": "000225",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 225,
+      "word": "grammatik",
+      "slug": "grammatik",
+      "file": "/audio_files/de-de/A1/A1_000225_grammatik.mp3"
+    },
+    {
+      "id": "000226",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 226,
+      "word": "grau",
+      "slug": "grau",
+      "file": "/audio_files/de-de/A1/A1_000226_grau.mp3"
+    },
+    {
+      "id": "000227",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 227,
+      "word": "gross",
+      "slug": "gross",
+      "file": "/audio_files/de-de/A1/A1_000227_gross.mp3"
+    },
+    {
+      "id": "000228",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 228,
+      "word": "grosseltern",
+      "slug": "grosseltern",
+      "file": "/audio_files/de-de/A1/A1_000228_grosseltern.mp3"
+    },
+    {
+      "id": "000229",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 229,
+      "word": "grossmutter",
+      "slug": "grossmutter",
+      "file": "/audio_files/de-de/A1/A1_000229_grossmutter.mp3"
+    },
+    {
+      "id": "000230",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 230,
+      "word": "grossvater",
+      "slug": "grossvater",
+      "file": "/audio_files/de-de/A1/A1_000230_grossvater.mp3"
+    },
+    {
+      "id": "000231",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 231,
+      "word": "groß",
+      "slug": "groß",
+      "file": "/audio_files/de-de/A1/A1_000231_groß.mp3"
+    },
+    {
+      "id": "000232",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 232,
+      "word": "grün",
+      "slug": "grün",
+      "file": "/audio_files/de-de/A1/A1_000232_grün.mp3"
+    },
+    {
+      "id": "000233",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 233,
+      "word": "grüßen",
+      "slug": "grüßen",
+      "file": "/audio_files/de-de/A1/A1_000233_grüßen.mp3"
+    },
+    {
+      "id": "000234",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 234,
+      "word": "gut",
+      "slug": "gut",
+      "file": "/audio_files/de-de/A1/A1_000234_gut.mp3"
+    },
+    {
+      "id": "000235",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 235,
+      "word": "haar",
+      "slug": "haar",
+      "file": "/audio_files/de-de/A1/A1_000235_haar.mp3"
+    },
+    {
+      "id": "000236",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 236,
+      "word": "haben",
+      "slug": "haben",
+      "file": "/audio_files/de-de/A1/A1_000236_haben.mp3"
+    },
+    {
+      "id": "000237",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 237,
+      "word": "halb",
+      "slug": "halb",
+      "file": "/audio_files/de-de/A1/A1_000237_halb.mp3"
+    },
+    {
+      "id": "000238",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 238,
+      "word": "halten",
+      "slug": "halten",
+      "file": "/audio_files/de-de/A1/A1_000238_halten.mp3"
+    },
+    {
+      "id": "000239",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 239,
+      "word": "haltestelle",
+      "slug": "haltestelle",
+      "file": "/audio_files/de-de/A1/A1_000239_haltestelle.mp3"
+    },
+    {
+      "id": "000240",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 240,
+      "word": "hamburger",
+      "slug": "hamburger",
+      "file": "/audio_files/de-de/A1/A1_000240_hamburger.mp3"
+    },
+    {
+      "id": "000241",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 241,
+      "word": "hand",
+      "slug": "hand",
+      "file": "/audio_files/de-de/A1/A1_000241_hand.mp3"
+    },
+    {
+      "id": "000242",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 242,
+      "word": "handtuch",
+      "slug": "handtuch",
+      "file": "/audio_files/de-de/A1/A1_000242_handtuch.mp3"
+    },
+    {
+      "id": "000243",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 243,
+      "word": "handy",
+      "slug": "handy",
+      "file": "/audio_files/de-de/A1/A1_000243_handy.mp3"
+    },
+    {
+      "id": "000244",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 244,
+      "word": "haus",
+      "slug": "haus",
+      "file": "/audio_files/de-de/A1/A1_000244_haus.mp3"
+    },
+    {
+      "id": "000245",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 245,
+      "word": "hausaufgabe",
+      "slug": "hausaufgabe",
+      "file": "/audio_files/de-de/A1/A1_000245_hausaufgabe.mp3"
+    },
+    {
+      "id": "000246",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 246,
+      "word": "haustier",
+      "slug": "haustier",
+      "file": "/audio_files/de-de/A1/A1_000246_haustier.mp3"
+    },
+    {
+      "id": "000247",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 247,
+      "word": "heft",
+      "slug": "heft",
+      "file": "/audio_files/de-de/A1/A1_000247_heft.mp3"
+    },
+    {
+      "id": "000248",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 248,
+      "word": "heiss",
+      "slug": "heiss",
+      "file": "/audio_files/de-de/A1/A1_000248_heiss.mp3"
+    },
+    {
+      "id": "000249",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 249,
+      "word": "heissen",
+      "slug": "heissen",
+      "file": "/audio_files/de-de/A1/A1_000249_heissen.mp3"
+    },
+    {
+      "id": "000250",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 250,
+      "word": "heiß",
+      "slug": "heiß",
+      "file": "/audio_files/de-de/A1/A1_000250_heiß.mp3"
+    },
+    {
+      "id": "000251",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 251,
+      "word": "heißen",
+      "slug": "heißen",
+      "file": "/audio_files/de-de/A1/A1_000251_heißen.mp3"
+    },
+    {
+      "id": "000252",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 252,
+      "word": "helfen",
+      "slug": "helfen",
+      "file": "/audio_files/de-de/A1/A1_000252_helfen.mp3"
+    },
+    {
+      "id": "000253",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 253,
+      "word": "hellblau",
+      "slug": "hellblau",
+      "file": "/audio_files/de-de/A1/A1_000253_hellblau.mp3"
+    },
+    {
+      "id": "000254",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 254,
+      "word": "hemd",
+      "slug": "hemd",
+      "file": "/audio_files/de-de/A1/A1_000254_hemd.mp3"
+    },
+    {
+      "id": "000255",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 255,
+      "word": "herr",
+      "slug": "herr",
+      "file": "/audio_files/de-de/A1/A1_000255_herr.mp3"
+    },
+    {
+      "id": "000256",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 256,
+      "word": "heut",
+      "slug": "heut",
+      "file": "/audio_files/de-de/A1/A1_000256_heut.mp3"
+    },
+    {
+      "id": "000257",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 257,
+      "word": "heute",
+      "slug": "heute",
+      "file": "/audio_files/de-de/A1/A1_000257_heute.mp3"
+    },
+    {
+      "id": "000258",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 258,
+      "word": "hier",
+      "slug": "hier",
+      "file": "/audio_files/de-de/A1/A1_000258_hier.mp3"
+    },
+    {
+      "id": "000259",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 259,
+      "word": "hilfe",
+      "slug": "hilfe",
+      "file": "/audio_files/de-de/A1/A1_000259_hilfe.mp3"
+    },
+    {
+      "id": "000260",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 260,
+      "word": "hinten",
+      "slug": "hinten",
+      "file": "/audio_files/de-de/A1/A1_000260_hinten.mp3"
+    },
+    {
+      "id": "000261",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 261,
+      "word": "hobby",
+      "slug": "hobby",
+      "file": "/audio_files/de-de/A1/A1_000261_hobby.mp3"
+    },
+    {
+      "id": "000262",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 262,
+      "word": "hoch",
+      "slug": "hoch",
+      "file": "/audio_files/de-de/A1/A1_000262_hoch.mp3"
+    },
+    {
+      "id": "000263",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 263,
+      "word": "holen",
+      "slug": "holen",
+      "file": "/audio_files/de-de/A1/A1_000263_holen.mp3"
+    },
+    {
+      "id": "000264",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 264,
+      "word": "hose",
+      "slug": "hose",
+      "file": "/audio_files/de-de/A1/A1_000264_hose.mp3"
+    },
+    {
+      "id": "000265",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 265,
+      "word": "hotel",
+      "slug": "hotel",
+      "file": "/audio_files/de-de/A1/A1_000265_hotel.mp3"
+    },
+    {
+      "id": "000266",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 266,
+      "word": "hotelzimmer",
+      "slug": "hotelzimmer",
+      "file": "/audio_files/de-de/A1/A1_000266_hotelzimmer.mp3"
+    },
+    {
+      "id": "000267",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 267,
+      "word": "huhn",
+      "slug": "huhn",
+      "file": "/audio_files/de-de/A1/A1_000267_huhn.mp3"
+    },
+    {
+      "id": "000268",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 268,
+      "word": "hund",
+      "slug": "hund",
+      "file": "/audio_files/de-de/A1/A1_000268_hund.mp3"
+    },
+    {
+      "id": "000269",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 269,
+      "word": "hundert",
+      "slug": "hundert",
+      "file": "/audio_files/de-de/A1/A1_000269_hundert.mp3"
+    },
+    {
+      "id": "000270",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 270,
+      "word": "hunger",
+      "slug": "hunger",
+      "file": "/audio_files/de-de/A1/A1_000270_hunger.mp3"
+    },
+    {
+      "id": "000271",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 271,
+      "word": "hut",
+      "slug": "hut",
+      "file": "/audio_files/de-de/A1/A1_000271_hut.mp3"
+    },
+    {
+      "id": "000272",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 272,
+      "word": "hähnchen",
+      "slug": "hähnchen",
+      "file": "/audio_files/de-de/A1/A1_000272_hähnchen.mp3"
+    },
+    {
+      "id": "000273",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 273,
+      "word": "hören",
+      "slug": "hören",
+      "file": "/audio_files/de-de/A1/A1_000273_hören.mp3"
+    },
+    {
+      "id": "000274",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 274,
+      "word": "idee",
+      "slug": "idee",
+      "file": "/audio_files/de-de/A1/A1_000274_idee.mp3"
+    },
+    {
+      "id": "000275",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 275,
+      "word": "ihr",
+      "slug": "ihr",
+      "file": "/audio_files/de-de/A1/A1_000275_ihr.mp3"
+    },
+    {
+      "id": "000276",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 276,
+      "word": "immer",
+      "slug": "immer",
+      "file": "/audio_files/de-de/A1/A1_000276_immer.mp3"
+    },
+    {
+      "id": "000277",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 277,
+      "word": "interessant",
+      "slug": "interessant",
+      "file": "/audio_files/de-de/A1/A1_000277_interessant.mp3"
+    },
+    {
+      "id": "000278",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 278,
+      "word": "interessieren",
+      "slug": "interessieren",
+      "file": "/audio_files/de-de/A1/A1_000278_interessieren.mp3"
+    },
+    {
+      "id": "000279",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 279,
+      "word": "italienerin",
+      "slug": "italienerin",
+      "file": "/audio_files/de-de/A1/A1_000279_italienerin.mp3"
+    },
+    {
+      "id": "000280",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 280,
+      "word": "italienisch",
+      "slug": "italienisch",
+      "file": "/audio_files/de-de/A1/A1_000280_italienisch.mp3"
+    },
+    {
+      "id": "000281",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 281,
+      "word": "jacke",
+      "slug": "jacke",
+      "file": "/audio_files/de-de/A1/A1_000281_jacke.mp3"
+    },
+    {
+      "id": "000282",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 282,
+      "word": "jahr",
+      "slug": "jahr",
+      "file": "/audio_files/de-de/A1/A1_000282_jahr.mp3"
+    },
+    {
+      "id": "000283",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 283,
+      "word": "januar",
+      "slug": "januar",
+      "file": "/audio_files/de-de/A1/A1_000283_januar.mp3"
+    },
+    {
+      "id": "000284",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 284,
+      "word": "jetzt",
+      "slug": "jetzt",
+      "file": "/audio_files/de-de/A1/A1_000284_jetzt.mp3"
+    },
+    {
+      "id": "000285",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 285,
+      "word": "joghurt",
+      "slug": "joghurt",
+      "file": "/audio_files/de-de/A1/A1_000285_joghurt.mp3"
+    },
+    {
+      "id": "000286",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 286,
+      "word": "juli",
+      "slug": "juli",
+      "file": "/audio_files/de-de/A1/A1_000286_juli.mp3"
+    },
+    {
+      "id": "000287",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 287,
+      "word": "junge",
+      "slug": "junge",
+      "file": "/audio_files/de-de/A1/A1_000287_junge.mp3"
+    },
+    {
+      "id": "000288",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 288,
+      "word": "juni",
+      "slug": "juni",
+      "file": "/audio_files/de-de/A1/A1_000288_juni.mp3"
+    },
+    {
+      "id": "000289",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 289,
+      "word": "kaffee",
+      "slug": "kaffee",
+      "file": "/audio_files/de-de/A1/A1_000289_kaffee.mp3"
+    },
+    {
+      "id": "000290",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 290,
+      "word": "kalt",
+      "slug": "kalt",
+      "file": "/audio_files/de-de/A1/A1_000290_kalt.mp3"
+    },
+    {
+      "id": "000291",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 291,
+      "word": "kapitel",
+      "slug": "kapitel",
+      "file": "/audio_files/de-de/A1/A1_000291_kapitel.mp3"
+    },
+    {
+      "id": "000292",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 292,
+      "word": "kaputt",
+      "slug": "kaputt",
+      "file": "/audio_files/de-de/A1/A1_000292_kaputt.mp3"
+    },
+    {
+      "id": "000293",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 293,
+      "word": "karte",
+      "slug": "karte",
+      "file": "/audio_files/de-de/A1/A1_000293_karte.mp3"
+    },
+    {
+      "id": "000294",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 294,
+      "word": "kartoffel",
+      "slug": "kartoffel",
+      "file": "/audio_files/de-de/A1/A1_000294_kartoffel.mp3"
+    },
+    {
+      "id": "000295",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 295,
+      "word": "katze",
+      "slug": "katze",
+      "file": "/audio_files/de-de/A1/A1_000295_katze.mp3"
+    },
+    {
+      "id": "000296",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 296,
+      "word": "kaufen",
+      "slug": "kaufen",
+      "file": "/audio_files/de-de/A1/A1_000296_kaufen.mp3"
+    },
+    {
+      "id": "000297",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 297,
+      "word": "kein",
+      "slug": "kein",
+      "file": "/audio_files/de-de/A1/A1_000297_kein.mp3"
+    },
+    {
+      "id": "000298",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 298,
+      "word": "kellnerin",
+      "slug": "kellnerin",
+      "file": "/audio_files/de-de/A1/A1_000298_kellnerin.mp3"
+    },
+    {
+      "id": "000299",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 299,
+      "word": "kennen",
+      "slug": "kennen",
+      "file": "/audio_files/de-de/A1/A1_000299_kennen.mp3"
+    },
+    {
+      "id": "000300",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 300,
+      "word": "kennenlernen",
+      "slug": "kennenlernen",
+      "file": "/audio_files/de-de/A1/A1_000300_kennenlernen.mp3"
+    },
+    {
+      "id": "000301",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 301,
+      "word": "ketchup",
+      "slug": "ketchup",
+      "file": "/audio_files/de-de/A1/A1_000301_ketchup.mp3"
+    },
+    {
+      "id": "000302",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 302,
+      "word": "kilo",
+      "slug": "kilo",
+      "file": "/audio_files/de-de/A1/A1_000302_kilo.mp3"
+    },
+    {
+      "id": "000303",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 303,
+      "word": "kilogramm",
+      "slug": "kilogramm",
+      "file": "/audio_files/de-de/A1/A1_000303_kilogramm.mp3"
+    },
+    {
+      "id": "000304",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 304,
+      "word": "kilometer",
+      "slug": "kilometer",
+      "file": "/audio_files/de-de/A1/A1_000304_kilometer.mp3"
+    },
+    {
+      "id": "000305",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 305,
+      "word": "kind",
+      "slug": "kind",
+      "file": "/audio_files/de-de/A1/A1_000305_kind.mp3"
+    },
+    {
+      "id": "000306",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 306,
+      "word": "kindergarten",
+      "slug": "kindergarten",
+      "file": "/audio_files/de-de/A1/A1_000306_kindergarten.mp3"
+    },
+    {
+      "id": "000307",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 307,
+      "word": "kino",
+      "slug": "kino",
+      "file": "/audio_files/de-de/A1/A1_000307_kino.mp3"
+    },
+    {
+      "id": "000308",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 308,
+      "word": "kissen",
+      "slug": "kissen",
+      "file": "/audio_files/de-de/A1/A1_000308_kissen.mp3"
+    },
+    {
+      "id": "000309",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 309,
+      "word": "klasse",
+      "slug": "klasse",
+      "file": "/audio_files/de-de/A1/A1_000309_klasse.mp3"
+    },
+    {
+      "id": "000310",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 310,
+      "word": "klassenzimmer",
+      "slug": "klassenzimmer",
+      "file": "/audio_files/de-de/A1/A1_000310_klassenzimmer.mp3"
+    },
+    {
+      "id": "000311",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 311,
+      "word": "kleid",
+      "slug": "kleid",
+      "file": "/audio_files/de-de/A1/A1_000311_kleid.mp3"
+    },
+    {
+      "id": "000312",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 312,
+      "word": "klein",
+      "slug": "klein",
+      "file": "/audio_files/de-de/A1/A1_000312_klein.mp3"
+    },
+    {
+      "id": "000313",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 313,
+      "word": "koch",
+      "slug": "koch",
+      "file": "/audio_files/de-de/A1/A1_000313_koch.mp3"
+    },
+    {
+      "id": "000314",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 314,
+      "word": "kochen",
+      "slug": "kochen",
+      "file": "/audio_files/de-de/A1/A1_000314_kochen.mp3"
+    },
+    {
+      "id": "000315",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 315,
+      "word": "koffer",
+      "slug": "koffer",
+      "file": "/audio_files/de-de/A1/A1_000315_koffer.mp3"
+    },
+    {
+      "id": "000316",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 316,
+      "word": "kommen",
+      "slug": "kommen",
+      "file": "/audio_files/de-de/A1/A1_000316_kommen.mp3"
+    },
+    {
+      "id": "000317",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 317,
+      "word": "konzert",
+      "slug": "konzert",
+      "file": "/audio_files/de-de/A1/A1_000317_konzert.mp3"
+    },
+    {
+      "id": "000318",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 318,
+      "word": "kopf",
+      "slug": "kopf",
+      "file": "/audio_files/de-de/A1/A1_000318_kopf.mp3"
+    },
+    {
+      "id": "000319",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 319,
+      "word": "kosten",
+      "slug": "kosten",
+      "file": "/audio_files/de-de/A1/A1_000319_kosten.mp3"
+    },
+    {
+      "id": "000320",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 320,
+      "word": "krank",
+      "slug": "krank",
+      "file": "/audio_files/de-de/A1/A1_000320_krank.mp3"
+    },
+    {
+      "id": "000321",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 321,
+      "word": "krankenhaus",
+      "slug": "krankenhaus",
+      "file": "/audio_files/de-de/A1/A1_000321_krankenhaus.mp3"
+    },
+    {
+      "id": "000322",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 322,
+      "word": "kuchen",
+      "slug": "kuchen",
+      "file": "/audio_files/de-de/A1/A1_000322_kuchen.mp3"
+    },
+    {
+      "id": "000323",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 323,
+      "word": "kugelschreiber",
+      "slug": "kugelschreiber",
+      "file": "/audio_files/de-de/A1/A1_000323_kugelschreiber.mp3"
+    },
+    {
+      "id": "000324",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 324,
+      "word": "kurz",
+      "slug": "kurz",
+      "file": "/audio_files/de-de/A1/A1_000324_kurz.mp3"
+    },
+    {
+      "id": "000325",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 325,
+      "word": "käse",
+      "slug": "käse",
+      "file": "/audio_files/de-de/A1/A1_000325_käse.mp3"
+    },
+    {
+      "id": "000326",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 326,
+      "word": "können",
+      "slug": "können",
+      "file": "/audio_files/de-de/A1/A1_000326_können.mp3"
+    },
+    {
+      "id": "000327",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 327,
+      "word": "küche",
+      "slug": "küche",
+      "file": "/audio_files/de-de/A1/A1_000327_küche.mp3"
+    },
+    {
+      "id": "000328",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 328,
+      "word": "lachen",
+      "slug": "lachen",
+      "file": "/audio_files/de-de/A1/A1_000328_lachen.mp3"
+    },
+    {
+      "id": "000329",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 329,
+      "word": "lampe",
+      "slug": "lampe",
+      "file": "/audio_files/de-de/A1/A1_000329_lampe.mp3"
+    },
+    {
+      "id": "000330",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 330,
+      "word": "land",
+      "slug": "land",
+      "file": "/audio_files/de-de/A1/A1_000330_land.mp3"
+    },
+    {
+      "id": "000331",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 331,
+      "word": "lang",
+      "slug": "lang",
+      "file": "/audio_files/de-de/A1/A1_000331_lang.mp3"
+    },
+    {
+      "id": "000332",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 332,
+      "word": "langsam",
+      "slug": "langsam",
+      "file": "/audio_files/de-de/A1/A1_000332_langsam.mp3"
+    },
+    {
+      "id": "000333",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 333,
+      "word": "laufen",
+      "slug": "laufen",
+      "file": "/audio_files/de-de/A1/A1_000333_laufen.mp3"
+    },
+    {
+      "id": "000334",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 334,
+      "word": "laut",
+      "slug": "laut",
+      "file": "/audio_files/de-de/A1/A1_000334_laut.mp3"
+    },
+    {
+      "id": "000335",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 335,
+      "word": "leben",
+      "slug": "leben",
+      "file": "/audio_files/de-de/A1/A1_000335_leben.mp3"
+    },
+    {
+      "id": "000336",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 336,
+      "word": "lecker",
+      "slug": "lecker",
+      "file": "/audio_files/de-de/A1/A1_000336_lecker.mp3"
+    },
+    {
+      "id": "000337",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 337,
+      "word": "leer",
+      "slug": "leer",
+      "file": "/audio_files/de-de/A1/A1_000337_leer.mp3"
+    },
+    {
+      "id": "000338",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 338,
+      "word": "legen",
+      "slug": "legen",
+      "file": "/audio_files/de-de/A1/A1_000338_legen.mp3"
+    },
+    {
+      "id": "000339",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 339,
+      "word": "lehrer",
+      "slug": "lehrer",
+      "file": "/audio_files/de-de/A1/A1_000339_lehrer.mp3"
+    },
+    {
+      "id": "000340",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 340,
+      "word": "lehrerin",
+      "slug": "lehrerin",
+      "file": "/audio_files/de-de/A1/A1_000340_lehrerin.mp3"
+    },
+    {
+      "id": "000341",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 341,
+      "word": "leicht",
+      "slug": "leicht",
+      "file": "/audio_files/de-de/A1/A1_000341_leicht.mp3"
+    },
+    {
+      "id": "000342",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 342,
+      "word": "lektion",
+      "slug": "lektion",
+      "file": "/audio_files/de-de/A1/A1_000342_lektion.mp3"
+    },
+    {
+      "id": "000343",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 343,
+      "word": "lernen",
+      "slug": "lernen",
+      "file": "/audio_files/de-de/A1/A1_000343_lernen.mp3"
+    },
+    {
+      "id": "000344",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 344,
+      "word": "lesen",
+      "slug": "lesen",
+      "file": "/audio_files/de-de/A1/A1_000344_lesen.mp3"
+    },
+    {
+      "id": "000345",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 345,
+      "word": "leute",
+      "slug": "leute",
+      "file": "/audio_files/de-de/A1/A1_000345_leute.mp3"
+    },
+    {
+      "id": "000346",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 346,
+      "word": "licht",
+      "slug": "licht",
+      "file": "/audio_files/de-de/A1/A1_000346_licht.mp3"
+    },
+    {
+      "id": "000347",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 347,
+      "word": "lieben",
+      "slug": "lieben",
+      "file": "/audio_files/de-de/A1/A1_000347_lieben.mp3"
+    },
+    {
+      "id": "000348",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 348,
+      "word": "lieblingsfarbe",
+      "slug": "lieblingsfarbe",
+      "file": "/audio_files/de-de/A1/A1_000348_lieblingsfarbe.mp3"
+    },
+    {
+      "id": "000349",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 349,
+      "word": "lied",
+      "slug": "lied",
+      "file": "/audio_files/de-de/A1/A1_000349_lied.mp3"
+    },
+    {
+      "id": "000350",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 350,
+      "word": "liegen",
+      "slug": "liegen",
+      "file": "/audio_files/de-de/A1/A1_000350_liegen.mp3"
+    },
+    {
+      "id": "000351",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 351,
+      "word": "lila",
+      "slug": "lila",
+      "file": "/audio_files/de-de/A1/A1_000351_lila.mp3"
+    },
+    {
+      "id": "000352",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 352,
+      "word": "limonade",
+      "slug": "limonade",
+      "file": "/audio_files/de-de/A1/A1_000352_limonade.mp3"
+    },
+    {
+      "id": "000353",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 353,
+      "word": "links",
+      "slug": "links",
+      "file": "/audio_files/de-de/A1/A1_000353_links.mp3"
+    },
+    {
+      "id": "000354",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 354,
+      "word": "liter",
+      "slug": "liter",
+      "file": "/audio_files/de-de/A1/A1_000354_liter.mp3"
+    },
+    {
+      "id": "000355",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 355,
+      "word": "lustig",
+      "slug": "lustig",
+      "file": "/audio_files/de-de/A1/A1_000355_lustig.mp3"
+    },
+    {
+      "id": "000356",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 356,
+      "word": "läden",
+      "slug": "läden",
+      "file": "/audio_files/de-de/A1/A1_000356_läden.mp3"
+    },
+    {
+      "id": "000357",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 357,
+      "word": "löffel",
+      "slug": "löffel",
+      "file": "/audio_files/de-de/A1/A1_000357_löffel.mp3"
+    },
+    {
+      "id": "000358",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 358,
+      "word": "machen",
+      "slug": "machen",
+      "file": "/audio_files/de-de/A1/A1_000358_machen.mp3"
+    },
+    {
+      "id": "000359",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 359,
+      "word": "mal",
+      "slug": "mal",
+      "file": "/audio_files/de-de/A1/A1_000359_mal.mp3"
+    },
+    {
+      "id": "000360",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 360,
+      "word": "malen",
+      "slug": "malen",
+      "file": "/audio_files/de-de/A1/A1_000360_malen.mp3"
+    },
+    {
+      "id": "000361",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 361,
+      "word": "mama",
+      "slug": "mama",
+      "file": "/audio_files/de-de/A1/A1_000361_mama.mp3"
+    },
+    {
+      "id": "000362",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 362,
+      "word": "mami",
+      "slug": "mami",
+      "file": "/audio_files/de-de/A1/A1_000362_mami.mp3"
+    },
+    {
+      "id": "000363",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 363,
+      "word": "mann",
+      "slug": "mann",
+      "file": "/audio_files/de-de/A1/A1_000363_mann.mp3"
+    },
+    {
+      "id": "000364",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 364,
+      "word": "markt",
+      "slug": "markt",
+      "file": "/audio_files/de-de/A1/A1_000364_markt.mp3"
+    },
+    {
+      "id": "000365",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 365,
+      "word": "mathe",
+      "slug": "mathe",
+      "file": "/audio_files/de-de/A1/A1_000365_mathe.mp3"
+    },
+    {
+      "id": "000366",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 366,
+      "word": "maus",
+      "slug": "maus",
+      "file": "/audio_files/de-de/A1/A1_000366_maus.mp3"
+    },
+    {
+      "id": "000367",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 367,
+      "word": "mehr",
+      "slug": "mehr",
+      "file": "/audio_files/de-de/A1/A1_000367_mehr.mp3"
+    },
+    {
+      "id": "000368",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 368,
+      "word": "meinen",
+      "slug": "meinen",
+      "file": "/audio_files/de-de/A1/A1_000368_meinen.mp3"
+    },
+    {
+      "id": "000369",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 369,
+      "word": "messer",
+      "slug": "messer",
+      "file": "/audio_files/de-de/A1/A1_000369_messer.mp3"
+    },
+    {
+      "id": "000370",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 370,
+      "word": "meter",
+      "slug": "meter",
+      "file": "/audio_files/de-de/A1/A1_000370_meter.mp3"
+    },
+    {
+      "id": "000371",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 371,
+      "word": "milch",
+      "slug": "milch",
+      "file": "/audio_files/de-de/A1/A1_000371_milch.mp3"
+    },
+    {
+      "id": "000372",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 372,
+      "word": "min",
+      "slug": "min",
+      "file": "/audio_files/de-de/A1/A1_000372_min.mp3"
+    },
+    {
+      "id": "000373",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 373,
+      "word": "minute",
+      "slug": "minute",
+      "file": "/audio_files/de-de/A1/A1_000373_minute.mp3"
+    },
+    {
+      "id": "000374",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 374,
+      "word": "mittag",
+      "slug": "mittag",
+      "file": "/audio_files/de-de/A1/A1_000374_mittag.mp3"
+    },
+    {
+      "id": "000375",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 375,
+      "word": "mittagessen",
+      "slug": "mittagessen",
+      "file": "/audio_files/de-de/A1/A1_000375_mittagessen.mp3"
+    },
+    {
+      "id": "000376",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 376,
+      "word": "mittwoch",
+      "slug": "mittwoch",
+      "file": "/audio_files/de-de/A1/A1_000376_mittwoch.mp3"
+    },
+    {
+      "id": "000377",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 377,
+      "word": "mom",
+      "slug": "mom",
+      "file": "/audio_files/de-de/A1/A1_000377_mom.mp3"
+    },
+    {
+      "id": "000378",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 378,
+      "word": "moment",
+      "slug": "moment",
+      "file": "/audio_files/de-de/A1/A1_000378_moment.mp3"
+    },
+    {
+      "id": "000379",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 379,
+      "word": "monat",
+      "slug": "monat",
+      "file": "/audio_files/de-de/A1/A1_000379_monat.mp3"
+    },
+    {
+      "id": "000380",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 380,
+      "word": "montag",
+      "slug": "montag",
+      "file": "/audio_files/de-de/A1/A1_000380_montag.mp3"
+    },
+    {
+      "id": "000381",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 381,
+      "word": "morgen",
+      "slug": "morgen",
+      "file": "/audio_files/de-de/A1/A1_000381_morgen.mp3"
+    },
+    {
+      "id": "000382",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 382,
+      "word": "morgens",
+      "slug": "morgens",
+      "file": "/audio_files/de-de/A1/A1_000382_morgens.mp3"
+    },
+    {
+      "id": "000383",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 383,
+      "word": "mund",
+      "slug": "mund",
+      "file": "/audio_files/de-de/A1/A1_000383_mund.mp3"
+    },
+    {
+      "id": "000384",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 384,
+      "word": "museum",
+      "slug": "museum",
+      "file": "/audio_files/de-de/A1/A1_000384_museum.mp3"
+    },
+    {
+      "id": "000385",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 385,
+      "word": "musik",
+      "slug": "musik",
+      "file": "/audio_files/de-de/A1/A1_000385_musik.mp3"
+    },
+    {
+      "id": "000386",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 386,
+      "word": "mutter",
+      "slug": "mutter",
+      "file": "/audio_files/de-de/A1/A1_000386_mutter.mp3"
+    },
+    {
+      "id": "000387",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 387,
+      "word": "mutti",
+      "slug": "mutti",
+      "file": "/audio_files/de-de/A1/A1_000387_mutti.mp3"
+    },
+    {
+      "id": "000388",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 388,
+      "word": "mädchen",
+      "slug": "mädchen",
+      "file": "/audio_files/de-de/A1/A1_000388_mädchen.mp3"
+    },
+    {
+      "id": "000389",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 389,
+      "word": "märz",
+      "slug": "märz",
+      "file": "/audio_files/de-de/A1/A1_000389_märz.mp3"
+    },
+    {
+      "id": "000390",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 390,
+      "word": "möglich",
+      "slug": "möglich",
+      "file": "/audio_files/de-de/A1/A1_000390_möglich.mp3"
+    },
+    {
+      "id": "000391",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 391,
+      "word": "möhre",
+      "slug": "möhre",
+      "file": "/audio_files/de-de/A1/A1_000391_möhre.mp3"
+    },
+    {
+      "id": "000392",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 392,
+      "word": "müde",
+      "slug": "müde",
+      "file": "/audio_files/de-de/A1/A1_000392_müde.mp3"
+    },
+    {
+      "id": "000393",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 393,
+      "word": "mütze",
+      "slug": "mütze",
+      "file": "/audio_files/de-de/A1/A1_000393_mütze.mp3"
+    },
+    {
+      "id": "000394",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 394,
+      "word": "nachbar",
+      "slug": "nachbar",
+      "file": "/audio_files/de-de/A1/A1_000394_nachbar.mp3"
+    },
+    {
+      "id": "000395",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 395,
+      "word": "nachhause",
+      "slug": "nachhause",
+      "file": "/audio_files/de-de/A1/A1_000395_nachhause.mp3"
+    },
+    {
+      "id": "000396",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 396,
+      "word": "nachmittag",
+      "slug": "nachmittag",
+      "file": "/audio_files/de-de/A1/A1_000396_nachmittag.mp3"
+    },
+    {
+      "id": "000397",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 397,
+      "word": "nachmittags",
+      "slug": "nachmittags",
+      "file": "/audio_files/de-de/A1/A1_000397_nachmittags.mp3"
+    },
+    {
+      "id": "000398",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 398,
+      "word": "nacht",
+      "slug": "nacht",
+      "file": "/audio_files/de-de/A1/A1_000398_nacht.mp3"
+    },
+    {
+      "id": "000399",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 399,
+      "word": "nachtisch",
+      "slug": "nachtisch",
+      "file": "/audio_files/de-de/A1/A1_000399_nachtisch.mp3"
+    },
+    {
+      "id": "000400",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 400,
+      "word": "nachts",
+      "slug": "nachts",
+      "file": "/audio_files/de-de/A1/A1_000400_nachts.mp3"
+    },
+    {
+      "id": "000402",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 402,
+      "word": "name",
+      "slug": "name",
+      "file": "/audio_files/de-de/A1/A1_000402_name.mp3"
+    },
+    {
+      "id": "000403",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 403,
+      "word": "nase",
+      "slug": "nase",
+      "file": "/audio_files/de-de/A1/A1_000403_nase.mp3"
+    },
+    {
+      "id": "000404",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 404,
+      "word": "nehmen",
+      "slug": "nehmen",
+      "file": "/audio_files/de-de/A1/A1_000404_nehmen.mp3"
+    },
+    {
+      "id": "000405",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 405,
+      "word": "nein",
+      "slug": "nein",
+      "file": "/audio_files/de-de/A1/A1_000405_nein.mp3"
+    },
+    {
+      "id": "000406",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 406,
+      "word": "nett",
+      "slug": "nett",
+      "file": "/audio_files/de-de/A1/A1_000406_nett.mp3"
+    },
+    {
+      "id": "000407",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 407,
+      "word": "neu",
+      "slug": "neu",
+      "file": "/audio_files/de-de/A1/A1_000407_neu.mp3"
+    },
+    {
+      "id": "000408",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 408,
+      "word": "neun",
+      "slug": "neun",
+      "file": "/audio_files/de-de/A1/A1_000408_neun.mp3"
+    },
+    {
+      "id": "000409",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 409,
+      "word": "neunzehn",
+      "slug": "neunzehn",
+      "file": "/audio_files/de-de/A1/A1_000409_neunzehn.mp3"
+    },
+    {
+      "id": "000410",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 410,
+      "word": "neunzig",
+      "slug": "neunzig",
+      "file": "/audio_files/de-de/A1/A1_000410_neunzig.mp3"
+    },
+    {
+      "id": "000411",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 411,
+      "word": "nie",
+      "slug": "nie",
+      "file": "/audio_files/de-de/A1/A1_000411_nie.mp3"
+    },
+    {
+      "id": "000412",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 412,
+      "word": "normal",
+      "slug": "normal",
+      "file": "/audio_files/de-de/A1/A1_000412_normal.mp3"
+    },
+    {
+      "id": "000413",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 413,
+      "word": "note",
+      "slug": "note",
+      "file": "/audio_files/de-de/A1/A1_000413_note.mp3"
+    },
+    {
+      "id": "000414",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 414,
+      "word": "nudel",
+      "slug": "nudel",
+      "file": "/audio_files/de-de/A1/A1_000414_nudel.mp3"
+    },
+    {
+      "id": "000415",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 415,
+      "word": "nummer",
+      "slug": "nummer",
+      "file": "/audio_files/de-de/A1/A1_000415_nummer.mp3"
+    },
+    {
+      "id": "000416",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 416,
+      "word": "nur",
+      "slug": "nur",
+      "file": "/audio_files/de-de/A1/A1_000416_nur.mp3"
+    },
+    {
+      "id": "000417",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 417,
+      "word": "nächst",
+      "slug": "nächst",
+      "file": "/audio_files/de-de/A1/A1_000417_nächst.mp3"
+    },
+    {
+      "id": "000418",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 418,
+      "word": "oben",
+      "slug": "oben",
+      "file": "/audio_files/de-de/A1/A1_000418_oben.mp3"
+    },
+    {
+      "id": "000419",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 419,
+      "word": "obst",
+      "slug": "obst",
+      "file": "/audio_files/de-de/A1/A1_000419_obst.mp3"
+    },
+    {
+      "id": "000420",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 420,
+      "word": "oft",
+      "slug": "oft",
+      "file": "/audio_files/de-de/A1/A1_000420_oft.mp3"
+    },
+    {
+      "id": "000421",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 421,
+      "word": "ohr",
+      "slug": "ohr",
+      "file": "/audio_files/de-de/A1/A1_000421_ohr.mp3"
+    },
+    {
+      "id": "000422",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 422,
+      "word": "oktober",
+      "slug": "oktober",
+      "file": "/audio_files/de-de/A1/A1_000422_oktober.mp3"
+    },
+    {
+      "id": "000423",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 423,
+      "word": "oma",
+      "slug": "oma",
+      "file": "/audio_files/de-de/A1/A1_000423_oma.mp3"
+    },
+    {
+      "id": "000424",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 424,
+      "word": "onkel",
+      "slug": "onkel",
+      "file": "/audio_files/de-de/A1/A1_000424_onkel.mp3"
+    },
+    {
+      "id": "000425",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 425,
+      "word": "opa",
+      "slug": "opa",
+      "file": "/audio_files/de-de/A1/A1_000425_opa.mp3"
+    },
+    {
+      "id": "000426",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 426,
+      "word": "orange",
+      "slug": "orange",
+      "file": "/audio_files/de-de/A1/A1_000426_orange.mp3"
+    },
+    {
+      "id": "000427",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 427,
+      "word": "orangensaft",
+      "slug": "orangensaft",
+      "file": "/audio_files/de-de/A1/A1_000427_orangensaft.mp3"
+    },
+    {
+      "id": "000428",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 428,
+      "word": "papa",
+      "slug": "papa",
+      "file": "/audio_files/de-de/A1/A1_000428_papa.mp3"
+    },
+    {
+      "id": "000429",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 429,
+      "word": "papi",
+      "slug": "papi",
+      "file": "/audio_files/de-de/A1/A1_000429_papi.mp3"
+    },
+    {
+      "id": "000430",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 430,
+      "word": "papier",
+      "slug": "papier",
+      "file": "/audio_files/de-de/A1/A1_000430_papier.mp3"
+    },
+    {
+      "id": "000431",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 431,
+      "word": "park",
+      "slug": "park",
+      "file": "/audio_files/de-de/A1/A1_000431_park.mp3"
+    },
+    {
+      "id": "000432",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 432,
+      "word": "parken",
+      "slug": "parken",
+      "file": "/audio_files/de-de/A1/A1_000432_parken.mp3"
+    },
+    {
+      "id": "000433",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 433,
+      "word": "passen",
+      "slug": "passen",
+      "file": "/audio_files/de-de/A1/A1_000433_passen.mp3"
+    },
+    {
+      "id": "000434",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 434,
+      "word": "pasta",
+      "slug": "pasta",
+      "file": "/audio_files/de-de/A1/A1_000434_pasta.mp3"
+    },
+    {
+      "id": "000435",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 435,
+      "word": "pause",
+      "slug": "pause",
+      "file": "/audio_files/de-de/A1/A1_000435_pause.mp3"
+    },
+    {
+      "id": "000436",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 436,
+      "word": "person",
+      "slug": "person",
+      "file": "/audio_files/de-de/A1/A1_000436_person.mp3"
+    },
+    {
+      "id": "000437",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 437,
+      "word": "pferd",
+      "slug": "pferd",
+      "file": "/audio_files/de-de/A1/A1_000437_pferd.mp3"
+    },
+    {
+      "id": "000438",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 438,
+      "word": "photo",
+      "slug": "photo",
+      "file": "/audio_files/de-de/A1/A1_000438_photo.mp3"
+    },
+    {
+      "id": "000439",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 439,
+      "word": "pink",
+      "slug": "pink",
+      "file": "/audio_files/de-de/A1/A1_000439_pink.mp3"
+    },
+    {
+      "id": "000440",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 440,
+      "word": "pipi",
+      "slug": "pipi",
+      "file": "/audio_files/de-de/A1/A1_000440_pipi.mp3"
+    },
+    {
+      "id": "000441",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 441,
+      "word": "pizza",
+      "slug": "pizza",
+      "file": "/audio_files/de-de/A1/A1_000441_pizza.mp3"
+    },
+    {
+      "id": "000442",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 442,
+      "word": "platz",
+      "slug": "platz",
+      "file": "/audio_files/de-de/A1/A1_000442_platz.mp3"
+    },
+    {
+      "id": "000443",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 443,
+      "word": "polizei",
+      "slug": "polizei",
+      "file": "/audio_files/de-de/A1/A1_000443_polizei.mp3"
+    },
+    {
+      "id": "000444",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 444,
+      "word": "post",
+      "slug": "post",
+      "file": "/audio_files/de-de/A1/A1_000444_post.mp3"
+    },
+    {
+      "id": "000445",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 445,
+      "word": "postkarte",
+      "slug": "postkarte",
+      "file": "/audio_files/de-de/A1/A1_000445_postkarte.mp3"
+    },
+    {
+      "id": "000446",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 446,
+      "word": "preis",
+      "slug": "preis",
+      "file": "/audio_files/de-de/A1/A1_000446_preis.mp3"
+    },
+    {
+      "id": "000447",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 447,
+      "word": "problem",
+      "slug": "problem",
+      "file": "/audio_files/de-de/A1/A1_000447_problem.mp3"
+    },
+    {
+      "id": "000448",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 448,
+      "word": "pullover",
+      "slug": "pullover",
+      "file": "/audio_files/de-de/A1/A1_000448_pullover.mp3"
+    },
+    {
+      "id": "000449",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 449,
+      "word": "punkt",
+      "slug": "punkt",
+      "file": "/audio_files/de-de/A1/A1_000449_punkt.mp3"
+    },
+    {
+      "id": "000450",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 450,
+      "word": "puppe",
+      "slug": "puppe",
+      "file": "/audio_files/de-de/A1/A1_000450_puppe.mp3"
+    },
+    {
+      "id": "000451",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 451,
+      "word": "putzen",
+      "slug": "putzen",
+      "file": "/audio_files/de-de/A1/A1_000451_putzen.mp3"
+    },
+    {
+      "id": "000452",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 452,
+      "word": "radio",
+      "slug": "radio",
+      "file": "/audio_files/de-de/A1/A1_000452_radio.mp3"
+    },
+    {
+      "id": "000453",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 453,
+      "word": "rechts",
+      "slug": "rechts",
+      "file": "/audio_files/de-de/A1/A1_000453_rechts.mp3"
+    },
+    {
+      "id": "000454",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 454,
+      "word": "regal",
+      "slug": "regal",
+      "file": "/audio_files/de-de/A1/A1_000454_regal.mp3"
+    },
+    {
+      "id": "000455",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 455,
+      "word": "regen",
+      "slug": "regen",
+      "file": "/audio_files/de-de/A1/A1_000455_regen.mp3"
+    },
+    {
+      "id": "000456",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 456,
+      "word": "regenschirm",
+      "slug": "regenschirm",
+      "file": "/audio_files/de-de/A1/A1_000456_regenschirm.mp3"
+    },
+    {
+      "id": "000457",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 457,
+      "word": "regnen",
+      "slug": "regnen",
+      "file": "/audio_files/de-de/A1/A1_000457_regnen.mp3"
+    },
+    {
+      "id": "000458",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 458,
+      "word": "reis",
+      "slug": "reis",
+      "file": "/audio_files/de-de/A1/A1_000458_reis.mp3"
+    },
+    {
+      "id": "000459",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 459,
+      "word": "reisen",
+      "slug": "reisen",
+      "file": "/audio_files/de-de/A1/A1_000459_reisen.mp3"
+    },
+    {
+      "id": "000460",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 460,
+      "word": "restaurant",
+      "slug": "restaurant",
+      "file": "/audio_files/de-de/A1/A1_000460_restaurant.mp3"
+    },
+    {
+      "id": "000461",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 461,
+      "word": "richtig",
+      "slug": "richtig",
+      "file": "/audio_files/de-de/A1/A1_000461_richtig.mp3"
+    },
+    {
+      "id": "000462",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 462,
+      "word": "rock",
+      "slug": "rock",
+      "file": "/audio_files/de-de/A1/A1_000462_rock.mp3"
+    },
+    {
+      "id": "000463",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 463,
+      "word": "rosa",
+      "slug": "rosa",
+      "file": "/audio_files/de-de/A1/A1_000463_rosa.mp3"
+    },
+    {
+      "id": "000464",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 464,
+      "word": "rose",
+      "slug": "rose",
+      "file": "/audio_files/de-de/A1/A1_000464_rose.mp3"
+    },
+    {
+      "id": "000465",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 465,
+      "word": "rot",
+      "slug": "rot",
+      "file": "/audio_files/de-de/A1/A1_000465_rot.mp3"
+    },
+    {
+      "id": "000466",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 466,
+      "word": "rufen",
+      "slug": "rufen",
+      "file": "/audio_files/de-de/A1/A1_000466_rufen.mp3"
+    },
+    {
+      "id": "000467",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 467,
+      "word": "russisch",
+      "slug": "russisch",
+      "file": "/audio_files/de-de/A1/A1_000467_russisch.mp3"
+    },
+    {
+      "id": "000468",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 468,
+      "word": "saft",
+      "slug": "saft",
+      "file": "/audio_files/de-de/A1/A1_000468_saft.mp3"
+    },
+    {
+      "id": "000469",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 469,
+      "word": "sagen",
+      "slug": "sagen",
+      "file": "/audio_files/de-de/A1/A1_000469_sagen.mp3"
+    },
+    {
+      "id": "000470",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 470,
+      "word": "salat",
+      "slug": "salat",
+      "file": "/audio_files/de-de/A1/A1_000470_salat.mp3"
+    },
+    {
+      "id": "000471",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 471,
+      "word": "salz",
+      "slug": "salz",
+      "file": "/audio_files/de-de/A1/A1_000471_salz.mp3"
+    },
+    {
+      "id": "000472",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 472,
+      "word": "samstag",
+      "slug": "samstag",
+      "file": "/audio_files/de-de/A1/A1_000472_samstag.mp3"
+    },
+    {
+      "id": "000473",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 473,
+      "word": "samstagabend",
+      "slug": "samstagabend",
+      "file": "/audio_files/de-de/A1/A1_000473_samstagabend.mp3"
+    },
+    {
+      "id": "000474",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 474,
+      "word": "sandwich",
+      "slug": "sandwich",
+      "file": "/audio_files/de-de/A1/A1_000474_sandwich.mp3"
+    },
+    {
+      "id": "000475",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 475,
+      "word": "schauen",
+      "slug": "schauen",
+      "file": "/audio_files/de-de/A1/A1_000475_schauen.mp3"
+    },
+    {
+      "id": "000476",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 476,
+      "word": "schlafen",
+      "slug": "schlafen",
+      "file": "/audio_files/de-de/A1/A1_000476_schlafen.mp3"
+    },
+    {
+      "id": "000477",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 477,
+      "word": "schlafzimmer",
+      "slug": "schlafzimmer",
+      "file": "/audio_files/de-de/A1/A1_000477_schlafzimmer.mp3"
+    },
+    {
+      "id": "000478",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 478,
+      "word": "schlecht",
+      "slug": "schlecht",
+      "file": "/audio_files/de-de/A1/A1_000478_schlecht.mp3"
+    },
+    {
+      "id": "000479",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 479,
+      "word": "schließen",
+      "slug": "schließen",
+      "file": "/audio_files/de-de/A1/A1_000479_schließen.mp3"
+    },
+    {
+      "id": "000480",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 480,
+      "word": "schlüssel",
+      "slug": "schlüssel",
+      "file": "/audio_files/de-de/A1/A1_000480_schlüssel.mp3"
+    },
+    {
+      "id": "000481",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 481,
+      "word": "schnee",
+      "slug": "schnee",
+      "file": "/audio_files/de-de/A1/A1_000481_schnee.mp3"
+    },
+    {
+      "id": "000482",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 482,
+      "word": "schneemann",
+      "slug": "schneemann",
+      "file": "/audio_files/de-de/A1/A1_000482_schneemann.mp3"
+    },
+    {
+      "id": "000483",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 483,
+      "word": "schneien",
+      "slug": "schneien",
+      "file": "/audio_files/de-de/A1/A1_000483_schneien.mp3"
+    },
+    {
+      "id": "000484",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 484,
+      "word": "schnell",
+      "slug": "schnell",
+      "file": "/audio_files/de-de/A1/A1_000484_schnell.mp3"
+    },
+    {
+      "id": "000485",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 485,
+      "word": "schokolade",
+      "slug": "schokolade",
+      "file": "/audio_files/de-de/A1/A1_000485_schokolade.mp3"
+    },
+    {
+      "id": "000486",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 486,
+      "word": "schon",
+      "slug": "schon",
+      "file": "/audio_files/de-de/A1/A1_000486_schon.mp3"
+    },
+    {
+      "id": "000487",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 487,
+      "word": "schrank",
+      "slug": "schrank",
+      "file": "/audio_files/de-de/A1/A1_000487_schrank.mp3"
+    },
+    {
+      "id": "000488",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 488,
+      "word": "schreiben",
+      "slug": "schreiben",
+      "file": "/audio_files/de-de/A1/A1_000488_schreiben.mp3"
+    },
+    {
+      "id": "000489",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 489,
+      "word": "schreibtisch",
+      "slug": "schreibtisch",
+      "file": "/audio_files/de-de/A1/A1_000489_schreibtisch.mp3"
+    },
+    {
+      "id": "000490",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 490,
+      "word": "schuh",
+      "slug": "schuh",
+      "file": "/audio_files/de-de/A1/A1_000490_schuh.mp3"
+    },
+    {
+      "id": "000491",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 491,
+      "word": "schulbus",
+      "slug": "schulbus",
+      "file": "/audio_files/de-de/A1/A1_000491_schulbus.mp3"
+    },
+    {
+      "id": "000492",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 492,
+      "word": "schule",
+      "slug": "schule",
+      "file": "/audio_files/de-de/A1/A1_000492_schule.mp3"
+    },
+    {
+      "id": "000493",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 493,
+      "word": "schwarz",
+      "slug": "schwarz",
+      "file": "/audio_files/de-de/A1/A1_000493_schwarz.mp3"
+    },
+    {
+      "id": "000494",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 494,
+      "word": "schwer",
+      "slug": "schwer",
+      "file": "/audio_files/de-de/A1/A1_000494_schwer.mp3"
+    },
+    {
+      "id": "000495",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 495,
+      "word": "schwester",
+      "slug": "schwester",
+      "file": "/audio_files/de-de/A1/A1_000495_schwester.mp3"
+    },
+    {
+      "id": "000496",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 496,
+      "word": "schwimmen",
+      "slug": "schwimmen",
+      "file": "/audio_files/de-de/A1/A1_000496_schwimmen.mp3"
+    },
+    {
+      "id": "000497",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 497,
+      "word": "schön",
+      "slug": "schön",
+      "file": "/audio_files/de-de/A1/A1_000497_schön.mp3"
+    },
+    {
+      "id": "000498",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 498,
+      "word": "schüler",
+      "slug": "schüler",
+      "file": "/audio_files/de-de/A1/A1_000498_schüler.mp3"
+    },
+    {
+      "id": "000499",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 499,
+      "word": "schülerin",
+      "slug": "schülerin",
+      "file": "/audio_files/de-de/A1/A1_000499_schülerin.mp3"
+    },
+    {
+      "id": "000500",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 500,
+      "word": "sechs",
+      "slug": "sechs",
+      "file": "/audio_files/de-de/A1/A1_000500_sechs.mp3"
+    },
+    {
+      "id": "000501",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 501,
+      "word": "sechste",
+      "slug": "sechste",
+      "file": "/audio_files/de-de/A1/A1_000501_sechste.mp3"
+    },
+    {
+      "id": "000502",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 502,
+      "word": "sechster",
+      "slug": "sechster",
+      "file": "/audio_files/de-de/A1/A1_000502_sechster.mp3"
+    },
+    {
+      "id": "000503",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 503,
+      "word": "sechzehn",
+      "slug": "sechzehn",
+      "file": "/audio_files/de-de/A1/A1_000503_sechzehn.mp3"
+    },
+    {
+      "id": "000504",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 504,
+      "word": "sechzig",
+      "slug": "sechzig",
+      "file": "/audio_files/de-de/A1/A1_000504_sechzig.mp3"
+    },
+    {
+      "id": "000505",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 505,
+      "word": "sehen",
+      "slug": "sehen",
+      "file": "/audio_files/de-de/A1/A1_000505_sehen.mp3"
+    },
+    {
+      "id": "000506",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 506,
+      "word": "sehr",
+      "slug": "sehr",
+      "file": "/audio_files/de-de/A1/A1_000506_sehr.mp3"
+    },
+    {
+      "id": "000507",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 507,
+      "word": "sein",
+      "slug": "sein",
+      "file": "/audio_files/de-de/A1/A1_000507_sein.mp3"
+    },
+    {
+      "id": "000508",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 508,
+      "word": "seite",
+      "slug": "seite",
+      "file": "/audio_files/de-de/A1/A1_000508_seite.mp3"
+    },
+    {
+      "id": "000509",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 509,
+      "word": "sekunde",
+      "slug": "sekunde",
+      "file": "/audio_files/de-de/A1/A1_000509_sekunde.mp3"
+    },
+    {
+      "id": "000510",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 510,
+      "word": "setzen",
+      "slug": "setzen",
+      "file": "/audio_files/de-de/A1/A1_000510_setzen.mp3"
+    },
+    {
+      "id": "000511",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 511,
+      "word": "shirt",
+      "slug": "shirt",
+      "file": "/audio_files/de-de/A1/A1_000511_shirt.mp3"
+    },
+    {
+      "id": "000512",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 512,
+      "word": "sie",
+      "slug": "sie",
+      "file": "/audio_files/de-de/A1/A1_000512_sie.mp3"
+    },
+    {
+      "id": "000513",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 513,
+      "word": "sieben",
+      "slug": "sieben",
+      "file": "/audio_files/de-de/A1/A1_000513_sieben.mp3"
+    },
+    {
+      "id": "000514",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 514,
+      "word": "siebzehn",
+      "slug": "siebzehn",
+      "file": "/audio_files/de-de/A1/A1_000514_siebzehn.mp3"
+    },
+    {
+      "id": "000515",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 515,
+      "word": "siebzig",
+      "slug": "siebzig",
+      "file": "/audio_files/de-de/A1/A1_000515_siebzig.mp3"
+    },
+    {
+      "id": "000516",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 516,
+      "word": "singen",
+      "slug": "singen",
+      "file": "/audio_files/de-de/A1/A1_000516_singen.mp3"
+    },
+    {
+      "id": "000517",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 517,
+      "word": "sitzen",
+      "slug": "sitzen",
+      "file": "/audio_files/de-de/A1/A1_000517_sitzen.mp3"
+    },
+    {
+      "id": "000518",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 518,
+      "word": "socke",
+      "slug": "socke",
+      "file": "/audio_files/de-de/A1/A1_000518_socke.mp3"
+    },
+    {
+      "id": "000519",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 519,
+      "word": "sohn",
+      "slug": "sohn",
+      "file": "/audio_files/de-de/A1/A1_000519_sohn.mp3"
+    },
+    {
+      "id": "000520",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 520,
+      "word": "sommer",
+      "slug": "sommer",
+      "file": "/audio_files/de-de/A1/A1_000520_sommer.mp3"
+    },
+    {
+      "id": "000521",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 521,
+      "word": "sonnabend",
+      "slug": "sonnabend",
+      "file": "/audio_files/de-de/A1/A1_000521_sonnabend.mp3"
+    },
+    {
+      "id": "000522",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 522,
+      "word": "sonne",
+      "slug": "sonne",
+      "file": "/audio_files/de-de/A1/A1_000522_sonne.mp3"
+    },
+    {
+      "id": "000523",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 523,
+      "word": "sonnig",
+      "slug": "sonnig",
+      "file": "/audio_files/de-de/A1/A1_000523_sonnig.mp3"
+    },
+    {
+      "id": "000524",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 524,
+      "word": "sonntag",
+      "slug": "sonntag",
+      "file": "/audio_files/de-de/A1/A1_000524_sonntag.mp3"
+    },
+    {
+      "id": "000525",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 525,
+      "word": "spanisch",
+      "slug": "spanisch",
+      "file": "/audio_files/de-de/A1/A1_000525_spanisch.mp3"
+    },
+    {
+      "id": "000526",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 526,
+      "word": "spass",
+      "slug": "spass",
+      "file": "/audio_files/de-de/A1/A1_000526_spass.mp3"
+    },
+    {
+      "id": "000527",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 527,
+      "word": "spazierengehen",
+      "slug": "spazierengehen",
+      "file": "/audio_files/de-de/A1/A1_000527_spazierengehen.mp3"
+    },
+    {
+      "id": "000528",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 528,
+      "word": "spaß",
+      "slug": "spaß",
+      "file": "/audio_files/de-de/A1/A1_000528_spaß.mp3"
+    },
+    {
+      "id": "000529",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 529,
+      "word": "spiel",
+      "slug": "spiel",
+      "file": "/audio_files/de-de/A1/A1_000529_spiel.mp3"
+    },
+    {
+      "id": "000530",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 530,
+      "word": "spielen",
+      "slug": "spielen",
+      "file": "/audio_files/de-de/A1/A1_000530_spielen.mp3"
+    },
+    {
+      "id": "000531",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 531,
+      "word": "spielzeug",
+      "slug": "spielzeug",
+      "file": "/audio_files/de-de/A1/A1_000531_spielzeug.mp3"
+    },
+    {
+      "id": "000532",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 532,
+      "word": "sport",
+      "slug": "sport",
+      "file": "/audio_files/de-de/A1/A1_000532_sport.mp3"
+    },
+    {
+      "id": "000533",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 533,
+      "word": "sportunterricht",
+      "slug": "sportunterricht",
+      "file": "/audio_files/de-de/A1/A1_000533_sportunterricht.mp3"
+    },
+    {
+      "id": "000534",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 534,
+      "word": "sprache",
+      "slug": "sprache",
+      "file": "/audio_files/de-de/A1/A1_000534_sprache.mp3"
+    },
+    {
+      "id": "000535",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 535,
+      "word": "sprachkurs",
+      "slug": "sprachkurs",
+      "file": "/audio_files/de-de/A1/A1_000535_sprachkurs.mp3"
+    },
+    {
+      "id": "000536",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 536,
+      "word": "sprechen",
+      "slug": "sprechen",
+      "file": "/audio_files/de-de/A1/A1_000536_sprechen.mp3"
+    },
+    {
+      "id": "000537",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 537,
+      "word": "spät",
+      "slug": "spät",
+      "file": "/audio_files/de-de/A1/A1_000537_spät.mp3"
+    },
+    {
+      "id": "000538",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 538,
+      "word": "stadt",
+      "slug": "stadt",
+      "file": "/audio_files/de-de/A1/A1_000538_stadt.mp3"
+    },
+    {
+      "id": "000539",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 539,
+      "word": "stehen",
+      "slug": "stehen",
+      "file": "/audio_files/de-de/A1/A1_000539_stehen.mp3"
+    },
+    {
+      "id": "000540",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 540,
+      "word": "stellen",
+      "slug": "stellen",
+      "file": "/audio_files/de-de/A1/A1_000540_stellen.mp3"
+    },
+    {
+      "id": "000541",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 541,
+      "word": "stern",
+      "slug": "stern",
+      "file": "/audio_files/de-de/A1/A1_000541_stern.mp3"
+    },
+    {
+      "id": "000542",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 542,
+      "word": "stift",
+      "slug": "stift",
+      "file": "/audio_files/de-de/A1/A1_000542_stift.mp3"
+    },
+    {
+      "id": "000543",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 543,
+      "word": "stopp",
+      "slug": "stopp",
+      "file": "/audio_files/de-de/A1/A1_000543_stopp.mp3"
+    },
+    {
+      "id": "000544",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 544,
+      "word": "student",
+      "slug": "student",
+      "file": "/audio_files/de-de/A1/A1_000544_student.mp3"
+    },
+    {
+      "id": "000545",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 545,
+      "word": "studentin",
+      "slug": "studentin",
+      "file": "/audio_files/de-de/A1/A1_000545_studentin.mp3"
+    },
+    {
+      "id": "000546",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 546,
+      "word": "studieren",
+      "slug": "studieren",
+      "file": "/audio_files/de-de/A1/A1_000546_studieren.mp3"
+    },
+    {
+      "id": "000547",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 547,
+      "word": "stuhl",
+      "slug": "stuhl",
+      "file": "/audio_files/de-de/A1/A1_000547_stuhl.mp3"
+    },
+    {
+      "id": "000548",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 548,
+      "word": "stunde",
+      "slug": "stunde",
+      "file": "/audio_files/de-de/A1/A1_000548_stunde.mp3"
+    },
+    {
+      "id": "000549",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 549,
+      "word": "stück",
+      "slug": "stück",
+      "file": "/audio_files/de-de/A1/A1_000549_stück.mp3"
+    },
+    {
+      "id": "000550",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 550,
+      "word": "suchen",
+      "slug": "suchen",
+      "file": "/audio_files/de-de/A1/A1_000550_suchen.mp3"
+    },
+    {
+      "id": "000551",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 551,
+      "word": "super",
+      "slug": "super",
+      "file": "/audio_files/de-de/A1/A1_000551_super.mp3"
+    },
+    {
+      "id": "000552",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 552,
+      "word": "supermarkt",
+      "slug": "supermarkt",
+      "file": "/audio_files/de-de/A1/A1_000552_supermarkt.mp3"
+    },
+    {
+      "id": "000553",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 553,
+      "word": "suppe",
+      "slug": "suppe",
+      "file": "/audio_files/de-de/A1/A1_000553_suppe.mp3"
+    },
+    {
+      "id": "000554",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 554,
+      "word": "süß",
+      "slug": "süß",
+      "file": "/audio_files/de-de/A1/A1_000554_süß.mp3"
+    },
+    {
+      "id": "000555",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 555,
+      "word": "tag",
+      "slug": "tag",
+      "file": "/audio_files/de-de/A1/A1_000555_tag.mp3"
+    },
+    {
+      "id": "000556",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 556,
+      "word": "tante",
+      "slug": "tante",
+      "file": "/audio_files/de-de/A1/A1_000556_tante.mp3"
+    },
+    {
+      "id": "000557",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 557,
+      "word": "tanzen",
+      "slug": "tanzen",
+      "file": "/audio_files/de-de/A1/A1_000557_tanzen.mp3"
+    },
+    {
+      "id": "000558",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 558,
+      "word": "tasche",
+      "slug": "tasche",
+      "file": "/audio_files/de-de/A1/A1_000558_tasche.mp3"
+    },
+    {
+      "id": "000559",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 559,
+      "word": "tasse",
+      "slug": "tasse",
+      "file": "/audio_files/de-de/A1/A1_000559_tasse.mp3"
+    },
+    {
+      "id": "000560",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 560,
+      "word": "tausend",
+      "slug": "tausend",
+      "file": "/audio_files/de-de/A1/A1_000560_tausend.mp3"
+    },
+    {
+      "id": "000561",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 561,
+      "word": "taxi",
+      "slug": "taxi",
+      "file": "/audio_files/de-de/A1/A1_000561_taxi.mp3"
+    },
+    {
+      "id": "000562",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 562,
+      "word": "tee",
+      "slug": "tee",
+      "file": "/audio_files/de-de/A1/A1_000562_tee.mp3"
+    },
+    {
+      "id": "000563",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 563,
+      "word": "teil",
+      "slug": "teil",
+      "file": "/audio_files/de-de/A1/A1_000563_teil.mp3"
+    },
+    {
+      "id": "000564",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 564,
+      "word": "teilen",
+      "slug": "teilen",
+      "file": "/audio_files/de-de/A1/A1_000564_teilen.mp3"
+    },
+    {
+      "id": "000565",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 565,
+      "word": "telefon",
+      "slug": "telefon",
+      "file": "/audio_files/de-de/A1/A1_000565_telefon.mp3"
+    },
+    {
+      "id": "000566",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 566,
+      "word": "telefonieren",
+      "slug": "telefonieren",
+      "file": "/audio_files/de-de/A1/A1_000566_telefonieren.mp3"
+    },
+    {
+      "id": "000567",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 567,
+      "word": "telefonnummer",
+      "slug": "telefonnummer",
+      "file": "/audio_files/de-de/A1/A1_000567_telefonnummer.mp3"
+    },
+    {
+      "id": "000568",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 568,
+      "word": "teller",
+      "slug": "teller",
+      "file": "/audio_files/de-de/A1/A1_000568_teller.mp3"
+    },
+    {
+      "id": "000569",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 569,
+      "word": "tennis",
+      "slug": "tennis",
+      "file": "/audio_files/de-de/A1/A1_000569_tennis.mp3"
+    },
+    {
+      "id": "000570",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 570,
+      "word": "teuer",
+      "slug": "teuer",
+      "file": "/audio_files/de-de/A1/A1_000570_teuer.mp3"
+    },
+    {
+      "id": "000571",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 571,
+      "word": "text",
+      "slug": "text",
+      "file": "/audio_files/de-de/A1/A1_000571_text.mp3"
+    },
+    {
+      "id": "000572",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 572,
+      "word": "tier",
+      "slug": "tier",
+      "file": "/audio_files/de-de/A1/A1_000572_tier.mp3"
+    },
+    {
+      "id": "000573",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 573,
+      "word": "tisch",
+      "slug": "tisch",
+      "file": "/audio_files/de-de/A1/A1_000573_tisch.mp3"
+    },
+    {
+      "id": "000574",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 574,
+      "word": "toast",
+      "slug": "toast",
+      "file": "/audio_files/de-de/A1/A1_000574_toast.mp3"
+    },
+    {
+      "id": "000575",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 575,
+      "word": "tochter",
+      "slug": "tochter",
+      "file": "/audio_files/de-de/A1/A1_000575_tochter.mp3"
+    },
+    {
+      "id": "000576",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 576,
+      "word": "toilette",
+      "slug": "toilette",
+      "file": "/audio_files/de-de/A1/A1_000576_toilette.mp3"
+    },
+    {
+      "id": "000577",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 577,
+      "word": "toll",
+      "slug": "toll",
+      "file": "/audio_files/de-de/A1/A1_000577_toll.mp3"
+    },
+    {
+      "id": "000578",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 578,
+      "word": "tomate",
+      "slug": "tomate",
+      "file": "/audio_files/de-de/A1/A1_000578_tomate.mp3"
+    },
+    {
+      "id": "000579",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 579,
+      "word": "tragen",
+      "slug": "tragen",
+      "file": "/audio_files/de-de/A1/A1_000579_tragen.mp3"
+    },
+    {
+      "id": "000580",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 580,
+      "word": "trainieren",
+      "slug": "trainieren",
+      "file": "/audio_files/de-de/A1/A1_000580_trainieren.mp3"
+    },
+    {
+      "id": "000581",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 581,
+      "word": "treffen",
+      "slug": "treffen",
+      "file": "/audio_files/de-de/A1/A1_000581_treffen.mp3"
+    },
+    {
+      "id": "000582",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 582,
+      "word": "trinken",
+      "slug": "trinken",
+      "file": "/audio_files/de-de/A1/A1_000582_trinken.mp3"
+    },
+    {
+      "id": "000583",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 583,
+      "word": "tun",
+      "slug": "tun",
+      "file": "/audio_files/de-de/A1/A1_000583_tun.mp3"
+    },
+    {
+      "id": "000584",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 584,
+      "word": "tür",
+      "slug": "tür",
+      "file": "/audio_files/de-de/A1/A1_000584_tür.mp3"
+    },
+    {
+      "id": "000585",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 585,
+      "word": "uhr",
+      "slug": "uhr",
+      "file": "/audio_files/de-de/A1/A1_000585_uhr.mp3"
+    },
+    {
+      "id": "000586",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 586,
+      "word": "uhrzeit",
+      "slug": "uhrzeit",
+      "file": "/audio_files/de-de/A1/A1_000586_uhrzeit.mp3"
+    },
+    {
+      "id": "000587",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 587,
+      "word": "unten",
+      "slug": "unten",
+      "file": "/audio_files/de-de/A1/A1_000587_unten.mp3"
+    },
+    {
+      "id": "000588",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 588,
+      "word": "unterricht",
+      "slug": "unterricht",
+      "file": "/audio_files/de-de/A1/A1_000588_unterricht.mp3"
+    },
+    {
+      "id": "000589",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 589,
+      "word": "vater",
+      "slug": "vater",
+      "file": "/audio_files/de-de/A1/A1_000589_vater.mp3"
+    },
+    {
+      "id": "000590",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 590,
+      "word": "vati",
+      "slug": "vati",
+      "file": "/audio_files/de-de/A1/A1_000590_vati.mp3"
+    },
+    {
+      "id": "000591",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 591,
+      "word": "vergessen",
+      "slug": "vergessen",
+      "file": "/audio_files/de-de/A1/A1_000591_vergessen.mp3"
+    },
+    {
+      "id": "000592",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 592,
+      "word": "verkaufen",
+      "slug": "verkaufen",
+      "file": "/audio_files/de-de/A1/A1_000592_verkaufen.mp3"
+    },
+    {
+      "id": "000593",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 593,
+      "word": "verkäuferin",
+      "slug": "verkäuferin",
+      "file": "/audio_files/de-de/A1/A1_000593_verkäuferin.mp3"
+    },
+    {
+      "id": "000594",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 594,
+      "word": "verstehen",
+      "slug": "verstehen",
+      "file": "/audio_files/de-de/A1/A1_000594_verstehen.mp3"
+    },
+    {
+      "id": "000595",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 595,
+      "word": "viel",
+      "slug": "viel",
+      "file": "/audio_files/de-de/A1/A1_000595_viel.mp3"
+    },
+    {
+      "id": "000596",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 596,
+      "word": "vielleicht",
+      "slug": "vielleicht",
+      "file": "/audio_files/de-de/A1/A1_000596_vielleicht.mp3"
+    },
+    {
+      "id": "000597",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 597,
+      "word": "vier",
+      "slug": "vier",
+      "file": "/audio_files/de-de/A1/A1_000597_vier.mp3"
+    },
+    {
+      "id": "000598",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 598,
+      "word": "viert",
+      "slug": "viert",
+      "file": "/audio_files/de-de/A1/A1_000598_viert.mp3"
+    },
+    {
+      "id": "000599",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 599,
+      "word": "vierzehn",
+      "slug": "vierzehn",
+      "file": "/audio_files/de-de/A1/A1_000599_vierzehn.mp3"
+    },
+    {
+      "id": "000600",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 600,
+      "word": "vierzig",
+      "slug": "vierzig",
+      "file": "/audio_files/de-de/A1/A1_000600_vierzig.mp3"
+    },
+    {
+      "id": "000601",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 601,
+      "word": "vokabel",
+      "slug": "vokabel",
+      "file": "/audio_files/de-de/A1/A1_000601_vokabel.mp3"
+    },
+    {
+      "id": "000602",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 602,
+      "word": "vormittag",
+      "slug": "vormittag",
+      "file": "/audio_files/de-de/A1/A1_000602_vormittag.mp3"
+    },
+    {
+      "id": "000603",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 603,
+      "word": "vorname",
+      "slug": "vorname",
+      "file": "/audio_files/de-de/A1/A1_000603_vorname.mp3"
+    },
+    {
+      "id": "000604",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 604,
+      "word": "vorstellen",
+      "slug": "vorstellen",
+      "file": "/audio_files/de-de/A1/A1_000604_vorstellen.mp3"
+    },
+    {
+      "id": "000605",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 605,
+      "word": "wald",
+      "slug": "wald",
+      "file": "/audio_files/de-de/A1/A1_000605_wald.mp3"
+    },
+    {
+      "id": "000606",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 606,
+      "word": "wann",
+      "slug": "wann",
+      "file": "/audio_files/de-de/A1/A1_000606_wann.mp3"
+    },
+    {
+      "id": "000607",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 607,
+      "word": "warm",
+      "slug": "warm",
+      "file": "/audio_files/de-de/A1/A1_000607_warm.mp3"
+    },
+    {
+      "id": "000608",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 608,
+      "word": "warten",
+      "slug": "warten",
+      "file": "/audio_files/de-de/A1/A1_000608_warten.mp3"
+    },
+    {
+      "id": "000609",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 609,
+      "word": "warum",
+      "slug": "warum",
+      "file": "/audio_files/de-de/A1/A1_000609_warum.mp3"
+    },
+    {
+      "id": "000610",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 610,
+      "word": "waschen",
+      "slug": "waschen",
+      "file": "/audio_files/de-de/A1/A1_000610_waschen.mp3"
+    },
+    {
+      "id": "000611",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 611,
+      "word": "wasser",
+      "slug": "wasser",
+      "file": "/audio_files/de-de/A1/A1_000611_wasser.mp3"
+    },
+    {
+      "id": "000612",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 612,
+      "word": "wein",
+      "slug": "wein",
+      "file": "/audio_files/de-de/A1/A1_000612_wein.mp3"
+    },
+    {
+      "id": "000613",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 613,
+      "word": "weiss",
+      "slug": "weiss",
+      "file": "/audio_files/de-de/A1/A1_000613_weiss.mp3"
+    },
+    {
+      "id": "000614",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 614,
+      "word": "wenig",
+      "slug": "wenig",
+      "file": "/audio_files/de-de/A1/A1_000614_wenig.mp3"
+    },
+    {
+      "id": "000615",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 615,
+      "word": "werden",
+      "slug": "werden",
+      "file": "/audio_files/de-de/A1/A1_000615_werden.mp3"
+    },
+    {
+      "id": "000616",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 616,
+      "word": "wetter",
+      "slug": "wetter",
+      "file": "/audio_files/de-de/A1/A1_000616_wetter.mp3"
+    },
+    {
+      "id": "000617",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 617,
+      "word": "wichtig",
+      "slug": "wichtig",
+      "file": "/audio_files/de-de/A1/A1_000617_wichtig.mp3"
+    },
+    {
+      "id": "000618",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 618,
+      "word": "wieder",
+      "slug": "wieder",
+      "file": "/audio_files/de-de/A1/A1_000618_wieder.mp3"
+    },
+    {
+      "id": "000619",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 619,
+      "word": "wieviel",
+      "slug": "wieviel",
+      "file": "/audio_files/de-de/A1/A1_000619_wieviel.mp3"
+    },
+    {
+      "id": "000620",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 620,
+      "word": "willkommen",
+      "slug": "willkommen",
+      "file": "/audio_files/de-de/A1/A1_000620_willkommen.mp3"
+    },
+    {
+      "id": "000621",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 621,
+      "word": "winter",
+      "slug": "winter",
+      "file": "/audio_files/de-de/A1/A1_000621_winter.mp3"
+    },
+    {
+      "id": "000622",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 622,
+      "word": "wissen",
+      "slug": "wissen",
+      "file": "/audio_files/de-de/A1/A1_000622_wissen.mp3"
+    },
+    {
+      "id": "000623",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 623,
+      "word": "woche",
+      "slug": "woche",
+      "file": "/audio_files/de-de/A1/A1_000623_woche.mp3"
+    },
+    {
+      "id": "000624",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 624,
+      "word": "wochenende",
+      "slug": "wochenende",
+      "file": "/audio_files/de-de/A1/A1_000624_wochenende.mp3"
+    },
+    {
+      "id": "000625",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 625,
+      "word": "wochentag",
+      "slug": "wochentag",
+      "file": "/audio_files/de-de/A1/A1_000625_wochentag.mp3"
+    },
+    {
+      "id": "000626",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 626,
+      "word": "woher",
+      "slug": "woher",
+      "file": "/audio_files/de-de/A1/A1_000626_woher.mp3"
+    },
+    {
+      "id": "000627",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 627,
+      "word": "wohin",
+      "slug": "wohin",
+      "file": "/audio_files/de-de/A1/A1_000627_wohin.mp3"
+    },
+    {
+      "id": "000628",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 628,
+      "word": "wohnen",
+      "slug": "wohnen",
+      "file": "/audio_files/de-de/A1/A1_000628_wohnen.mp3"
+    },
+    {
+      "id": "000629",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 629,
+      "word": "wohnung",
+      "slug": "wohnung",
+      "file": "/audio_files/de-de/A1/A1_000629_wohnung.mp3"
+    },
+    {
+      "id": "000630",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 630,
+      "word": "wohnzimmer",
+      "slug": "wohnzimmer",
+      "file": "/audio_files/de-de/A1/A1_000630_wohnzimmer.mp3"
+    },
+    {
+      "id": "000631",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 631,
+      "word": "wort",
+      "slug": "wort",
+      "file": "/audio_files/de-de/A1/A1_000631_wort.mp3"
+    },
+    {
+      "id": "000632",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 632,
+      "word": "wortschatz",
+      "slug": "wortschatz",
+      "file": "/audio_files/de-de/A1/A1_000632_wortschatz.mp3"
+    },
+    {
+      "id": "000633",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 633,
+      "word": "wurst",
+      "slug": "wurst",
+      "file": "/audio_files/de-de/A1/A1_000633_wurst.mp3"
+    },
+    {
+      "id": "000634",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 634,
+      "word": "wörterbuch",
+      "slug": "wörterbuch",
+      "file": "/audio_files/de-de/A1/A1_000634_wörterbuch.mp3"
+    },
+    {
+      "id": "000635",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 635,
+      "word": "würstchen",
+      "slug": "würstchen",
+      "file": "/audio_files/de-de/A1/A1_000635_würstchen.mp3"
+    },
+    {
+      "id": "000636",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 636,
+      "word": "zahlen",
+      "slug": "zahlen",
+      "file": "/audio_files/de-de/A1/A1_000636_zahlen.mp3"
+    },
+    {
+      "id": "000637",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 637,
+      "word": "zahn",
+      "slug": "zahn",
+      "file": "/audio_files/de-de/A1/A1_000637_zahn.mp3"
+    },
+    {
+      "id": "000638",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 638,
+      "word": "zahnbürste",
+      "slug": "zahnbürste",
+      "file": "/audio_files/de-de/A1/A1_000638_zahnbürste.mp3"
+    },
+    {
+      "id": "000639",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 639,
+      "word": "zahnpasta",
+      "slug": "zahnpasta",
+      "file": "/audio_files/de-de/A1/A1_000639_zahnpasta.mp3"
+    },
+    {
+      "id": "000640",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 640,
+      "word": "zehn",
+      "slug": "zehn",
+      "file": "/audio_files/de-de/A1/A1_000640_zehn.mp3"
+    },
+    {
+      "id": "000641",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 641,
+      "word": "zeigen",
+      "slug": "zeigen",
+      "file": "/audio_files/de-de/A1/A1_000641_zeigen.mp3"
+    },
+    {
+      "id": "000642",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 642,
+      "word": "zeit",
+      "slug": "zeit",
+      "file": "/audio_files/de-de/A1/A1_000642_zeit.mp3"
+    },
+    {
+      "id": "000643",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 643,
+      "word": "zeitung",
+      "slug": "zeitung",
+      "file": "/audio_files/de-de/A1/A1_000643_zeitung.mp3"
+    },
+    {
+      "id": "000644",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 644,
+      "word": "ziehen",
+      "slug": "ziehen",
+      "file": "/audio_files/de-de/A1/A1_000644_ziehen.mp3"
+    },
+    {
+      "id": "000645",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 645,
+      "word": "zimmer",
+      "slug": "zimmer",
+      "file": "/audio_files/de-de/A1/A1_000645_zimmer.mp3"
+    },
+    {
+      "id": "000646",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 646,
+      "word": "zitrone",
+      "slug": "zitrone",
+      "file": "/audio_files/de-de/A1/A1_000646_zitrone.mp3"
+    },
+    {
+      "id": "000647",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 647,
+      "word": "zoo",
+      "slug": "zoo",
+      "file": "/audio_files/de-de/A1/A1_000647_zoo.mp3"
+    },
+    {
+      "id": "000648",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 648,
+      "word": "zucker",
+      "slug": "zucker",
+      "file": "/audio_files/de-de/A1/A1_000648_zucker.mp3"
+    },
+    {
+      "id": "000649",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 649,
+      "word": "zuerst",
+      "slug": "zuerst",
+      "file": "/audio_files/de-de/A1/A1_000649_zuerst.mp3"
+    },
+    {
+      "id": "000650",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 650,
+      "word": "zug",
+      "slug": "zug",
+      "file": "/audio_files/de-de/A1/A1_000650_zug.mp3"
+    },
+    {
+      "id": "000651",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 651,
+      "word": "zuhause",
+      "slug": "zuhause",
+      "file": "/audio_files/de-de/A1/A1_000651_zuhause.mp3"
+    },
+    {
+      "id": "000652",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 652,
+      "word": "zumachen",
+      "slug": "zumachen",
+      "file": "/audio_files/de-de/A1/A1_000652_zumachen.mp3"
+    },
+    {
+      "id": "000653",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 653,
+      "word": "zurueck",
+      "slug": "zurueck",
+      "file": "/audio_files/de-de/A1/A1_000653_zurueck.mp3"
+    },
+    {
+      "id": "000654",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 654,
+      "word": "zurück",
+      "slug": "zurück",
+      "file": "/audio_files/de-de/A1/A1_000654_zurück.mp3"
+    },
+    {
+      "id": "000655",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 655,
+      "word": "zusammen",
+      "slug": "zusammen",
+      "file": "/audio_files/de-de/A1/A1_000655_zusammen.mp3"
+    },
+    {
+      "id": "000656",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 656,
+      "word": "zwanzig",
+      "slug": "zwanzig",
+      "file": "/audio_files/de-de/A1/A1_000656_zwanzig.mp3"
+    },
+    {
+      "id": "000657",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 657,
+      "word": "zwei",
+      "slug": "zwei",
+      "file": "/audio_files/de-de/A1/A1_000657_zwei.mp3"
+    },
+    {
+      "id": "000658",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 658,
+      "word": "zweihundert",
+      "slug": "zweihundert",
+      "file": "/audio_files/de-de/A1/A1_000658_zweihundert.mp3"
+    },
+    {
+      "id": "000659",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 659,
+      "word": "zweimal",
+      "slug": "zweimal",
+      "file": "/audio_files/de-de/A1/A1_000659_zweimal.mp3"
+    },
+    {
+      "id": "000660",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 660,
+      "word": "zweit",
+      "slug": "zweit",
+      "file": "/audio_files/de-de/A1/A1_000660_zweit.mp3"
+    },
+    {
+      "id": "000661",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 661,
+      "word": "zwölf",
+      "slug": "zwölf",
+      "file": "/audio_files/de-de/A1/A1_000661_zwölf.mp3"
+    },
+    {
+      "id": "000662",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 662,
+      "word": "zwölfte",
+      "slug": "zwölfte",
+      "file": "/audio_files/de-de/A1/A1_000662_zwölfte.mp3"
+    },
+    {
+      "id": "000663",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 663,
+      "word": "öffnen",
+      "slug": "öffnen",
+      "file": "/audio_files/de-de/A1/A1_000663_öffnen.mp3"
+    },
+    {
+      "id": "000664",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 664,
+      "word": "üben",
+      "slug": "üben",
+      "file": "/audio_files/de-de/A1/A1_000664_üben.mp3"
+    },
+    {
+      "id": "000665",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 665,
+      "word": "überall",
+      "slug": "überall",
+      "file": "/audio_files/de-de/A1/A1_000665_überall.mp3"
+    },
+    {
+      "id": "000666",
+      "lang": "de-de",
+      "level": "A1",
+      "index": 666,
+      "word": "übung",
+      "slug": "übung",
+      "file": "/audio_files/de-de/A1/A1_000666_übung.mp3"
+    }
+  ],
+  "index": {
+    "000001": 0,
+    "000002": 1,
+    "000003": 2,
+    "000004": 3,
+    "000005": 4,
+    "000006": 5,
+    "000007": 6,
+    "000008": 7,
+    "000009": 8,
+    "000010": 9,
+    "000011": 10,
+    "000012": 11,
+    "000013": 12,
+    "000014": 13,
+    "000015": 14,
+    "000016": 15,
+    "000017": 16,
+    "000018": 17,
+    "000019": 18,
+    "000020": 19,
+    "000021": 20,
+    "000022": 21,
+    "000023": 22,
+    "000024": 23,
+    "000025": 24,
+    "000026": 25,
+    "000027": 26,
+    "000028": 27,
+    "000029": 28,
+    "000030": 29,
+    "000031": 30,
+    "000032": 31,
+    "000033": 32,
+    "000034": 33,
+    "000035": 34,
+    "000036": 35,
+    "000037": 36,
+    "000038": 37,
+    "000039": 38,
+    "000040": 39,
+    "000041": 40,
+    "000042": 41,
+    "000043": 42,
+    "000044": 43,
+    "000045": 44,
+    "000046": 45,
+    "000047": 46,
+    "000048": 47,
+    "000049": 48,
+    "000050": 49,
+    "000051": 50,
+    "000052": 51,
+    "000053": 52,
+    "000054": 53,
+    "000055": 54,
+    "000056": 55,
+    "000057": 56,
+    "000058": 57,
+    "000059": 58,
+    "000060": 59,
+    "000061": 60,
+    "000062": 61,
+    "000063": 62,
+    "000064": 63,
+    "000065": 64,
+    "000066": 65,
+    "000067": 66,
+    "000068": 67,
+    "000069": 68,
+    "000070": 69,
+    "000071": 70,
+    "000072": 71,
+    "000073": 72,
+    "000074": 73,
+    "000075": 74,
+    "000076": 75,
+    "000077": 76,
+    "000078": 77,
+    "000079": 78,
+    "000080": 79,
+    "000081": 80,
+    "000082": 81,
+    "000083": 82,
+    "000084": 83,
+    "000085": 84,
+    "000086": 85,
+    "000087": 86,
+    "000088": 87,
+    "000089": 88,
+    "000090": 89,
+    "000091": 90,
+    "000092": 91,
+    "000093": 92,
+    "000094": 93,
+    "000095": 94,
+    "000096": 95,
+    "000097": 96,
+    "000098": 97,
+    "000099": 98,
+    "000100": 99,
+    "000101": 100,
+    "000102": 101,
+    "000103": 102,
+    "000104": 103,
+    "000105": 104,
+    "000106": 105,
+    "000107": 106,
+    "000108": 107,
+    "000109": 108,
+    "000110": 109,
+    "000111": 110,
+    "000112": 111,
+    "000113": 112,
+    "000114": 113,
+    "000115": 114,
+    "000116": 115,
+    "000117": 116,
+    "000118": 117,
+    "000119": 118,
+    "000120": 119,
+    "000121": 120,
+    "000122": 121,
+    "000123": 122,
+    "000124": 123,
+    "000125": 124,
+    "000126": 125,
+    "000127": 126,
+    "000128": 127,
+    "000129": 128,
+    "000130": 129,
+    "000131": 130,
+    "000132": 131,
+    "000133": 132,
+    "000134": 133,
+    "000135": 134,
+    "000136": 135,
+    "000137": 136,
+    "000138": 137,
+    "000139": 138,
+    "000140": 139,
+    "000141": 140,
+    "000142": 141,
+    "000143": 142,
+    "000144": 143,
+    "000145": 144,
+    "000146": 145,
+    "000147": 146,
+    "000148": 147,
+    "000149": 148,
+    "000150": 149,
+    "000151": 150,
+    "000152": 151,
+    "000153": 152,
+    "000154": 153,
+    "000155": 154,
+    "000156": 155,
+    "000157": 156,
+    "000158": 157,
+    "000159": 158,
+    "000160": 159,
+    "000161": 160,
+    "000162": 161,
+    "000163": 162,
+    "000164": 163,
+    "000165": 164,
+    "000166": 165,
+    "000167": 166,
+    "000168": 167,
+    "000169": 168,
+    "000170": 169,
+    "000171": 170,
+    "000172": 171,
+    "000173": 172,
+    "000174": 173,
+    "000175": 174,
+    "000176": 175,
+    "000177": 176,
+    "000178": 177,
+    "000179": 178,
+    "000180": 179,
+    "000181": 180,
+    "000182": 181,
+    "000183": 182,
+    "000184": 183,
+    "000185": 184,
+    "000186": 185,
+    "000187": 186,
+    "000188": 187,
+    "000189": 188,
+    "000190": 189,
+    "000191": 190,
+    "000192": 191,
+    "000193": 192,
+    "000194": 193,
+    "000195": 194,
+    "000196": 195,
+    "000197": 196,
+    "000198": 197,
+    "000199": 198,
+    "000200": 199,
+    "000201": 200,
+    "000202": 201,
+    "000203": 202,
+    "000204": 203,
+    "000205": 204,
+    "000206": 205,
+    "000207": 206,
+    "000208": 207,
+    "000209": 208,
+    "000210": 209,
+    "000211": 210,
+    "000212": 211,
+    "000213": 212,
+    "000214": 213,
+    "000215": 214,
+    "000216": 215,
+    "000217": 216,
+    "000218": 217,
+    "000219": 218,
+    "000220": 219,
+    "000221": 220,
+    "000222": 221,
+    "000223": 222,
+    "000224": 223,
+    "000225": 224,
+    "000226": 225,
+    "000227": 226,
+    "000228": 227,
+    "000229": 228,
+    "000230": 229,
+    "000231": 230,
+    "000232": 231,
+    "000233": 232,
+    "000234": 233,
+    "000235": 234,
+    "000236": 235,
+    "000237": 236,
+    "000238": 237,
+    "000239": 238,
+    "000240": 239,
+    "000241": 240,
+    "000242": 241,
+    "000243": 242,
+    "000244": 243,
+    "000245": 244,
+    "000246": 245,
+    "000247": 246,
+    "000248": 247,
+    "000249": 248,
+    "000250": 249,
+    "000251": 250,
+    "000252": 251,
+    "000253": 252,
+    "000254": 253,
+    "000255": 254,
+    "000256": 255,
+    "000257": 256,
+    "000258": 257,
+    "000259": 258,
+    "000260": 259,
+    "000261": 260,
+    "000262": 261,
+    "000263": 262,
+    "000264": 263,
+    "000265": 264,
+    "000266": 265,
+    "000267": 266,
+    "000268": 267,
+    "000269": 268,
+    "000270": 269,
+    "000271": 270,
+    "000272": 271,
+    "000273": 272,
+    "000274": 273,
+    "000275": 274,
+    "000276": 275,
+    "000277": 276,
+    "000278": 277,
+    "000279": 278,
+    "000280": 279,
+    "000281": 280,
+    "000282": 281,
+    "000283": 282,
+    "000284": 283,
+    "000285": 284,
+    "000286": 285,
+    "000287": 286,
+    "000288": 287,
+    "000289": 288,
+    "000290": 289,
+    "000291": 290,
+    "000292": 291,
+    "000293": 292,
+    "000294": 293,
+    "000295": 294,
+    "000296": 295,
+    "000297": 296,
+    "000298": 297,
+    "000299": 298,
+    "000300": 299,
+    "000301": 300,
+    "000302": 301,
+    "000303": 302,
+    "000304": 303,
+    "000305": 304,
+    "000306": 305,
+    "000307": 306,
+    "000308": 307,
+    "000309": 308,
+    "000310": 309,
+    "000311": 310,
+    "000312": 311,
+    "000313": 312,
+    "000314": 313,
+    "000315": 314,
+    "000316": 315,
+    "000317": 316,
+    "000318": 317,
+    "000319": 318,
+    "000320": 319,
+    "000321": 320,
+    "000322": 321,
+    "000323": 322,
+    "000324": 323,
+    "000325": 324,
+    "000326": 325,
+    "000327": 326,
+    "000328": 327,
+    "000329": 328,
+    "000330": 329,
+    "000331": 330,
+    "000332": 331,
+    "000333": 332,
+    "000334": 333,
+    "000335": 334,
+    "000336": 335,
+    "000337": 336,
+    "000338": 337,
+    "000339": 338,
+    "000340": 339,
+    "000341": 340,
+    "000342": 341,
+    "000343": 342,
+    "000344": 343,
+    "000345": 344,
+    "000346": 345,
+    "000347": 346,
+    "000348": 347,
+    "000349": 348,
+    "000350": 349,
+    "000351": 350,
+    "000352": 351,
+    "000353": 352,
+    "000354": 353,
+    "000355": 354,
+    "000356": 355,
+    "000357": 356,
+    "000358": 357,
+    "000359": 358,
+    "000360": 359,
+    "000361": 360,
+    "000362": 361,
+    "000363": 362,
+    "000364": 363,
+    "000365": 364,
+    "000366": 365,
+    "000367": 366,
+    "000368": 367,
+    "000369": 368,
+    "000370": 369,
+    "000371": 370,
+    "000372": 371,
+    "000373": 372,
+    "000374": 373,
+    "000375": 374,
+    "000376": 375,
+    "000377": 376,
+    "000378": 377,
+    "000379": 378,
+    "000380": 379,
+    "000381": 380,
+    "000382": 381,
+    "000383": 382,
+    "000384": 383,
+    "000385": 384,
+    "000386": 385,
+    "000387": 386,
+    "000388": 387,
+    "000389": 388,
+    "000390": 389,
+    "000391": 390,
+    "000392": 391,
+    "000393": 392,
+    "000394": 393,
+    "000395": 394,
+    "000396": 395,
+    "000397": 396,
+    "000398": 397,
+    "000399": 398,
+    "000400": 399,
+    "000401": 400,
+    "000402": 401,
+    "000403": 402,
+    "000404": 403,
+    "000405": 404,
+    "000406": 405,
+    "000407": 406,
+    "000408": 407,
+    "000409": 408,
+    "000410": 409,
+    "000411": 410,
+    "000412": 411,
+    "000413": 412,
+    "000414": 413,
+    "000415": 414,
+    "000416": 415,
+    "000417": 416,
+    "000418": 417,
+    "000419": 418,
+    "000420": 419,
+    "000421": 420,
+    "000422": 421,
+    "000423": 422,
+    "000424": 423,
+    "000425": 424,
+    "000426": 425,
+    "000427": 426,
+    "000428": 427,
+    "000429": 428,
+    "000430": 429,
+    "000431": 430,
+    "000432": 431,
+    "000433": 432,
+    "000434": 433,
+    "000435": 434,
+    "000436": 435,
+    "000437": 436,
+    "000438": 437,
+    "000439": 438,
+    "000440": 439,
+    "000441": 440,
+    "000442": 441,
+    "000443": 442,
+    "000444": 443,
+    "000445": 444,
+    "000446": 445,
+    "000447": 446,
+    "000448": 447,
+    "000449": 448,
+    "000450": 449,
+    "000451": 450,
+    "000452": 451,
+    "000453": 452,
+    "000454": 453,
+    "000455": 454,
+    "000456": 455,
+    "000457": 456,
+    "000458": 457,
+    "000459": 458,
+    "000460": 459,
+    "000461": 460,
+    "000462": 461,
+    "000463": 462,
+    "000464": 463,
+    "000465": 464,
+    "000466": 465,
+    "000467": 466,
+    "000468": 467,
+    "000469": 468,
+    "000470": 469,
+    "000471": 470,
+    "000472": 471,
+    "000473": 472,
+    "000474": 473,
+    "000475": 474,
+    "000476": 475,
+    "000477": 476,
+    "000478": 477,
+    "000479": 478,
+    "000480": 479,
+    "000481": 480,
+    "000482": 481,
+    "000483": 482,
+    "000484": 483,
+    "000485": 484,
+    "000486": 485,
+    "000487": 486,
+    "000488": 487,
+    "000489": 488,
+    "000490": 489,
+    "000491": 490,
+    "000492": 491,
+    "000493": 492,
+    "000494": 493,
+    "000495": 494,
+    "000496": 495,
+    "000497": 496,
+    "000498": 497,
+    "000499": 498,
+    "000500": 499,
+    "000501": 500,
+    "000502": 501,
+    "000503": 502,
+    "000504": 503,
+    "000505": 504,
+    "000506": 505,
+    "000507": 506,
+    "000508": 507,
+    "000509": 508,
+    "000510": 509,
+    "000511": 510,
+    "000512": 511,
+    "000513": 512,
+    "000514": 513,
+    "000515": 514,
+    "000516": 515,
+    "000517": 516,
+    "000518": 517,
+    "000519": 518,
+    "000520": 519,
+    "000521": 520,
+    "000522": 521,
+    "000523": 522,
+    "000524": 523,
+    "000525": 524,
+    "000526": 525,
+    "000527": 526,
+    "000528": 527,
+    "000529": 528,
+    "000530": 529,
+    "000531": 530,
+    "000532": 531,
+    "000533": 532,
+    "000534": 533,
+    "000535": 534,
+    "000536": 535,
+    "000537": 536,
+    "000538": 537,
+    "000539": 538,
+    "000540": 539,
+    "000541": 540,
+    "000542": 541,
+    "000543": 542,
+    "000544": 543,
+    "000545": 544,
+    "000546": 545,
+    "000547": 546,
+    "000548": 547,
+    "000549": 548,
+    "000550": 549,
+    "000551": 550,
+    "000552": 551,
+    "000553": 552,
+    "000554": 553,
+    "000555": 554,
+    "000556": 555,
+    "000557": 556,
+    "000558": 557,
+    "000559": 558,
+    "000560": 559,
+    "000561": 560,
+    "000562": 561,
+    "000563": 562,
+    "000564": 563,
+    "000565": 564,
+    "000566": 565,
+    "000567": 566,
+    "000568": 567,
+    "000569": 568,
+    "000570": 569,
+    "000571": 570,
+    "000572": 571,
+    "000573": 572,
+    "000574": 573,
+    "000575": 574,
+    "000576": 575,
+    "000577": 576,
+    "000578": 577,
+    "000579": 578,
+    "000580": 579,
+    "000581": 580,
+    "000582": 581,
+    "000583": 582,
+    "000584": 583,
+    "000585": 584,
+    "000586": 585,
+    "000587": 586,
+    "000588": 587,
+    "000589": 588,
+    "000590": 589,
+    "000591": 590,
+    "000592": 591,
+    "000593": 592,
+    "000594": 593,
+    "000595": 594,
+    "000596": 595,
+    "000597": 596,
+    "000598": 597,
+    "000599": 598,
+    "000600": 599,
+    "000601": 600,
+    "000602": 601,
+    "000603": 602,
+    "000604": 603,
+    "000605": 604,
+    "000606": 605,
+    "000607": 606,
+    "000608": 607,
+    "000609": 608,
+    "000610": 609,
+    "000611": 610,
+    "000612": 611,
+    "000613": 612,
+    "000614": 613,
+    "000615": 614,
+    "000616": 615,
+    "000617": 616,
+    "000618": 617,
+    "000619": 618,
+    "000620": 619,
+    "000621": 620,
+    "000622": 621,
+    "000623": 622,
+    "000624": 623,
+    "000625": 624,
+    "000626": 625,
+    "000627": 626,
+    "000628": 627,
+    "000629": 628,
+    "000630": 629,
+    "000631": 630,
+    "000632": 631,
+    "000633": 632,
+    "000634": 633,
+    "000635": 634,
+    "000636": 635,
+    "000637": 636,
+    "000638": 637,
+    "000639": 638,
+    "000640": 639,
+    "000641": 640,
+    "000642": 641,
+    "000643": 642,
+    "000644": 643,
+    "000645": 644,
+    "000646": 645,
+    "000647": 646,
+    "000648": 647,
+    "000649": 648,
+    "000650": 649,
+    "000651": 650,
+    "000652": 651,
+    "000653": 652,
+    "000654": 653,
+    "000655": 654,
+    "000656": 655,
+    "000657": 656,
+    "000658": 657,
+    "000659": 658,
+    "000660": 659,
+    "000661": 660,
+    "000662": 661,
+    "000663": 662,
+    "000664": 663,
+    "000665": 664,
+    "000666": 665
+  }
+}

@@ -54,12 +54,14 @@ export function useReportUpload() {
           console.error("File upload error:", uploadError);
 
           if (uploadedFiles.length > 0) {
-            const pathsToDelete = uploadedFiles.map((f) => {
-              const url = new URL(f.url);
-              const path = url.pathname.split("/report-attachments/")[1];
-              return path;
-            });
-
+            const pathsToDelete = uploadedFiles
+              .map((f) => {
+                const url = new URL(f.url);
+                const path = url.pathname.split("/report-attachments/")[1];
+                return path;
+              })
+              .filter((path): path is string => path !== undefined);
+              
             await supabase.storage
               .from("report-attachments")
               .remove(pathsToDelete);

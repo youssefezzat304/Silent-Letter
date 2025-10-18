@@ -1,5 +1,10 @@
 import React from "react";
-import type { FieldError, FieldValues, Path, UseFormReturn } from "react-hook-form";
+import type {
+  FieldError,
+  FieldValues,
+  Path,
+  UseFormReturn,
+} from "react-hook-form";
 
 type Props<TForm extends FieldValues> = {
   form: UseFormReturn<TForm>;
@@ -10,7 +15,7 @@ export default function InputError<TForm extends FieldValues>({
   form,
   name,
 }: Props<TForm>) {
-  const fieldError = (form.formState.errors as Record<string, any>)[name] as
+  const fieldError = (form.formState.errors)[name] as
     | FieldError
     | undefined;
 
