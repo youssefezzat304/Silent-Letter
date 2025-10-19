@@ -26,13 +26,6 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV SKIP_ENV_VALIDATION=1
 
-# Create missing audio index files
-RUN mkdir -p public/audio_files/en-us/index public/audio_files/de-de/index && \
-  for level in A1 A2 B1 B2 C1 C2; do \
-  echo '[]' > public/audio_files/en-us/index/${level}_en_us_index.json; \
-  echo '[]' > public/audio_files/de-de/index/${level}_de_de_index.json; \
-  done
-
 RUN npm run build
 
 # Stage 3: Runner

@@ -139,7 +139,6 @@ export const useWordsStore = create<WordsState>((set, get) => {
             }
             const importLevel = (await response.json()) as {
               entries: WordEntryInterface[];
-              index: Record<string, number>;
             };
 
             const correctedEntries = importLevel.entries.map((entry) => {

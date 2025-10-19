@@ -8,19 +8,22 @@
 
 ## 📋 Table of Contents
 
-* [Features](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-features)
-* [Tech Stack](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-tech-stack)
-* [Prerequisites](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-prerequisites)
-* [Getting Started](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-getting-started)
-* [Docker Deployment](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-docker-deployment)
-* [Environment Variables](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-environment-variables)
-* [Project Structure](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-project-structure)
-* [Database Schema](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-database-schema)
-* [API Routes](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-api-routes)
-* [Contributing](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-contributing)
-* [License](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-license)
+* [Features](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-features)
+* [Tech Stack](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-tech-stack)
+* [Prerequisites](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-prerequisites)
+* [Getting Started](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-getting-started)
+* [Docker Deployment](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-docker-deployment)
+* [Environment Variables](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-environment-variables)
+* [Project Structure](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-project-structure)
+* [Database Schema](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-database-schema)
+* [Customization](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#customization)
+* [Testing Database Connection](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-testing-database-connection)
+* [Available Scripts](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-available-scripts)
+* [Troubleshooting](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#troubleshooting)
+* [License](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#license)
+* [Acknowledgments](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#acknowledgments)
 
-## Features
+## ✨ Features
 
 * 🎧  **Audio-Based Learning** : Listen to words and practice spelling
 * 🌍  **Multi-Language Support** : Currently supports English (US) and German (DE)
@@ -32,7 +35,7 @@
 * 🔊  **Sound Effects** : Interactive audio feedback for correct/incorrect answers
 * ⚙️  **Customizable Settings** : Adjust delay timers, sound effects, and learning preferences
 
-## Tech Stack
+## 🛠 Tech Stack
 
 ### Core Framework
 
@@ -44,7 +47,7 @@
 
 * **[Prisma](https://www.prisma.io/)** - Next-generation ORM
 * **[PostgreSQL](https://www.postgresql.org/)** (via Supabase) - Relational database
-* **[tRPC](https://trpc.io/)** - End-to-end typesafe APIs
+* **[tRPC](https://trpc.io/)** - End-to-end typesafe APIs [ To be added ]
 
 ### Authentication & Storage
 
@@ -74,16 +77,16 @@ Before you begin, ensure you have the following installed:
 
 * **Node.js** (v20 or higher)
 * **npm** or **yarn** or **pnpm**
-* **Docker** (optional, for containerized deployment)
+* **Docker** and **Docker Compose** (for containerized deployment)
 * **PostgreSQL** (or a Supabase account)
 
-## Getting Started
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/hear-and-spell.git
-cd hear-and-spell
+git clone https://github.com/youssefezzat304/Silent-Letter.git
+cd Silent-Letter
 ```
 
 ### 2. Install Dependencies
@@ -104,9 +107,58 @@ Copy the example environment file:
 cp .env.example .env
 ```
 
-Fill in your environment variables (see [Environment Variables](https://claude.ai/chat/133183ff-413a-4aaf-9150-cfc1a2795940#-environment-variables) section).
+Fill in your environment variables (see [Environment Variables](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-environment-variables) section).
 
-### 4. Set Up the Database
+### 4. Prepare Audio Files
+
+**Important:** This application requires audio files for each language and CEFR level. You need to add your audio files to the `public/audio_files` directory before running the application.
+
+The expected directory structure is:
+
+```
+public/
+└── audio_files/
+    ├── en-us/
+    │   ├── index/
+    │   │   ├── A1_en_us_index.json
+    │   │   ├── A2_en_us_index.json
+    │   │   ├── B1_en_us_index.json
+    │   │   ├── B2_en_us_index.json
+    │   │   ├── C1_en_us_index.json
+    │   │   └── C2_en_us_index.json
+    │   ├── A1/
+    │   │   └── [audio files].mp3
+    │   ├── A2/
+    │   └── ... (other levels)
+    └── de-de/
+        ├── index/
+        │   ├── A1_de_de_index.json
+        │   └── ... (other levels)
+        └── A1/
+            └── [audio files].mp3
+```
+
+Each index JSON file should follow this structure:
+
+```json
+{
+  "entries": [
+    {
+      "id": "unique-id",
+      "lang": "en-us",
+      "level": "A1",
+      "index": 0,
+      "word": "example",
+      "slug": "example",
+      "file": "/audio_files/en-us/A1/example.mp3"
+    }
+  ]
+}
+```
+
+**Note:** Without audio files, the application will not function properly. If you don't have audio files yet, you can create placeholder JSON files with the structure above, but the learning features won't work until you add actual audio content.
+
+### 5. Set Up the Database
 
 Run Prisma migrations:
 
@@ -121,7 +173,7 @@ Optionally, seed the database:
 npx prisma db seed
 ```
 
-### 5. Run the Development Server
+### 6. Run the Development Server
 
 ```bash
 npm run dev
@@ -131,15 +183,22 @@ Open [http://localhost:3000](http://localhost:3000/) in your browser.
 
 ## 🐳 Docker Deployment
 
+### Prerequisites for Docker Deployment
+
+1. **Audio Files:** Ensure your `public/audio_files` directory is populated with the required audio files and index JSON files (see step 4 above).
+2. **Environment Variables:** Create a `.env` file with all required variables.
+
 ### Quick Start with Docker Compose
 
-1. **Ensure Docker is installed** on your system
-2. **Create your `.env` file** with all required variables
-3. **Build and run the container** :
-
-```bash
-docker-compose up -d
-```
+1. **Ensure audio files are in place:**
+   ```bash
+   ls -la public/audio_files/
+   ```
+2. **Create your `.env` file** with all required variables (see [Environment Variables](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-environment-variables))
+3. **Build and run the container:**
+   ```bash
+   docker-compose up -d --build
+   ```
 
 The application will be available at `http://localhost:3000`
 
@@ -148,7 +207,10 @@ The application will be available at `http://localhost:3000`
 Build the Docker image:
 
 ```bash
-docker build -t hear-and-spell .
+docker build -t hear-and-spell \
+  --build-arg NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL \
+  --build-arg NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY \
+  .
 ```
 
 Run the container:
@@ -179,15 +241,11 @@ docker-compose exec app sh
 docker-compose ps
 ```
 
-### Production Deployment
+### Important Notes for Docker Deployment
 
-For production deployment, consider:
-
-1. **Using a reverse proxy** (Nginx, Caddy) for SSL/TLS
-2. **Setting up health checks** and monitoring
-3. **Configuring automatic backups** for your database
-4. **Using Docker secrets** for sensitive environment variables
-5. **Implementing container orchestration** (Kubernetes, Docker Swarm)
+* **Audio Files:** The Docker image will include whatever is in your `public/audio_files` directory at build time. Make sure these files are present before building.
+* **File Size:** If you have large audio files, the Docker image size will increase accordingly. Consider using `.dockerignore` to exclude unnecessary files.
+* **Updates:** If you add or modify audio files, you need to rebuild the Docker image for changes to take effect.
 
 ## 🔑 Environment Variables
 
@@ -203,9 +261,9 @@ NEXT_PUBLIC_SUPABASE_URL="https://..."      # Your Supabase project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY="..."         # Supabase anonymous key
 SUPABASE_SERVICE_ROLE_KEY="..."             # Service role key (server-side only)
 
-# Google OAuth
-NEXT_PUBLIC_GOOGLE_CLIENT_ID="..."          # Google OAuth client ID
-GOOGLE_CLIENT_SECRET="..."                   # Google OAuth client secret
+# Application
+APP_URL="http://localhost:3000"             # Your application URL
+NEXT_PUBLIC_APP_URL="http://localhost:3000" # Public application URL
 
 # Email
 REPORTS_TO_EMAIL="reports@yourdomain.com"   # Email for receiving reports
@@ -229,16 +287,6 @@ SKIP_ENV_VALIDATION="false"                  # Skip environment validation
 3. Go to Settings → API to get your keys
 4. Go to Settings → Database to get connection strings
 
-#### Google OAuth Setup
-
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select existing
-3. Enable Google+ API
-4. Create OAuth 2.0 credentials
-5. Add authorized redirect URIs:
-   * `http://localhost:3000/api/auth/callback/google` (development)
-   * `https://yourdomain.com/api/auth/callback/google` (production)
-
 #### Resend Setup
 
 1. Sign up at [resend.com](https://resend.com/)
@@ -250,8 +298,10 @@ SKIP_ENV_VALIDATION="false"                  # Skip environment validation
 ```
 hear-and-spell/
 ├── public/                    # Static files
-│   ├── audio_files/          # Language audio files
+│   ├── audio_files/          # Language audio files (REQUIRED)
 │   │   ├── en-us/           # English audio
+│   │   │   ├── index/       # JSON index files
+│   │   │   └── A1/          # Level-specific audio
 │   │   └── de-de/           # German audio
 │   └── website_sounds/       # UI sound effects
 ├── prisma/                   # Database schema and migrations
@@ -284,7 +334,7 @@ hear-and-spell/
 └── package.json            # Node.js dependencies
 ```
 
-## Database Schema
+## 🗄 Database Schema
 
 ### Main Tables
 
@@ -326,14 +376,15 @@ User-submitted reports and feedback
 * `ReportStatus`: OPEN, IN_PROGRESS, RESOLVED, DISMISSED
 * `ReportPriority`: LOW, MEDIUM, HIGH, CRITICAL
 
-## Customization
+## 🎨 Customization
 
 ### Adding New Languages
 
 1. Add audio files to `public/audio_files/[language-code]/`
-2. Update `LANGUAGE_CONFIG` in `src/store/words.store.ts`
-3. Add language option to `src/metadata.ts`
-4. Update Prisma enum in `prisma/schema.prisma`
+2. Create index JSON files following the structure above
+3. Update `LANGUAGE_CONFIG` in `src/store/words.store.ts`
+4. Add language option to `src/metadata.ts`
+5. Update Prisma enum in `prisma/schema.prisma`
 
 ## 🧪 Testing Database Connection
 
@@ -343,34 +394,7 @@ Run the test script to verify your database setup:
 node src/test-db.mjs
 ```
 
-## 📝 Available Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run type-check   # Check TypeScript types
-```
-
-### Prisma Scripts
-
-```bash
-npx prisma studio           # Open Prisma Studio
-npx prisma migrate dev      # Create migration
-npx prisma migrate deploy   # Apply migrations
-npx prisma generate         # Generate Prisma Client
-npx prisma db push          # Push schema without migration
-```
-
-### Code Style
-
-* Use TypeScript for all new files
-* Follow the existing ESLint configuration
-* Use Prettier for code formatting
-* Write meaningful commit messages
-
-## Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -386,6 +410,13 @@ npx prisma db push          # Push schema without migration
 * Ensure Docker has enough memory (4GB+ recommended)
 * Try clearing Docker cache: `docker system prune -a`
 
+**Audio Files Not Loading**
+
+* Verify files exist in `public/audio_files/`
+* Check file paths in index JSON files
+* Ensure JSON structure matches the expected format
+* For Docker: Rebuild the image after adding files
+
 **Google OAuth Not Working**
 
 * Verify redirect URIs in Google Cloud Console
@@ -394,16 +425,11 @@ npx prisma db push          # Push schema without migration
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://claude.ai/chat/LICENSE) file for details.
-
-## Acknowledgments
-
-* Built with [T3 Stack](https://create.t3.gg/)
-* UI components from [shadcn/u](https://ui.shadcn.com/)i
+This project is licensed under the MIT License.
 
 ## 📧 Contact
 
-For questions or support, please open an issue or contact
+For questions or support, please open an issue or feel free to contact me on [LinkedIn](https://www.linkedin.com/in/youssef-abdelrahim-de/).
 
 ---
 
