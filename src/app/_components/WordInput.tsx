@@ -29,6 +29,7 @@ const WordInput = forwardRef<
       onChange={handleAnswer}
       value={answer}
       maxLength={wordLenght}
+      inputMode="text"
     >
       <InputOTPGroup
         className={`cartoonish-in max-w-[330px] gap-1 bg-stone-100 text-black md:max-w-[600px] lg:max-w-[800px] ${
@@ -41,9 +42,10 @@ const WordInput = forwardRef<
       >
         {currentWord?.split("").map((_, index) => (
           <InputOTPSlot
-            className="h-10 w-12 border-b-2 border-black text-[15px] caret-black shadow-none md:text-2xl lg:text-3xl"
+            className="h-10 w-12 border-b-2 border-black text-xl caret-black shadow-none md:text-2xl lg:text-3xl"
             key={index}
             index={index}
+
             style={{
               WebkitAppearance: "none",
               MozAppearance: "none",

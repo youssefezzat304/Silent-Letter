@@ -61,7 +61,7 @@ export default function TheWord() {
         const profile = await createProfile();
         if (!profile) {
           console.error("Profile handling failed");
-          // Optional: Add a toast or UI feedback if needed
+          // TODO: Add a toast or UI feedback if needed
         }
         // Optional: If you need to use the returned profile (e.g., for additional state), do so here
       } catch (err) {

@@ -6,6 +6,8 @@ import { Geist } from "next/font/google";
 import { NavBar } from "./_components/layout/NavBar";
 import { Toaster } from "~/components/ui/sonner";
 import ProvidersWrapper from "./_components/providers/ProvidersWrapper";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -51,6 +53,8 @@ export default function RootLayout({
           <div className="flex min-h-0 flex-1 flex-col">{children}</div>
           <Toaster duration={3000} position="top-center" />
         </ProvidersWrapper>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
