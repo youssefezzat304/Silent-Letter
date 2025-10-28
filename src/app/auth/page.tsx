@@ -21,7 +21,9 @@ import Loading from "../loading";
 import InputError from "../_components/ui/InputError";
 import { useAuth } from "~/hooks/useAuth";
 import { createClient } from "~/lib/supabase/client";
-
+import CustomToast from "../_components/ui/CustomToast";
+import { toast } from "sonner";
+import Link from "next/link";
 
 function AuthPage() {
   const [isPending, startTransition] = useTransition();
@@ -63,15 +65,15 @@ function AuthPage() {
   });
 
   const handleLoginSubmit = (values: LoginValues) => {
-    startTransition(async () => {
-      await handleLogin(values);
-    });
+    toast.custom(() => (
+      <CustomToast text="This feature is coming soon!" type="info" />
+    ));
   };
 
   const handleSignupSubmit = (values: CreateAccountValues) => {
-    startTransition(async () => {
-      await handleSignup(values);
-    });
+    toast.custom(() => (
+      <CustomToast text="This feature is coming soon!" type="info" />
+    ));
   };
 
   if (isCheckingSession) {
@@ -80,30 +82,46 @@ function AuthPage() {
 
   return (
     <div className="absolute top-[15%] flex w-full items-center justify-center">
-      <div className="max-w-sm flex-col gap-6 self-center">
+      <div className="relative max-w-sm flex-col gap-6 self-center">
+        <div className="fixed inset-0 z-10 flex flex-col gap-4 w-screen items-center justify-center rounded-lg bg-white/70 backdrop-blur-[1px] dark:bg-black/70">
+          <span className="text-3xl font-bold text-gray-800 dark:text-gray-200">
+            Coming Soon!
+          </span>
+          
+            <Link href="/"><Button className="cursor-pointer font-bold">Home</Button></Link>
+          
+        </div>
+
         <Tabs defaultValue="Login">
           <TabsList className="cartoonish-card self-center md:w-lg">
             <TabsTrigger
               className="text-md cursor-pointer uppercase"
               value="Login"
+              disabled={true}
             >
               login
             </TabsTrigger>
             <TabsTrigger
               className="text-md cursor-pointer uppercase"
               value="Signup"
+              disabled={true}
             >
               signup
             </TabsTrigger>
           </TabsList>
-          {/* ################## Login ##################### */}
+
           <TabsContent
             className="cartoonish-card self-center md:w-2xl"
             value="Login"
           >
             <Card>
               <Form {...loginForm}>
-                <form onSubmit={loginForm.handleSubmit(handleLoginSubmit)}>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleLoginSubmit(loginForm.getValues());
+                  }}
+                >
                   <CardContent className="grid gap-2">
                     <FormField
                       {...loginForm}
@@ -116,6 +134,7 @@ function AuthPage() {
                             id="email"
                             placeholder="example@example.com"
                             {...field}
+                            disabled={true}
                           />
                           <InputError form={loginForm} name="email" />
                         </FormItem>
@@ -133,6 +152,7 @@ function AuthPage() {
                             placeholder="0123456789"
                             type="password"
                             {...field}
+                            disabled={true}
                           />
                           <InputError form={loginForm} name="password" />
                         </FormItem>
@@ -142,7 +162,7 @@ function AuthPage() {
                   <CardFooter className="mt-2 flex flex-col gap-2">
                     <Button
                       type="submit"
-                      disabled={isPending}
+                      disabled={true}
                       className="cartoonish-btn w-full"
                     >
                       {isPending ? "Logging in..." : "Login"}
@@ -150,7 +170,7 @@ function AuthPage() {
                     <Button
                       className="cartoonish-btn w-full bg-white from-green-200 to-blue-200 text-black"
                       onClick={handleGoogleSignIn}
-                      disabled={isPending || googleLoading}
+                      disabled={true}
                       type="button"
                     >
                       <FcGoogle />
@@ -164,14 +184,18 @@ function AuthPage() {
             </Card>
           </TabsContent>
 
-          {/* ################## Signup ##################### */}
           <TabsContent
             className="cartoonish-card self-center md:w-2xl"
             value="Signup"
           >
             <Card>
               <Form {...signupForm}>
-                <form onSubmit={signupForm.handleSubmit(handleSignupSubmit)}>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSignupSubmit(signupForm.getValues());
+                  }}
+                >
                   <CardContent className="grid gap-2">
                     <FormField
                       control={signupForm.control}
@@ -183,6 +207,7 @@ function AuthPage() {
                             id="display-name"
                             placeholder="John Doe"
                             {...field}
+                            disabled={true}
                           />
                           <InputError form={signupForm} name="name" />
                         </FormItem>
@@ -199,6 +224,7 @@ function AuthPage() {
                             type="email"
                             placeholder="john.doe@example.com"
                             {...field}
+                            disabled={true}
                           />
                           <InputError form={signupForm} name="email" />
                         </FormItem>
@@ -215,6 +241,7 @@ function AuthPage() {
                             type="password"
                             placeholder="0123456789"
                             {...field}
+                            disabled={true}
                           />
                           <InputError form={signupForm} name="password" />
                         </FormItem>
@@ -233,6 +260,7 @@ function AuthPage() {
                             type="password"
                             placeholder="0123456789"
                             {...field}
+                            disabled={true}
                           />
                           <InputError
                             form={signupForm}
@@ -246,7 +274,7 @@ function AuthPage() {
                     <Button
                       type="submit"
                       className="cartoonish-btn mt-2 w-full"
-                      disabled={isPending}
+                      disabled={true}
                     >
                       {isPending ? "Creating Account..." : "Create Account"}
                     </Button>

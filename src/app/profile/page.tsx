@@ -46,20 +46,18 @@ function ProfilePage() {
   });
 
   const { handleSignOut } = useAuth();
-  const { uploadProfileImage, uploading: imageUploading } = useProfileImage();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
+  // Keep the hooks for UI consistency, even though they won't be fully used
+  const { uploading: imageUploading } = useProfileImage();
+  const [isSubmitting] = useState(false);
   const uploading = imageUploading || isSubmitting;
 
   useEffect(() => {
     const getUser = async () => {
       try {
         const fetchedProfile = await getProfile();
-
         if (!fetchedProfile) {
           console.warn("No profile found for user:", user?.id);
         }
-
         setProfile(fetchedProfile);
       } catch (err) {
         console.error("Unexpected error getting user:", err);
@@ -87,11 +85,11 @@ function ProfilePage() {
     }
   }, [user, profile, profileForm]);
 
+  // Keep handlers for UI consistency, though they are blocked
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       setSelectedFile(file);
-
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewImage(reader.result as string);
@@ -104,106 +102,10 @@ function ProfilePage() {
     fileInputRef.current?.click();
   };
 
+  // Block onSubmit
   const onSubmit = async (data: ProfileValues) => {
-    if (!user?.id) {
-      toast.custom(() => (
-        <CustomToast text="User session not found" type="error" />
-      ));
-      return;
-    }
-
-    try {
-      let imageUpdated = false;
-
-      if (selectedFile) {
-        const { result, error, publicUrl } = await uploadProfileImage(
-          selectedFile,
-          user.id,
-        );
-
-        if (error || !result || !publicUrl) {
-          toast.custom(() => (
-            <CustomToast
-              text={`Failed to upload image: ${error}`}
-              type="error"
-            />
-          ));
-          return;
-        }
-
-        const { result: dbResult, error: dbError } =
-          await updateProfileImageUrl(user.id, publicUrl);
-
-        if (dbError || !dbResult) {
-          toast.custom(() => (
-            <CustomToast
-              text={`Failed to save image: ${dbError}`}
-              type="error"
-            />
-          ));
-          return;
-        }
-
-        imageUpdated = true;
-      }
-
-      const emailChanged = data.email !== user.email;
-      const nameChanged = data.name !== (profile?.name ?? "");
-
-      if (emailChanged || nameChanged) {
-        const { error } = await updateProfileInfo(
-          user.id,
-          data,
-          user.email ?? "",
-          profile?.name ?? "",
-        );
-
-        if (error) {
-          toast.custom(() => <CustomToast text={error} type="error" />);
-          return;
-        }
-      }
-
-      if (imageUpdated || emailChanged || nameChanged) {
-        toast.custom(() => (
-          <CustomToast text="Profile updated successfully!" type="success" />
-        ));
-      }
-
-      const updatedProfile = await getProfile();
-      setProfile(updatedProfile);
-
-      const {
-        data: { user: refreshedUser },
-      } = await supabase.auth.getUser();
-
-      if (refreshedUser) {
-        setUser(refreshedUser);
-      }
-
-      profileForm.reset({
-        email: refreshedUser?.email ?? user.email ?? "",
-        name: updatedProfile?.name ?? "",
-        image: updatedProfile?.image ?? undefined,
-      });
-
-      setPreviewImage(null);
-      setSelectedFile(null);
-    } catch (error) {
-      console.error("Error updating profile:", error);
-      toast.custom(() => (
-        <CustomToast
-          text={
-            error instanceof Error
-              ? error.message
-              : "An unexpected error occurred"
-          }
-          type="error"
-        />
-      ));
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Form submission is blocked, this won't be called
+    console.warn("Profile page is disabled.");
   };
 
   if (loading) {
@@ -218,11 +120,27 @@ function ProfilePage() {
 
   return (
     <Form {...profileForm}>
+      {/* Prevent form submission */}
       <form
         className="flex w-full items-center justify-center"
-        onSubmit={profileForm.handleSubmit(onSubmit)}
+        onSubmit={(e) => {
+          e.preventDefault();
+          toast.custom(() => (
+            <CustomToast text="This feature is coming soon!" type="info" />
+          ));
+        }}
       >
-        <Card className="cartoonish-card mx-5 w-full px-4">
+        {/* Add relative positioning to the card */}
+        <Card className="cartoonish-card relative mx-5 w-full px-4">
+          {/* --- DISABLED OVERLAY --- */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-white/70 backdrop-blur-sm dark:bg-black/70">
+            <span className="text-3xl font-bold text-gray-800 dark:text-gray-200">
+              Coming Soon!
+            </span>
+          </div>
+          {/* --- END DISABLED OVERLAY --- */}
+
+          {/* Original UI elements, now under the overlay */}
           <Profile
             imageSrc={displayImage}
             fallback={profile?.name?.[0] ?? "C"}
@@ -236,13 +154,14 @@ function ProfilePage() {
             className="hidden"
             ref={fileInputRef}
             onChange={handleImageChange}
+            disabled={true}
           />
 
           <Button
             type="button"
             className="cartoonish-btn w-52 self-center from-gray-500 to-gray-800"
             onClick={handleChangeImageClick}
-            disabled={uploading}
+            disabled={true}
           >
             Change image
           </Button>
@@ -258,7 +177,7 @@ function ProfilePage() {
                   placeholder="Name"
                   alt="Name"
                   {...field}
-                  disabled={uploading}
+                  disabled={true}
                 />
                 <InputError form={profileForm} name="name" />
               </FormItem>
@@ -276,7 +195,7 @@ function ProfilePage() {
                   placeholder="Email"
                   alt="Email"
                   {...field}
-                  disabled={uploading}
+                  disabled={true}
                 />
                 <InputError form={profileForm} name="email" />
               </FormItem>
@@ -287,7 +206,7 @@ function ProfilePage() {
             <Button
               type="submit"
               className="cartoonish-btn w-52 from-blue-500 to-blue-800"
-              disabled={uploading}
+              disabled={true}
             >
               {uploading ? "Updating..." : "Submit Changes"}
             </Button>
@@ -295,7 +214,6 @@ function ProfilePage() {
               type="button"
               className="cartoonish-btn w-52 from-red-700 to-red-950"
               onClick={handleSignOut}
-              disabled={uploading}
             >
               Logout
             </Button>

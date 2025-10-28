@@ -100,24 +100,24 @@ export function NavBar() {
           Support
         </MenubarTrigger>
         <MenubarContent className="cartoonish-l gap-1 px-2 py-2">
-          <Link href="/support/contribute">
+          {/* <Link href="/support/contribute">
             <MenubarItem className="cursor-pointer">Contribute</MenubarItem>
           </Link>
           <MenubarSeparator />
           <Link href="/support/feedback">
             <MenubarItem className="cursor-pointer">Feedback</MenubarItem>
-          </Link>
-          <MenubarSeparator />
+          </Link> */}
+          {/* <MenubarSeparator /> */}
           <Link href="/support/report">
             <MenubarItem className="cursor-pointer">Report</MenubarItem>
           </Link>
         </MenubarContent>
       </MenubarMenu>
-      <MenubarMenu>
+      {/* <MenubarMenu>
         <MenubarTrigger className="cursor-pointer font-bold uppercase">
           About
         </MenubarTrigger>
-      </MenubarMenu>
+      </MenubarMenu> */}
       <MenubarMenu>
         {loading ? (
           <div>Loading...</div>
