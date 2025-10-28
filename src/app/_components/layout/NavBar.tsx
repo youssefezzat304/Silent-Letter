@@ -18,6 +18,10 @@ import { getProfile } from "~/app/api/actions/profile";
 import type { Profile as ProfileType } from "@prisma/client";
 import { useGetUser } from "~/hooks/useGetUser";
 
+
+// TODO: Hamburger menu
+// TODO: GitHub link
+
 const LoginSignup = () => {
   return (
     <div className="cursor-pointer font-bold uppercase">

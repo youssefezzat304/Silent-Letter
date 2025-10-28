@@ -74,7 +74,7 @@ function InfoDisplayBar() {
         </div>
 
         <div title="version" className="self-end text-stone-500">
-          v.0.0.1 (beta)
+          v.0.0.0 (beta)
         </div>
       </div>
     </>

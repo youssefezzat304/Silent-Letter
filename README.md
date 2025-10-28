@@ -1,4 +1,4 @@
-# Silent Letter
+# Silent Letter (Beta version)
 
 > A modern language learning application built with the T3 Stack, helping users improve their spelling and pronunciation skills through interactive audio exercises.
 
@@ -47,7 +47,6 @@
 
 * **[Prisma](https://www.prisma.io/)** - Next-generation ORM
 * **[PostgreSQL](https://www.postgresql.org/)** (via Supabase) - Relational database
-* **[tRPC](https://trpc.io/)** - End-to-end typesafe APIs [ To be added ]
 
 ### Authentication & Storage
 
@@ -333,48 +332,6 @@ hear-and-spell/
 ├── tsconfig.json           # TypeScript configuration
 └── package.json            # Node.js dependencies
 ```
-
-## 🗄 Database Schema
-
-### Main Tables
-
-#### `profiles`
-
-User profile information
-
-* `id` (UUID, PK) - User ID from Supabase Auth
-* `name` (String) - Display name
-* `image` (String) - Avatar URL
-* `createdAt`, `updatedAt` (DateTime)
-
-#### `words_preferences`
-
-User learning preferences
-
-* `id` (UUID, PK)
-* `userId` (UUID, FK → profiles)
-* `levels` (Level[]) - Selected CEFR levels
-* `wordsLanguage` (Enum) - UI language preference
-* `delayTimer` (Int) - Delay in seconds
-
-#### `reports`
-
-User-submitted reports and feedback
-
-* `id` (UUID, PK)
-* `userId` (UUID, FK → profiles, optional)
-* `subject`, `message` (String)
-* `problemType` (Enum)
-* `priority`, `status` (Enum)
-* `attachments` → `report_attachments`
-
-### Enums
-
-* `Level`: A1, A2, B1, B2, C1, C2
-* `WordsLanguage`: en, de
-* `ProblemType`: SPELLING, PRONUNCIATION, BAD_WORD, UI_UX, SERVER, OTHER
-* `ReportStatus`: OPEN, IN_PROGRESS, RESOLVED, DISMISSED
-* `ReportPriority`: LOW, MEDIUM, HIGH, CRITICAL
 
 ## 🎨 Customization
 

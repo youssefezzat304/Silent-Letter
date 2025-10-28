@@ -4,6 +4,8 @@ import { createClient } from "~/lib/supabase/server";
 import { db } from "~/server/db";
 import { Resend } from "resend";
 import type { ReportValues } from "~/schema/report.schema";
+import { getIpAddress } from "~/lib/server-utils";
+import { checkRateLimit } from "~/lib/rate-limiter";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -15,20 +17,37 @@ interface CreateReportParams {
     mimeType: string;
     size: number;
   }>;
-  ip?: string;
   userAgent?: string;
 }
 
 export async function createReport({
   data,
   attachmentUrls,
-  ip = "unknown",
   userAgent = "unknown",
 }: CreateReportParams): Promise<{
   result: boolean;
   error: string | null;
   reportId?: string;
 }> {
+  // Get IP address for rate limiting
+  const ipAddress = await getIpAddress();
+
+  // Check rate limit: 3 reports per hour (60 * 60 seconds)
+  const { isLimited, error: limitError } = checkRateLimit(
+    ipAddress,
+    3,
+    60 * 60,
+  );
+
+  if (isLimited) {
+    console.warn(`Rate limit hit for createReport from IP: ${ipAddress}`);
+    return {
+      result: false,
+      error:
+        limitError ?? "Too many reports submitted. Please try again later.",
+    };
+  }
+
   const supabase = await createClient();
 
   try {
@@ -46,9 +65,9 @@ export async function createReport({
       data: {
         userId,
         subject: data.subject,
-        message: data.message,
+        message: data.message ?? "Anonymous report",
         contactEmail: finalContactEmail,
-        ip,
+        ip: ipAddress ?? "unknown",
         userAgent,
         problemType: data.problemType,
         priority: data.priority,
@@ -85,6 +104,7 @@ export async function createReport({
       });
     } catch (emailError) {
       console.error("Email sending error:", emailError);
+      // Don't fail the whole request if email fails
     }
 
     return { result: true, error: null, reportId: report.id };

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
-export const MAX_ATTACHMENTS = 3;
+export const MAX_ATTACHMENTS = 2;
 
 export const fileSchema = z
   .custom<File>()
@@ -10,7 +10,7 @@ export const fileSchema = z
 
 export const reportSchema = z.object({
   subject: z.string().min(5, "Subject must be at least 5 characters long."),
-  message: z.string().min(20, "Message must be at least 20 characters long."),
+  message: z.string().optional(),
   language: z.enum(["nal", "en-us", "de-de"], {
     required_error: "Please select a language.",
   }),
