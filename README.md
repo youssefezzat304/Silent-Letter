@@ -13,6 +13,7 @@
 ## 📋 Table of Contents
 
 * [Features](#-features "null")
+* [Teck Stack](#-teck-stack)
 * [Prerequisites](#-prerequisites "null")
 * [Getting Started](#-getting-started "null")
 * [Docker Deployment](#-docker-deployment "null")
@@ -295,7 +296,7 @@ SKIP_ENV_VALIDATION="false"                  # Skip environment validation
 ## 📁 Project Structure
 
 ```
-hear-and-spell/
+silent-letter/
 ├── public/                    # Static files
 │   ├── audio_files/          # Language audio files (REQUIRED)
 │   │   ├── en-us/           # English audio

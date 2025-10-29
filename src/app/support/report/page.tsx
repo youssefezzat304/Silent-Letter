@@ -85,7 +85,7 @@ function ReportRecommendation() {
               </li>
             </ul>
             <p>
-              When in doubt, use your best judgment. Thank you for helping felow
+              When in doubt, use your best judgment. Thank you for helping fellow
               oxygen consumer!
             </p>
           </div>
