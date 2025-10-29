@@ -17,10 +17,9 @@ import { useEffect, useState } from "react";
 import { getProfile } from "~/app/api/actions/profile";
 import type { Profile as ProfileType } from "@prisma/client";
 import { useGetUser } from "~/hooks/useGetUser";
-
+import { FaGithub } from "react-icons/fa6";
 
 // TODO: Hamburger menu
-// TODO: GitHub link
 
 const LoginSignup = () => {
   return (
@@ -102,16 +101,23 @@ export function NavBar() {
         <MenubarContent className="cartoonish-l gap-1 px-2 py-2">
           {/* <Link href="/support/contribute">
             <MenubarItem className="cursor-pointer">Contribute</MenubarItem>
-          </Link>
-          <MenubarSeparator />
-          <Link href="/support/feedback">
+            </Link>
+            <MenubarSeparator />
+            <Link href="/support/feedback">
             <MenubarItem className="cursor-pointer">Feedback</MenubarItem>
-          </Link> */}
+            </Link> */}
           {/* <MenubarSeparator /> */}
           <Link href="/support/report">
             <MenubarItem className="cursor-pointer">Report</MenubarItem>
           </Link>
         </MenubarContent>
+        <MenubarMenu>
+          <MenubarTrigger title="Github repo" className="cursor-pointer font-bold uppercase">
+            <Link href="https://github.com/youssefezzat304/Silent-Letter">
+              <FaGithub className="hover:scale-105" size={23} />
+            </Link>
+          </MenubarTrigger>
+        </MenubarMenu>
       </MenubarMenu>
       {/* <MenubarMenu>
         <MenubarTrigger className="cursor-pointer font-bold uppercase">
