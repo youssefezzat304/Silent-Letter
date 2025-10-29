@@ -7,7 +7,7 @@ services:
         NEXT_PUBLIC_SUPABASE_URL: ${SUPABASE_URL}
         NEXT_PUBLIC_SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
         NEXT_PUBLIC_APP_URL: ${APP_URL}
-    container_name: hear-and-spell
+    container_name: silent-letter
     restart: unless-stopped
     ports:
       - "3000:3000"

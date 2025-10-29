@@ -6,22 +6,22 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Prisma](https://img.shields.io/badge/Prisma-5-2D3748?style=flat-square&logo=prisma)](https://www.prisma.io/)
 
+## 🚀 Live Demo
+
+**[View Live Application →](https://silent-letter-kappa.vercel.app/)**
+
 ## 📋 Table of Contents
 
-* [Features](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-features)
-* [Tech Stack](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-tech-stack)
-* [Prerequisites](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-prerequisites)
-* [Getting Started](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-getting-started)
-* [Docker Deployment](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-docker-deployment)
-* [Environment Variables](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-environment-variables)
-* [Project Structure](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-project-structure)
-* [Database Schema](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-database-schema)
-* [Customization](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#customization)
-* [Testing Database Connection](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-testing-database-connection)
-* [Available Scripts](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#-available-scripts)
-* [Troubleshooting](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#troubleshooting)
-* [License](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#license)
-* [Acknowledgments](https://claude.ai/chat/131bcf9f-9b2a-4d55-b9fb-6bfee1db0891#acknowledgments)
+* [Features](#-features "null")
+* [Prerequisites](#-prerequisites "null")
+* [Getting Started](#-getting-started "null")
+* [Docker Deployment](#-docker-deployment "null")
+* [Environment Variables](#-environment-variables "null")
+* [Project Structure](#-project-structure "null")
+* [Customization](#customization "null")
+* [Testing Database Connection](#-testing-database-connection "null")
+* [Troubleshooting](#troubleshooting "null")
+* [License](#license "null")
 
 ## ✨ Features
 
