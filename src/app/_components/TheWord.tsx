@@ -55,15 +55,13 @@ export default function TheWord() {
 
   useEffect(() => {
     const handleProfile = async () => {
-      if (!user) return; // Skip if no user
+      if (!user) return;
 
       try {
         const profile = await createProfile();
         if (!profile) {
           console.error("Profile handling failed");
-          // TODO: Add a toast or UI feedback if needed
         }
-        // Optional: If you need to use the returned profile (e.g., for additional state), do so here
       } catch (err) {
         console.error("Error calling createProfile:", err);
       }
@@ -84,7 +82,10 @@ export default function TheWord() {
   }, []);
 
   const checkAnswer = () => {
-    if (!answer || answer !== currentWord) {
+    const normalizedAnswer = answer?.trim().toLowerCase() || "";
+    const normalizedCurrentWord = currentWord?.trim().toLowerCase() ?? "";
+
+    if (!normalizedAnswer || normalizedAnswer !== normalizedCurrentWord) {
       if (wrongAnswerSoundRef.current) {
         setAnswerResult(false);
         if (soundEffects.wrong) {
@@ -96,12 +97,14 @@ export default function TheWord() {
       }
       return false;
     }
+
     if (correctAnswerSoundRef.current) {
       setAnswerResult(true);
       if (soundEffects.correct) {
         correctAnswerSoundRef.current.play().catch(console.error);
       }
     }
+
     setTimeout(() => {
       setAnswer("");
       setAnswerResult(null);
@@ -173,7 +176,7 @@ export default function TheWord() {
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-5">
       {user?.user_metadata.name && (
         <span className="text-xl font-bold text-stone-950 dark:text-zinc-200">
-          Welcom, {user?.user_metadata.name}.
+          Welcome, {user?.user_metadata.name}.
         </span>
       )}
 

@@ -66,13 +66,13 @@ function AuthPage() {
 
   const handleLoginSubmit = (values: LoginValues) => {
     toast.custom(() => (
-      <CustomToast text="This feature is coming soon!" type="info" />
+      <CustomToast text="Stop trying to outsmart me. I don't have that much time :(" type="info" />
     ));
   };
 
   const handleSignupSubmit = (values: CreateAccountValues) => {
     toast.custom(() => (
-      <CustomToast text="This feature is coming soon!" type="info" />
+      <CustomToast text="Stop trying to outsmart me. I don't have that much time :(" type="info" />
     ));
   };
 
